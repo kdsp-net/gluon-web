@@ -1,10 +1,10 @@
 ---
+title: Our Principles
 tags:
   - web
 type: blog
-title: Our Principles
 date: 2024-06-29T15:56:26.317Z
-lastmod: 2024-07-17T16:02:21.884Z
+lastmod: 2024-07-17T19:03:30.639Z
 ---
 ## Syndication
 

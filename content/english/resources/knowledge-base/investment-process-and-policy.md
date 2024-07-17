@@ -1,10 +1,10 @@
 ---
+title: Investment Process and Policy
 tags:
   - web
 type: blog
-title: Investment process and policy
 date: 2024-06-26T13:31:13.987Z
-lastmod: 2024-07-17T16:01:37.304Z
+lastmod: 2024-07-17T19:03:03.879Z
 ---
 In our syndicate, investing in startups is strongly tied to 4 pitching events during the year (one per quarter).
 

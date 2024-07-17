@@ -1,10 +1,10 @@
 ---
+title: Startup Criteria
 tags:
   - web
 type: blog
-title: Startup criteria
 date: 2024-06-26T13:02:49.962Z
-lastmod: 2024-07-17T16:02:31.800Z
+lastmod: 2024-07-17T19:04:34.191Z
 ---
 Our criteria for startups:
 
