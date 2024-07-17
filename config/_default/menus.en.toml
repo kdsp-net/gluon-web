@@ -23,7 +23,7 @@ name = "Pages"
 [[main]]
 parent = "Pages"
 name = "Blog"
-pageRef = "/blog"
+pageRef = "/resources/blog"
 
 [[main]]
 parent = "Pages"
@@ -45,6 +45,19 @@ parent = "Pages"
 name = "404 Page"
 pageRef = "/404"
 
+[[main]]
+weight = 4
+name = "Resources"
+
+[[main]]
+parent = "Resources"
+name = "Blog"
+pageRef = "/resources/blog"
+
+[[main]]
+parent = "Resources"
+name = "Knowledge Base"
+pageRef = "/resources/knowledge-base"
 
 # footer menu
 [[footer]]
