@@ -1,5 +1,5 @@
 +++
-title = "Angel Syndicates 101.md"
+title = "Angel Syndicates 101"
 +++
 
 ## The Power of Angel Syndicates in Modern Investing

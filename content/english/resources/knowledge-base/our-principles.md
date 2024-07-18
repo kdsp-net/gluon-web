@@ -1,5 +1,5 @@
 +++
-title = "Our Principles.md"
+title = "Our Principles"
 +++
 
 ## Syndication
