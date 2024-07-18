@@ -1,6 +1,6 @@
 +++
-type = "blog"
 title = "Angel Syndicates 101"
+type = "blog"
 +++
 
 ## The Power of Angel Syndicates in Modern Investing
