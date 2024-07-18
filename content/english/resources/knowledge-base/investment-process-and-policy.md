@@ -1,4 +1,5 @@
 +++
+type = "blog"
 title = "Investment Process and Policy"
 +++
 
