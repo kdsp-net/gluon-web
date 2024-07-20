@@ -12,39 +12,23 @@ pageRef = "/about"
 weight = 2
 
 [[main]]
-name = "Elements"
-pageRef = "/elements"
+name = "Resources"
 weight = 3
 
 [[main]]
-weight = 4
-name = "Pages"
-
-[[main]]
-parent = "Pages"
+parent = "Resources"
 name = "Blog"
-pageRef = "/blog"
+pageRef = "/resources/blog"
 
 [[main]]
-parent = "Pages"
+parent = "Resources"
+name = "Knowledge Base"
+pageRef = "/resources/knowledge-base"
+
+[[main]]
 name = "Contact"
 pageRef = "/contact"
-
-[[main]]
-parent = "Pages"
-name = "Authors"
-pageRef = "/authors"
-
-[[main]]
-parent = "Pages"
-name = "Categories"
-pageRef = "/categories"
-
-[[main]]
-parent = "Pages"
-name = "404 Page"
-pageRef = "/404"
-
+weight = 4
 
 # footer menu
 [[footer]]
