@@ -1,5 +1,5 @@
 +++
-title = "Business Angel Syndicates 101"
+title = "Angel Syndicates 101"
 type = "blog"
 +++
 
