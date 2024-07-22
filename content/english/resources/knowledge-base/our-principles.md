@@ -3,7 +3,7 @@ title = "Our Principles"
 type = "blog"
 +++
 
-## Syndication
+#### Syndication
 
 
 
@@ -13,7 +13,7 @@ We provide you with a significantly higher deal flow and allow you to build a mu
 
 Thus lowering the risk with <mark>tickets&nbsp;as&nbsp;low&nbsp;as&nbsp;€5.000</mark>. 
 
-## Angel & Pre-Seed
+#### Angel & Pre-Seed
 
 
 
@@ -23,7 +23,7 @@ We focus on startups from the <mark>CEE&nbsp;region</mark>, with 3/5 of them bei
 
 The deals we seek are not bound to any particular industry. 
 
-## Fair Deals
+#### Fair Deals
 
 
 
