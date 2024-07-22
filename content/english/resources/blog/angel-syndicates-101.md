@@ -1,4 +1,5 @@
 +++
+description = "this is meta description"
 title = "Angel Syndicates 101"
 type = "blog"
 +++
