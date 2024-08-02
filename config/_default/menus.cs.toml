@@ -27,12 +27,12 @@ weight = 3
 [[main]]
 parent = "Informace"
 name = "Blog"
-url = "resources/blog"
+pageRef = "resources/blog"
 
 [[main]]
 parent = "Informace"
 name = "Znalostní báze"
-url = "resources/knowledge-base"
+pageRef = "resources/knowledge-base"
 
 [[main]]
 name = "Kontakt"

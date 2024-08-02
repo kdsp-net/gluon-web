@@ -97,3 +97,28 @@ path = "github.com/gethugothemes/hugo-modules/seo-tools/google-tag-manager"
 
 [[imports]]
 path = "github.com/hugomods/mermaid"
+
+[[mounts]]
+source = 'content/english'
+target = 'content'
+lang = 'en'
+
+[[mounts]]
+source = 'content/slovak'
+target = 'content'
+lang = 'sk'
+
+[[mounts]]
+source = 'content/czech'
+target = 'content'
+lang = 'cs'
+
+[[mounts]]
+source = 'content/english'
+target = 'content'
+lang = 'sk'
+
+[[mounts]]
+source = 'content/english'
+target = 'content'
+lang = 'cs'
