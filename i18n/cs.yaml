@@ -1,0 +1,18 @@
+home: Domů
+read_more: Přečíst více
+send: Odeslat
+related_posts: Související příspěvky
+categories: Kategorie
+tags: Štítky
+toc: Obsah
+share: Sdílet
+search_input_placeholder: Hledat příspěvek...
+search_no_results: Žádné výsledky pro
+search_initial_message: Napište něco k vyhledání..
+search_navigate: pro navigaci
+search_select: pro výběr
+search_close: pro zavření
+button_labels:
+  startup: Přihlásit se (Startup)
+  member: Připojit se (Investor)
+announcement_message: "Rezervovali jsme letadlo na **Web Summit 2024** v **Lisabonu**! Létajte s námi a užijte si skvělé nabídky na hotely, lístky a vedlejší akce. Spojte se s námi přímo od **startu**."

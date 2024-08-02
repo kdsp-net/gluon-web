@@ -1,0 +1,56 @@
+############# Slovak navigation ##############
+
+# main menu
+[[main]]
+name = "Domov"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "O nás"
+weight = 2
+
+[[main]]
+parent = "O nás"
+name = "Zakladatelia"
+pageRef = "founders"
+
+[[main]]
+parent = "O nás"
+name = "Členovia"
+pageRef = "members"
+
+[[main]]
+name = "Informácie"
+weight = 3
+
+[[main]]
+parent = "Informácie"
+name = "Blog"
+url = "resources/blog"
+
+[[main]]
+parent = "Informácie"
+name = "Znalostná báza"
+url = "resources/knowledge-base"
+
+[[main]]
+name = "Kontakt"
+pageRef = "contact"
+weight = 4
+
+# footer menu
+[[footer]]
+name = "O nás"
+pageRef = "/about"
+weight = 1
+
+[[footer]]
+name = "Verejné obchodné podmienky"
+pageRef = "/terms-of-service"
+weight = 2
+
+[[footer]]
+name = "Zásady ochrany osobných údajov"
+pageRef = "/privacy-policy"
+weight = 3

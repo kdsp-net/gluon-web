@@ -35,11 +35,14 @@ copyright = "Designed & Developed by [Zeon Studio](https://zeon.studio)"
 enable = false
 preloader = "" # use jpg, png, svg or gif format.
 
-# Navigation button
-[navigation_button]
+# Navigation buttons
+[navigation_button_startup]
 enable = true
-label = "get a quote"
-link = "contact"
+link = "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+
+[navigation_button_member]
+enable = true
+link = "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
 
 # search
 # search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
@@ -53,11 +56,11 @@ show_tags = true
 show_categories = true
 
 # announcement
-# announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement
 [announcement]
 enable = true
 expire_days = 7
-content = "You must replace the **baseURL** in **hugo.toml** file when deploying, you can manage this announcement from the **params.toml** file."
+content_key = "announcement_message"
+link = "https://www.pelikan.sk/sk/pobyt/web-summit-lisabon"
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo

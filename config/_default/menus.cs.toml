@@ -1,0 +1,56 @@
+############# Czech navigation ##############
+
+# main menu
+[[main]]
+name = "Domů"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "O nás"
+weight = 2
+
+[[main]]
+parent = "O nás"
+name = "Zakladatelé"
+pageRef = "founders"
+
+[[main]]
+parent = "O nás"
+name = "Členové"
+pageRef = "members"
+
+[[main]]
+name = "Informace"
+weight = 3
+
+[[main]]
+parent = "Informace"
+name = "Blog"
+url = "resources/blog"
+
+[[main]]
+parent = "Informace"
+name = "Znalostní báze"
+url = "resources/knowledge-base"
+
+[[main]]
+name = "Kontakt"
+pageRef = "contact"
+weight = 4
+
+# footer menu
+[[footer]]
+name = "O nás"
+pageRef = "/about"
+weight = 1
+
+[[footer]]
+name = "Veřejné obchodní podmínky"
+pageRef = "/terms-of-service"
+weight = 2
+
+[[footer]]
+name = "Zásady ochrany osobních údajů"
+pageRef = "/privacy-policy"
+weight = 3
