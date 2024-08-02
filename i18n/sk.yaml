@@ -15,4 +15,8 @@ search_close: na zatvorenie
 button_labels:
   startup: Prihlásiť sa (Startup)
   member: Pripojiť sa (Investor)
+  subscribe: Odoberať
 announcement_message: "Zarezervovali sme lietadlo na **Web Summit 2024** v **Lisabone**! Letujte s nami a užívajte si skvelé zľavy na hotely, lístky a vedľajšie podujatia. Spoznajte sa s nami priamo od **štartu**."
+beehiiv_url:
+  default: "https://embeds.beehiiv.com/afc88566-4707-413e-944d-e7af9cbf3a07"
+  dark: "https://embeds.beehiiv.com/6f392545-b778-43db-b3dc-ba54ce18eb63"

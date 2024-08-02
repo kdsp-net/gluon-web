@@ -15,4 +15,8 @@ search_close: to close
 button_labels:
   startup: Apply (Startup)
   member: Join (Investor)
+  subscribe: Subscirbe
 announcement_message: "We've booked a plane to **Web Summit 2024** in **Lisbon**! Fly with us and enjoy great deals on hotel, tickets and side events. Let's network right from the **lift off**."
+beehiiv_url:
+  default: "https://embeds.beehiiv.com/04babe21-4fa5-4161-acd6-2638316a6a13"
+  dark: "https://embeds.beehiiv.com/27541c05-650d-4afc-a803-d7d74cb375d2"
