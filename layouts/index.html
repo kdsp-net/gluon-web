@@ -14,7 +14,7 @@
             {{ with .button }}
               {{ if .enable }}
                 <a
-                  class="btn btn-primary mb-4 md:mb-0 md:ml-4"
+                  class="btn btn-primary"
                   href="{{ .link | absURL }}"
                   {{ if strings.HasPrefix .link `http` }}
                     target="_blank" rel="noopener"
@@ -27,7 +27,7 @@
             {{ with .button_2 }}
             {{ if .enable }}
               <a
-                class="btn btn-secondary mb-4 md:mb-0 md:ml-4"
+                class="btn btn-secondary mt-4 md:mt-0 md:ml-4"
                 href="{{ .link | absURL }}"
                 {{ if strings.HasPrefix .link `http` }}
                   target="_blank" rel="noopener"
@@ -78,7 +78,7 @@
             </ul>
             {{ with .button }}
               {{ if .enable }}
-                <a class="btn btn-primary mt-6 mb-4 md:mb-0" href="{{ .link | absURL }}">
+                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
                   {{ .label }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>
@@ -86,7 +86,7 @@
             {{ end }}
             {{ with .button_2 }}
               {{ if .enable }}
-                <a class="btn btn-secondary mt-6 mb-4 md:mb-0 md:ml-4" href="{{ .link | absURL }}">
+                <a class="btn btn-secondary mt-4 md:mt-6 md:ml-4" href="{{ .link | absURL }}">
                   {{ .label }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>

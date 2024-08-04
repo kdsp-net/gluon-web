@@ -28,3 +28,11 @@ h6 {
 .btn-tertiary {
   @apply border-transparent text-dark bg-transparent dark:border-transparent dark:text-white transition transform hover:-translate-y-1;
 }
+
+.nav-link {
+  @apply text-text hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary;
+}
+
+.nav-dropdown-link {
+  @apply text-text hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary;
+}
