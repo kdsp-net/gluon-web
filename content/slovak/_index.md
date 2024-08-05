@@ -4,14 +4,10 @@ banner:
   title: "GLUON SYNDICATE"
   content: "Či už ste angel investor hľadajúci možnosti diverzifikácie a maximalizácie vášho portfólia, alebo startup hľadajúci spravodlivé a rané financovanie, Gluon Syndicate je tu pre vás. Prihláste sa na odber nášho newsletteru a staňte sa súčasťou komunity, ktorá formuje budúcnosť angel investícií v regióne CEE!"
   image: "/images/banner.png"
-  button:
+  button_startup:
     enable: true
-    label: "Prihlásiť sa (Startup)"
-    link: "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
-  button_2:
+  button_member:
     enable: true
-    label: "Pripojiť sa (Investor)"
-    link: "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
 
 # Features
 features:
@@ -23,14 +19,10 @@ features:
       - "Prezentácia 15 predvybraných, overených startupov na každej akcii"
       - "Spravodlivé, transparentné investície prostredníctvom štandardizovaného právneho rámca"
       - "Investície vo výške 50 000 až 300 000 € v pre-seed a seed fázach"
-    button:
+    button_startup:
       enable: true
-      label: "Prihlásiť sa (Startup)"
-      link: "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
-    button_2:
+    button_member:
       enable: true
-      label: "Pripojiť sa (Investor)"
-      link: "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
 
   - title: "Angeli, maximalizujte svoj investičný potenciál"
     image: "/images/service-2.png"
@@ -41,14 +33,10 @@ features:
       - "Ko-investovanie s skúsenými angelmi a zdieľanie náhľadov a rizík"
       - "Zjednodušený investičný proces s šablónami právneho rámca"
       - "Aktívne riadenie vzťahov medzi investormi a startupmi pre udržateľný rast"
-    button:
+    button_startup:
       enable: true
-      label: "Prihlásiť sa (Startup)"
-      link: "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
-    button_2:
+    button_member:
       enable: true
-      label: "Pripojiť sa (Investor)"
-      link: "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
 
   - title: "Startupy, podporte svoj rast"
     image: "/images/service-3.png"
@@ -60,12 +48,8 @@ features:
       - "Prístup k odborným znalostiam a mentoringu investorov"
       - "Rýchly a efektívny proces financovania"
       - "Cesta k následným kolám financovania s poprednými VC fondmi v regióne CEE"
-    button:
+    button_startup:
       enable: true
-      label: "Prihlásiť sa (Startup)"
-      link: "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
-    button_2:
+    button_member:
       enable: true
-      label: "Pripojiť sa (Investor)"
-      link: "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
 ---

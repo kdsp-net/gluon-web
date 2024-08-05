@@ -11,28 +11,28 @@
             <p class="mb-8">
               {{ .content | markdownify }}
             </p>
-            {{ with .button }}
+            {{ with .button_startup }}
               {{ if .enable }}
                 <a
                   class="btn btn-primary"
-                  href="{{ .link | absURL }}"
+                  href="{{ site.Params.dealum.startup_link | absURL }}"
                   {{ if strings.HasPrefix .link `http` }}
                     target="_blank" rel="noopener"
                   {{ end }}>
-                  {{ .label }}
+                  {{ i18n "button_labels.startup" | safeHTML }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>
               {{ end }}
             {{ end }}
-            {{ with .button_2 }}
+            {{ with .button_member }}
             {{ if .enable }}
               <a
                 class="btn btn-secondary mt-4 md:mt-0 md:ml-4"
-                href="{{ .link | absURL }}"
+                href="{{ site.Params.dealum.member_link | absURL }}"
                 {{ if strings.HasPrefix .link `http` }}
                   target="_blank" rel="noopener"
                 {{ end }}>
-                {{ .label }}
+                {{ i18n "button_labels.member" | safeHTML }}
                 <i class="fa fa-arrow-right pl-2"></i>
               </a>
             {{ end }}
@@ -76,18 +76,18 @@
                 </li>
               {{ end }}
             </ul>
-            {{ with .button }}
+            {{ with .button_startup }}
               {{ if .enable }}
-                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
-                  {{ .label }}
+                <a class="btn btn-primary mt-6" href="{{ site.Params.dealum.startup_link | absURL }}">
+                  {{ i18n "button_labels.startup" | safeHTML }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>
               {{ end }}
             {{ end }}
-            {{ with .button_2 }}
+            {{ with .button_member }}
               {{ if .enable }}
-                <a class="btn btn-secondary mt-4 md:mt-6 md:ml-4" href="{{ .link | absURL }}">
-                  {{ .label }}
+                <a class="btn btn-secondary mt-4 md:mt-6 md:ml-4" href="{{ site.Params.dealum.member_link | absURL }}">
+                  {{ i18n "button_labels.member" | safeHTML }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>
               {{ end }}

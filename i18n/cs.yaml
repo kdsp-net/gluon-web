@@ -13,8 +13,8 @@ search_navigate: pro navigaci
 search_select: pro výběr
 search_close: pro zavření
 button_labels:
-  startup: Přihlásit se (Startup)
-  member: Připojit se (Investor)
+  startup: Přihlásit se <span>(Startup)</span>
+  member: Připojit se <span>(Investor)</span>
   subscribe: Odebírat
 announcement_message: "Rezervovali jsme letadlo na **Web Summit 2024** v **Lisabonu**! Létajte s námi a užijte si skvělé nabídky na hotely, lístky a vedlejší akce. Spojte se s námi přímo od **startu**."
 beehiiv_url:

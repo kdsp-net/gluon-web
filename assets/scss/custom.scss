@@ -15,12 +15,15 @@ h6 {
 
 .btn {
   @apply rounded-none font-secondary font-semibold uppercase;
+  span {
+    @apply font-normal;
+  }
 }
 
 .btn-primary {
   @apply
     border-dark bg-dark text-darkmode-dark
-    dark:border-darkmode-dark dark:bg-darkmode-dark dark:text-dark
+    dark:border-darkmode-dark dark:bg-darkmode-dark dark:text-dark;
 }
 
 .btn-secondary {

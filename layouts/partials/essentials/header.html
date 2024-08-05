@@ -99,8 +99,8 @@
         <li class="mt-4 inline-block lg:hidden">
           <a
             class="btn btn-primary btn-sm"
-            href="{{ site.Params.navigation_button_startup.link | relLangURL }}">
-            {{ i18n "button_labels.startup" }}
+            href="{{ site.Params.dealum.startup_link | absURL }}">
+            {{ i18n "button_labels.startup" | safeHTML }}
           </a>
         </li>
       {{ end }}
@@ -108,8 +108,8 @@
       <li class="mt-4 inline-block lg:hidden">
         <a
           class="btn btn-secondary btn-sm ml-4"
-          href="{{ site.Params.navigation_button_member.link | relLangURL }}">
-          {{ i18n "button_labels.member" }}
+          href="{{ site.Params.dealum.member_link | absURL }}">
+          {{ i18n "button_labels.member" | safeHTML }}
         </a>
       </li>
     {{ end }}
@@ -138,17 +138,17 @@
       <!-- navigation btns -->
       {{ if site.Params.navigation_button_startup.enable }}
         <a
-          href="{{ site.Params.navigation_button_startup.link | relLangURL }}"
+          href="{{ site.Params.dealum.startup_link | absURL }}"
           class="btn btn-primary btn-sm hidden lg:inline-block">
-          {{ i18n "button_labels.startup" }}
+          {{ i18n "button_labels.startup" | safeHTML }}
         </a>
       {{ end }}
 
       {{ if site.Params.navigation_button_member.enable }}
       <a
-        href="{{ site.Params.navigation_button_member.link | relLangURL }}"
+        href="{{ site.Params.dealum.member_link | absURL }}"
         class="btn btn-secondary btn-sm hidden lg:inline-block ml-4">
-        {{ i18n "button_labels.member" }}
+        {{ i18n "button_labels.member" | safeHTML }}
       </a>
     {{ end }}
     
