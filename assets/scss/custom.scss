@@ -18,21 +18,35 @@ h6 {
 }
 
 .btn-primary {
-  @apply border-primary bg-primary dark:border-darkmode-primary dark:text-dark text-white dark:bg-darkmode-primary transition transform hover:-translate-y-1;
+  @apply
+    border-dark bg-dark text-darkmode-dark
+    dark:border-darkmode-dark dark:bg-darkmode-dark dark:text-dark
 }
 
 .btn-secondary {
-  @apply border-dark text-dark bg-transparent dark:border-darkmode-primary dark:text-white transition transform hover:-translate-y-1;
+  @apply
+    border-dark bg-transparent text-dark
+    dark:border-darkmode-dark dark:text-darkmode-dark;
 }
 
 .btn-tertiary {
-  @apply border-transparent text-dark bg-transparent dark:border-transparent dark:text-white transition transform hover:-translate-y-1;
+  @apply
+    border-transparent bg-transparent text-dark
+    dark:text-darkmode-dark;
 }
 
 .nav-link {
-  @apply text-text hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary;
+  @apply text-text hover:text-dark dark:text-darkmode-text dark:hover:text-darkmode-dark;
 }
 
 .nav-dropdown-link {
-  @apply text-text hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary;
+  @apply text-text hover:text-dark dark:text-darkmode-text dark:hover:text-darkmode-dark;
+}
+
+.theme-switcher {
+
+  label {
+    @apply dark:bg-darkmode-border;
+  }
+
 }
