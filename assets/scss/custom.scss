@@ -53,3 +53,11 @@ h6 {
   }
 
 }
+
+.founder {
+  @apply text-dark dark:text-darkmode-dark font-secondary font-semibold uppercase text-3xl;
+}
+
+.founder-socials li a {
+  @apply relative -top-2 h-6 w-6 text-xs;
+}

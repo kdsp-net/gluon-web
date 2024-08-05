@@ -2,15 +2,38 @@
   {{ partial "page-header" . }}
 
 
-  <section class="section-sm">
+  <section class="section">
     <div class="container">
       <div class="row justify-center">
-        <div class="lg:col-10">
-          <div class="content">
-            {{ .Content }}
+        {{ range .RegularPages }}
+          <div class="lg:col-10 mb-10">
+            <h2 class="mb-6">
+              {{ .Params.title }}
+            </h2>
+            {{ range .Params.founders }}
+              <ul class="social-icons founder-socials mt-4">
+                <li class="founder">{{ .name }}</li>
+                {{ range .social }}
+                  <li>
+                    <a href="{{ .link | safeURL }}" target="_blank" rel="noopener nofollow">
+                      <span class="sr-only">{{ .title }}</span>
+                      <i class="{{ .icon }}"></i>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
+            <div class="content mt-8">
+              {{ .Content }}
+            </div>
           </div>
+        {{ end }}
+      </div>
+      <div class="row justify-center">
+        <div class="lg:col-10 mb-10">
+          {{ .Content }}
         </div>
       </div>
     </div>
   </section>
-{{ end }}
+ {{ end }}
