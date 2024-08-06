@@ -7,10 +7,6 @@ weight: 1
 founders:
   - name: "Alex Janusek"
     social:
-    - name: twitter
-      icon: fa-brands fa-twitter
-      link: https://x.com/alexjanusek/
-
     - name: linkedin
       icon: fa-brands fa-linkedin
       link: https://www.linkedin.com/in/alexanderjanusek/
