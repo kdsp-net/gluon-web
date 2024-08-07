@@ -1,6 +1,5 @@
 +++
 title = "Our Principles"
-type = "blog"
 +++
 
 #### Syndication

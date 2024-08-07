@@ -95,24 +95,20 @@
           </li>
         {{ end }}
       {{ end }}
-      {{ if site.Params.navigation_button_startup.enable }}
-        <li class="mt-4 inline-block lg:hidden">
-          <a
-            class="btn btn-primary btn-sm"
-            href="{{ site.Params.dealum.startup_link | absURL }}">
-            {{ i18n "button_labels.startup" | safeHTML }}
-          </a>
-        </li>
+      <!-- navigation btns -->
+      {{ $index := 0 }}
+      {{ range site.Params.navigation_buttons }}
+        {{ if .enable }}
+          <li class="mt-4 inline-block lg:hidden">
+            <a
+              class="btn btn-{{ .type }} btn-sm {{ if gt $index 0 }}ml-4{{ end }}"
+              href="{{ .link | absURL }}">
+              {{ i18n (printf "button_labels.%s" .label_key) | safeHTML }}
+            </a>
+          </li>
+          {{ $index = add $index 1 }}
+        {{ end }}
       {{ end }}
-      {{ if site.Params.navigation_button_member.enable }}
-      <li class="mt-4 inline-block lg:hidden">
-        <a
-          class="btn btn-secondary btn-sm ml-4"
-          href="{{ site.Params.dealum.member_link | absURL }}">
-          {{ i18n "button_labels.member" | safeHTML }}
-        </a>
-      </li>
-    {{ end }}
     </ul>
 
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
@@ -136,22 +132,20 @@
 
 
       <!-- navigation btns -->
-      {{ if site.Params.navigation_button_startup.enable }}
-        <a
-          href="{{ site.Params.dealum.startup_link | absURL }}"
-          class="btn btn-primary btn-sm hidden lg:inline-block">
-          {{ i18n "button_labels.startup" | safeHTML }}
+      {{ $index := 0 }}
+      {{ range site.Params.navigation_buttons }}
+        {{ if .enable }}
+          <a
+            class="btn btn-{{ .type }} btn-sm hidden lg:inline-block {{ if gt $index 0 }}ml-4{{ end }}"
+            href="{{ .link | absURL }}"
+            {{ if strings.HasPrefix .link `http` }}
+              target="_blank" rel="noopener"
+            {{ end }}>
+            {{ i18n (printf "button_labels.%s" .label_key) | safeHTML }}
         </a>
+          {{ $index = add $index 1 }}
+        {{ end }}
       {{ end }}
-
-      {{ if site.Params.navigation_button_member.enable }}
-      <a
-        href="{{ site.Params.dealum.member_link | absURL }}"
-        class="btn btn-secondary btn-sm hidden lg:inline-block ml-4">
-        {{ i18n "button_labels.member" | safeHTML }}
-      </a>
-    {{ end }}
-    
     </div>
   </nav>
 </header>

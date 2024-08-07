@@ -1,6 +1,5 @@
 +++
 title = "Pitch Events"
-type = "blog"
 +++
 
 #### 4 Events per Year

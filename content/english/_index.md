@@ -4,10 +4,15 @@ banner:
   title: "GLUON SYNDICATE"
   content: "Whether you’re an angel investor looking to diversify and maximize your portfolio or a startup seeking fair and early-stage funding, Gluon Syndicate is here for you. Join our newsletter and be part of a community that’s shaping the future of angel investments in CEE!"
   image: "/images/banner.png"
-  button_startup:
-    enable: true
-  button_member:
-    enable: true
+  buttons:
+    - label_key: "startup" 
+      link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+      type: "primary"
+      enable: true
+    - label_key: "member" 
+      link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
+      type: "secondary"
+      enable: true
 
 # Features
 features:
@@ -19,10 +24,15 @@ features:
       - "Presenting 15 pre-selected, vetted startups per event"
       - "Fair, transparent investments through a standardized legal framework"
       - "Investments of €50K to €300K in pre-seed and seed stages"
-    button_startup:
-      enable: true
-    button_member:
-      enable: true
+    buttons:
+      - label_key: "startup" 
+        link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+        type: "primary"
+        enable: true
+      - label_key: "member" 
+        link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
+        type: "secondary"
+        enable: true
 
   - title: "Angels, Maximize Your Investment Potential"
     image: "/images/service-2.png"
@@ -33,10 +43,15 @@ features:
       - "Co-invest with experienced angels and share insights and risks"
       - "Simplified investment process with a templated legal framework"
       - "Active investor-startup relationship management for sustained growth"
-    button_startup:
-      enable: true
-    button_member:
-      enable: true
+    buttons:
+      - label_key: "member" 
+        link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
+        type: "primary"
+        enable: true
+      - label_key: "investment_process" 
+        link:  "/resources/knowladge-base/investment-process"
+        type: "secondary"
+        enable: true
 
   - title: "Startups, Fuel Your Growth"
     image: "/images/service-3.png"
@@ -48,8 +63,13 @@ features:
       - "Access to investors' expertise and mentoring"
       - "Quick and efficient funding process"
       - "Pathway to subsequent funding rounds with leading CEE VC funds"
-    button_startup:
-      enable: true
-    button_member:
-      enable: true
+    buttons:
+      - label_key: "startup" 
+        link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+        type: "primary"
+        enable: true
+      - label_key: "member" 
+        link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
+        type: "tertiary"
+        enable: true
 ---

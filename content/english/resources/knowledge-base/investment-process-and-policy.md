@@ -1,6 +1,5 @@
 +++
 title = "Investment Process and Policy"
-type = "blog"
 +++
 
 In our syndicate, investing in startups is strongly tied to 4 pitching events during the year (one per quarter).

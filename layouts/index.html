@@ -11,32 +11,21 @@
             <p class="mb-8">
               {{ .content | markdownify }}
             </p>
-            {{ with .button_startup }}
+            {{ $index := 0 }}
+            {{ range .buttons }}
               {{ if .enable }}
                 <a
-                  class="btn btn-primary"
-                  href="{{ site.Params.dealum.startup_link | absURL }}"
+                  class="btn btn-{{ .type }} {{ if gt $index 0 }}mt-4 md:mt-6 md:ml-4{{ end }}"
+                  href="{{ .link | absURL }}"
                   {{ if strings.HasPrefix .link `http` }}
                     target="_blank" rel="noopener"
                   {{ end }}>
-                  {{ i18n "button_labels.startup" | safeHTML }}
+                  {{ i18n (printf "button_labels.%s" .label_key) | safeHTML }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>
+                {{ $index = add $index 1 }}
               {{ end }}
             {{ end }}
-            {{ with .button_member }}
-            {{ if .enable }}
-              <a
-                class="btn btn-secondary mt-4 md:mt-0 md:ml-4"
-                href="{{ site.Params.dealum.member_link | absURL }}"
-                {{ if strings.HasPrefix .link `http` }}
-                  target="_blank" rel="noopener"
-                {{ end }}>
-                {{ i18n "button_labels.member" | safeHTML }}
-                <i class="fa fa-arrow-right pl-2"></i>
-              </a>
-            {{ end }}
-          {{ end }}
           </div>
           <div class="col-12">
             {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
@@ -76,20 +65,19 @@
                 </li>
               {{ end }}
             </ul>
-            {{ with .button_startup }}
+            {{ $index := 0 }}
+            {{ range .buttons }}
               {{ if .enable }}
-                <a class="btn btn-primary mt-6" href="{{ site.Params.dealum.startup_link | absURL }}">
-                  {{ i18n "button_labels.startup" | safeHTML }}
+                <a
+                  class="btn btn-{{ .type }} {{ if gt $index 0 }}mt-4 md:mt-6 md:ml-4{{ end }}"
+                  href="{{ .link | absURL }}"
+                  {{ if strings.HasPrefix .link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
+                  {{ i18n (printf "button_labels.%s" .label_key) | safeHTML }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>
-              {{ end }}
-            {{ end }}
-            {{ with .button_member }}
-              {{ if .enable }}
-                <a class="btn btn-secondary mt-4 md:mt-6 md:ml-4" href="{{ site.Params.dealum.member_link | absURL }}">
-                  {{ i18n "button_labels.member" | safeHTML }}
-                  <i class="fa fa-arrow-right pl-2"></i>
-                </a>
+                {{ $index = add $index 1 }}
               {{ end }}
             {{ end }}
           </div>

@@ -1,6 +1,5 @@
 +++
 title = "Deal Flow Sources"
-type = "blog"
 +++
 
 #### Screening

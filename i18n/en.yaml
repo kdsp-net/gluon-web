@@ -16,6 +16,7 @@ button_labels:
   startup: Apply <span>(Startup)</span>
   member: Join <span>(Investor)</span>
   subscribe: Subscirbe
+  investment_process: Investment Process
 announcement_message: "We've booked a plane to **Web Summit 2024** in **Lisbon**! Fly with us and enjoy great deals on hotel, tickets and side events. Let's network right from the **lift off**."
 beehiiv_url:
   default: "https://embeds.beehiiv.com/04babe21-4fa5-4161-acd6-2638316a6a13"

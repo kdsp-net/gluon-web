@@ -1,6 +1,5 @@
 +++
 title = "Startup Criteria"
-type = "blog"
 +++
 
 In Gluon Syndicate we are looking for startups that meet these criteria:
