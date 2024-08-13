@@ -36,6 +36,28 @@
   {{ end }}
   <!-- /Banner -->
 
+  <!-- Countdown Timer -->
+
+  {{ if site.Params.next_event.enable }}
+  <section class="section next-event">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-7 md:col-9 text-center">
+          <h2>
+            {{ i18n "timer.title" }}
+          </h2>
+          {{ partial "components/countdown-timer" }}
+          <p>
+            <i class="fa-regular fa-location-pin"></i> {{ site.Params.next_event.location }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- /Coutdown Timer -->
+
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
     <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">

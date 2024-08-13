@@ -35,6 +35,11 @@ name = "Knowledge Base"
 pageRef = "/resources/knowledge-base"
 
 [[main]]
+parent = "Resources"
+name = "Investor Deck"
+url = "https://slides.gluon.vc/investor-deck"
+
+[[main]]
 name = "Contact"
 pageRef = "/contact"
 weight = 4

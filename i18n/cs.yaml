@@ -20,3 +20,9 @@ announcement_message: "Rezervovali jsme letadlo na **Web Summit 2024** v **Lisab
 beehiiv_url:
   default: "https://embeds.beehiiv.com/d1961360-055e-42e3-9ed9-d355489da9cb"
   dark: "https://embeds.beehiiv.com/6e9538b1-e558-4795-850e-04ec4c48a6da"
+timer:
+  title: "Příští Pitching Event:"
+  days: Dnů
+  hours: Hodin
+  minutes: Minut
+  seconds: Sekund

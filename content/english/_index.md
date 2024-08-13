@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "GLUON SYNDICATE"
-  content: "Whether you’re an angel investor looking to diversify and maximize your portfolio or a startup seeking fair and early-stage funding, Gluon Syndicate is here for you. Join our newsletter and be part of a community that’s shaping the future of angel investments in CEE!"
+  content: "Whether you’re an angel investor looking to diversify and maximize your portfolio or a startup seeking fair and early-stage funding, Gluon Syndicate is here for you. Join us and become a part of a community that’s shaping the future of angel investments in CEE!"
   image: "/images/banner.png"
   buttons:
     - label_key: "startup" 
@@ -48,8 +48,8 @@ features:
         link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
         type: "primary"
         enable: true
-      - label_key: "investment_process" 
-        link:  "/resources/knowladge-base/investment-process"
+      - label_key: "investor_deck" 
+        link:  "https://slides.gluon.vc/investor-deck"
         type: "secondary"
         enable: true
 
@@ -68,8 +68,8 @@ features:
         link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
         type: "primary"
         enable: true
-      - label_key: "member" 
-        link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
-        type: "tertiary"
+      - label_key: "investment_process" 
+        link:  "/resources/knowledge-base/investment-process"
+        type: "secondary"
         enable: true
 ---

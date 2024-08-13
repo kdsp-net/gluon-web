@@ -61,3 +61,35 @@ h6 {
 .founder-socials li a {
   @apply relative -top-2 h-6 w-6 text-xs;
 }
+
+// Count Down
+
+.count-down-title {
+  @apply flex items-center justify-center w-full
+}
+
+.count-down-main {
+  @apply flex items-center justify-center w-full gap-6
+}
+
+.timer {
+  div {
+    @apply pr-1.5 pl-2 relative bg-darkmode-border dark:bg-border w-max before:absolute before:h-full before:w-0.5 before:top-0 before:left-1/2 before:-translate-x-1/2 before:bg-darkmode-body dark:before:bg-body before:z-10
+  };
+  h3 {
+    @apply font-semibold text-2xl text-darkmode-dark dark:text-dark tracking-[15.36px] max-w-[44px] text-center relative z-20
+  };
+  p {
+    @apply text-sm font-medium text-darkmode-dark dark:text-dark mt-1 text-center w-full
+  }
+}
+
+.next-event {
+  @apply bg-dark dark:bg-darkmode-dark;
+  h2 {
+    @apply mb-4 text-h3 lg:text-h3 text-darkmode-dark dark:text-dark
+  };
+  p {
+    @apply text-sm font-medium text-darkmode-dark dark:text-dark mt-4 text-center w-full
+  }
+}
