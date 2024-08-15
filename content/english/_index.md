@@ -77,18 +77,18 @@ features:
     image: "/images/service-4.png"
     content: "Gluon Syndicate despises predatory deals and offers investment through convertible loan agreements that postpone the discussion about valuation until the upcoming qualified round."
     bulletpoints:
-      - "We target pre-revenue and first-revenue startups from CEE industry-agnostic"
-      - "Our sweet spot for investment is in the range of 50‑300K, founders set the investment target themselves"
-      - "Reaching the investment target at the pitching event serves as a threshold for making the investment"
+      - "We target pre-revenue and first-revenue CEE startups (industry-agnostic)"
+      - "Our investment sweet spot is in the range of 50‑300K, founders set the investment targets themselves"
+      - "Reaching the investment target at the pitching event sets off the deal"
       - "Once the startup raises their goal, they can raise up to double the amount as a stretch goal."
-      - "Funding based on CLAs with 30% discount on subsequent equity round and valuation cap in the amount of ten times the investment target"
+      - "Funding based on CLAs with 30% discount on a subsequent round and a valuation cap in the amount of 10&times; the investment target"
     buttons:
       - label_key: "investment_process"
-        link:  "/how-we-invsest"
+        link:  "/how-we-invest"
         type: "primary"
         enable: true
       - label_key: "investment_criteria"
-        link:  "/resources/knowledge-base/investment-criteria"
+        link:  "/resources/knowledge-base/startup-criteria"
         type: "secondary"
         enable: true
 ---
