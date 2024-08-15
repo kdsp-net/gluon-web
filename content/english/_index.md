@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "GLUON SYNDICATE"
+  title: "Shaping the Early-Stage Landscape"
   content: "Whether you’re an angel investor looking to diversify and maximize your portfolio or a startup seeking fair and early-stage funding, Gluon Syndicate is here for you. Join us and become a part of a community that’s shaping the future of angel investments in CEE!"
   image: "/images/banner.png"
   buttons:
