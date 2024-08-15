@@ -16,7 +16,9 @@ button_labels:
   startup: Přihlásit se <span>(Startup)</span>
   member: Připojit se <span>(Investor)</span>
   subscribe: Odebírat
-announcement_message: "Rezervovali jsme letadlo na **Web Summit 2024** v **Lisabonu**! Létajte s námi a užijte si skvělé nabídky na hotely, lístky a vedlejší akce. Spojte se s námi přímo od **startu**."
+announcement:
+  message: "Rezervovali jsme letadlo na **Web Summit 2024** v **Lisabonu**! Létajte s námi a užijte si skvělé nabídky na hotely, lístky a vedlejší akce. Spojte se s námi přímo od **startu**."
+  link: "https://www.pelikan.cz/cs/pobyt/web-summit-lisabon-gluon-syndicate"
 beehiiv_url:
   default: "https://embeds.beehiiv.com/d1961360-055e-42e3-9ed9-d355489da9cb"
   dark: "https://embeds.beehiiv.com/6e9538b1-e558-4795-850e-04ec4c48a6da"

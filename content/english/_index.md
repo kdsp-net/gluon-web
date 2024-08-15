@@ -80,7 +80,7 @@ features:
       - "We target pre-revenue and first-revenue CEE startups (industry-agnostic)"
       - "Our investment sweet spot is in the range of 50‑300K, founders set the investment targets themselves"
       - "Reaching the investment target at the pitching event sets off the deal"
-      - "Once the startup raises their goal, they can raise up to double the amount as a stretch goal."
+      - "Once the startup raises their goal, they can raise up to double the amount as a stretch goal"
       - "Funding based on CLAs with 30% discount on a subsequent round and a valuation cap in the amount of 10&times; the investment target"
     buttons:
       - label_key: "investment_process"

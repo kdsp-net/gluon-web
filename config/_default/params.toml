@@ -63,8 +63,6 @@ show_categories = true
 [announcement]
 enable = true
 expire_days = 7
-content_key = "announcement_message"
-link = "https://www.pelikan.sk/sk/pobyt/web-summit-lisabon"
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
