@@ -1,5 +1,5 @@
 home: Domů
-read_more: Přečíst více
+read_more: Číst více
 send: Odeslat
 related_posts: Související příspěvky
 categories: Kategorie
@@ -9,15 +9,18 @@ share: Sdílet
 search_input_placeholder: Hledat příspěvek...
 search_no_results: Žádné výsledky pro
 search_initial_message: Napište něco k vyhledání..
-search_navigate: pro navigaci
-search_select: pro výběr
-search_close: pro zavření
+search_navigate: navigovat
+search_select: vybrat
+search_close: zavřít
 button_labels:
   startup: Přihlásit se <span>(Startup)</span>
-  member: Připojit se <span>(Investor)</span>
+  member: Přidat se <span>(Investor)</span>
   subscribe: Odebírat
+  investment_process: Jak investujeme
+  investor_deck: Prezentace pro investory
+  investment_criteria: Investiční kritéria
 announcement:
-  message: "Rezervovali jsme letadlo na **Web Summit 2024** v **Lisabonu**! Létajte s námi a užijte si skvělé nabídky na hotely, lístky a vedlejší akce. Spojte se s námi přímo od **startu**."
+  message: "Jsi investor, startupista nebo technologický nadšenec a plánuješ navštívit Web Summit 2024? **Rezervovali jsme pro tebe letadlo z Prahy, Brna, Bratislavy a Košic!** Poleťte s námi a užijte si skvělou kombinaci ubytování, vstupenek a doprovodného programu."
   link: "https://www.pelikan.cz/cs/pobyt/web-summit-lisabon-gluon-syndicate"
 beehiiv_url:
   default: "https://embeds.beehiiv.com/d1961360-055e-42e3-9ed9-d355489da9cb"

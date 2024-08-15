@@ -3,27 +3,30 @@ read_more: Čítať viac
 send: Odoslať
 related_posts: Súvisiace príspevky
 categories: Kategórie
-tags: Označenia
+tags: Štítky
 toc: Obsah
 share: Zdieľať
 search_input_placeholder: Hľadať príspevok...
 search_no_results: Žiadne výsledky pre
 search_initial_message: Napíšte niečo na vyhľadanie..
-search_navigate: na navigáciu
-search_select: na výber
-search_close: na zatvorenie
+search_navigate: navigovať
+search_select: vybrať
+search_close: zatvoriť
 button_labels:
   startup: Prihlásiť sa <span>(Startup)</span>
   member: Pripojiť sa <span>(Investor)</span>
   subscribe: Odoberať
+  investment_process: Ako investujeme
+  investor_deck: Prezentácia pre investorov
+  investment_criteria: Investičné kritéria
 announcement:
-  message: "Zarezervovali sme lietadlo na **Web Summit 2024** v **Lisabone**! Letujte s nami a užívajte si skvelé zľavy na hotely, lístky a vedľajšie podujatia. Spoznajte sa s nami priamo od **štartu**."
+  message: "Si investor, startupista alebo technologický našenec a plánuješ ísť na Web Summit 2024? **Zarezervovali sme pre teba lietadlo z Bratislavy, Košíc, Prahy a Brna!** Leťte s nami a užite si skvelú kombináciu ubytovania, vstupeniek a sprievodného programu."
   link: "https://www.pelikan.sk/sk/pobyt/web-summit-lisabon-gluon-syndicate"
 beehiiv_url:
   default: "https://embeds.beehiiv.com/afc88566-4707-413e-944d-e7af9cbf3a07"
   dark: "https://embeds.beehiiv.com/6f392545-b778-43db-b3dc-ba54ce18eb63"
 timer:
-  title: "Nadchádzajúcí Pitching Event:"
+  title: "Nadchádzajúci Pitching Event:"
   days: Dní
   hours: Hodín
   minutes: Minút
