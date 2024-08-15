@@ -47,9 +47,14 @@
             {{ i18n "timer.title" }}
           </h2>
           {{ partial "components/countdown-timer" }}
-          <p>
-            <i class="fa-regular fa-location-pin"></i> {{ site.Params.next_event.location }}
-          </p>
+          <ul>
+            <li>
+              <i class="fa-regular fa-calendar"></i> {{ site.Params.next_event.date_display }}
+            </li>
+            <li>
+              <i class="fa-regular fa-location-pin"></i> {{ site.Params.next_event.location }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>

@@ -73,16 +73,15 @@ features:
         type: "secondary"
         enable: true
 
-  - title: "Investment Process & Criteria"
+  - title: "Fair Deals, Clear Conditions"
     image: "/images/service-4.png"
-    content: "In Gluon Syndicate we are looking for startups that meet these criteria:"
+    content: "Gluon Syndicate despises predatory deals and offers investment through convertible loan agreements that postpone the discussion about valuation until the upcoming qualified round."
     bulletpoints:
-      - "CEE region (founders or business)"
-      - "Pre-revenue or first-revenue"
-      - "Industry agnostic"
-      - "Looking for a first investor on board (not a condition)"
-      - "Seeking €50-300k investment"
-      - "Think Big mindset"
+      - "We target pre-revenue and first-revenue startups from CEE industry-agnostic"
+      - "Our sweet spot for investment is in the range of 50‑300K, founders set the investment target themselves"
+      - "Reaching the investment target at the pitching event serves as a threshold for making the investment"
+      - "Once the startup raises their goal, they can raise up to double the amount as a stretch goal."
+      - "Funding based on CLAs with 30% discount on subsequent equity round and valuation cap in the amount of ten times the investment target"
     buttons:
       - label_key: "investment_process"
         link:  "/how-we-invsest"

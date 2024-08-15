@@ -89,7 +89,10 @@ h6 {
   h2 {
     @apply mb-4 text-h3 lg:text-h3 text-darkmode-dark dark:text-dark
   };
-  p {
-    @apply text-sm font-medium text-darkmode-dark dark:text-dark mt-4 text-center w-full
+  ul {
+    @apply mt-4 flex flex-wrap items-center justify-center space-x-4 md:space-x-6
+  };
+  li {
+    @apply text-sm font-medium text-darkmode-dark dark:text-dark
   }
 }
