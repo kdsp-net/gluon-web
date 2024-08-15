@@ -69,7 +69,27 @@ features:
         type: "primary"
         enable: true
       - label_key: "investment_process"
-        link:  "/resources/knowledge-base/investment-process"
+        link:  "/how-we-invest"
+        type: "secondary"
+        enable: true
+
+  - title: "Investment Process & Criteria"
+    image: "/images/service-4.png"
+    content: "In Gluon Syndicate we are looking for startups that meet these criteria:"
+    bulletpoints:
+      - "CEE region (founders or business)"
+      - "Pre-revenue or first-revenue"
+      - "Industry agnostic"
+      - "Looking for a first investor on board (not a condition)"
+      - "Seeking €50-300k investment"
+      - "Think Big mindset"
+    buttons:
+      - label_key: "investment_process"
+        link:  "/how-we-invsest"
+        type: "primary"
+        enable: true
+      - label_key: "investment_criteria"
+        link:  "/resources/knowledge-base/investment-criteria"
         type: "secondary"
         enable: true
 ---
