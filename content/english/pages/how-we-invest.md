@@ -8,6 +8,25 @@ description: "This is meta description"
 draft: false
 ---
 
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+  .page-columns .column-page-inset {
+      z-index: 100;                     /* default z-index: 998; */
+    }
+</style>
+
 {{< toc >}}
 
 Here is an example of headings. You can use this heading by the following markdown rules. For example: use `#` for heading 1 and use `######` for heading 6.
@@ -193,12 +212,70 @@ print s
 ```
 
 ```mermaid
-flowchart TD
-    A[Start] --> B{Is it?}
-    B -- Yes --> C[OK]
-    C --> D[Rethink]
-    D --> B
-    B -- No ----> E[End]
+
+flowchart LR
+
+inbound("Inbound")
+events("Startup Events & Network")
+accelerators("Accelerators & Incubators")
+members("Syndicate members")
+inbox("Inbox")
+prescreening("Pre-screening")
+screening("Screening")
+shortlist("Shortlist")
+vc("VC Funds")
+followup("Follow Up")
+archive("Archive")
+pitchevent("Pitch Event")
+duedilligence("Due Dilligence")
+cla("Convertible Loan")
+qualifiedround("Subsequent Qualified Round(s)")
+conversion("Conversion to Equity")
+exit("Exit")
+
+click inbound callback "Tooltip for Inbound"
+
+members --> selection
+members -. Wildcard .-> pitchevent
+accelerators --> selection
+events --> selection
+inbound --> selection
+
+subgraph selection ["Selection Process"]
+    direction TB
+    inbox --> prescreening
+    prescreening --> screening
+    screening --> shortlist
+end
+
+selection --> followup
+followup --> selection
+selection --> archive
+selection -- "Later Stage" --> vc
+vc -- "Early Stage<br>/ Co-investment" --> selection
+selection ==> pitchevent
+pitchevent ==> investment
+
+subgraph investment ["Investment Process"]
+direction TB
+duedilligence --> cla
+cla --> qualifiedround
+qualifiedround --> conversion
+end
+
+investment ==> exit    
+    
+style inbox color:#FFFFFF, fill:#000
+style prescreening color:#FFFFFF, fill:#000
+style screening color:#FFFFFF, fill:#000
+style shortlist color:#FFFFFF, fill:#000
+style pitchevent color:#FFFFFF, fill:#000
+style duedilligence color:#FFFFFF, fill:#000
+style cla color:#FFFFFF, fill:#000
+style qualifiedround color:#FFFFFF, fill:#000
+style conversion color:#FFFFFF, fill:#000
+style exit color:#FFFFFF, fill:#000
+
 ```
 
 <hr>

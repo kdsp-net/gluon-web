@@ -1,0 +1,7 @@
+<!-- Assume the date is passed as a string in ISO8601 format -->
+{{ $dateString := .Get 0 }}
+<!-- Try to parse the datetime part without timezone -->
+{{ $date := time (slice $dateString 0 19) }} <!-- Remove timezone for Hugo compatibility -->
+<!-- Format the date for the current locale -->
+{{ $formattedDate := $date.Format ":date_full" }}
+{{ $formattedDate }}

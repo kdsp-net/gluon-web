@@ -49,7 +49,12 @@
           {{ partial "components/countdown-timer" }}
           <ul>
             <li>
-              <i class="fa-regular fa-calendar"></i> {{ site.Params.next_event.date_display }}
+              <i class="fa-regular fa-calendar"></i> 
+              {{ with site.Params.next_event.date }}
+                {{ $dateString := slicestr . 0 19 }} <!-- Extract the date-time portion -->
+                {{ $date := time $dateString }}
+                {{ $date | time.Format ":date_full" }}
+              {{ end }}
             </li>
             <li>
               <i class="fa-regular fa-location-pin"></i> {{ site.Params.next_event.location }}
