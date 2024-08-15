@@ -1,15 +1,15 @@
 ---
 # Banner
 banner:
-  title: "Shaping the Early-Stage Landscape"
+  title: "Shaping the Early-Stage Funding Landscape"
   content: "Whether you’re an angel investor looking to diversify and maximize your portfolio or a startup seeking fair and early-stage funding, Gluon Syndicate is here for you. Join us and become a part of a community that’s shaping the future of angel investments in CEE!"
   image: "/images/banner.png"
   buttons:
-    - label_key: "startup" 
+    - label_key: "startup"
       link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
       type: "primary"
       enable: true
-    - label_key: "member" 
+    - label_key: "member"
       link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
       type: "secondary"
       enable: true
@@ -25,11 +25,11 @@ features:
       - "Fair, transparent investments through a standardized legal framework"
       - "Investments of €50K to €300K in pre-seed and seed stages"
     buttons:
-      - label_key: "startup" 
+      - label_key: "startup"
         link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
         type: "primary"
         enable: true
-      - label_key: "member" 
+      - label_key: "member"
         link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
         type: "secondary"
         enable: true
@@ -44,11 +44,11 @@ features:
       - "Simplified investment process with a templated legal framework"
       - "Active investor-startup relationship management for sustained growth"
     buttons:
-      - label_key: "member" 
+      - label_key: "member"
         link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
         type: "primary"
         enable: true
-      - label_key: "investor_deck" 
+      - label_key: "investor_deck"
         link:  "https://slides.gluon.vc/investor-deck"
         type: "secondary"
         enable: true
@@ -64,11 +64,11 @@ features:
       - "Quick and efficient funding process"
       - "Pathway to subsequent funding rounds with leading CEE VC funds"
     buttons:
-      - label_key: "startup" 
+      - label_key: "startup"
         link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
         type: "primary"
         enable: true
-      - label_key: "investment_process" 
+      - label_key: "investment_process"
         link:  "/resources/knowledge-base/investment-process"
         type: "secondary"
         enable: true
