@@ -23,7 +23,7 @@ features:
       - "Čtyři prestižní fyzické pitch eventy ročně na Slovensku a v Česku"
       - "Představení 15 předem vybraných a prověřených startupů na každém eventu"
       - "Férové, transparentní investice prostřednictvím standardizovaného právního rámce"
-      - „Preseedové a seedové investice ve výši 50 000 až 300 000 EUR“
+      - "Preseedové a seedové investice ve výši 50 000 až 300 000 EUR"
     buttons:
       - label_key: "startup"
         link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
@@ -38,8 +38,8 @@ features:
     image: "/images/service-2.png"
     content: "Gluon Syndicate nabízí investorům jedinečné příležitosti ke vstupu do nejslibnějších startupů v regionu střední a východní Evropy."
     bulletpoints:
-      - "Získejte přístup k prvotřídnímu deal flow prostřednictvím rozsáhlého networku a partnerství“
-      - „Diverzifikujte své portfolio investicemi již od 5 000 EUR“
+      - "Získejte přístup k prvotřídnímu deal flow prostřednictvím rozsáhlého networku a partnerství"
+      - "Diverzifikujte své portfolio investicemi již od 5 000 EUR"
       - "Spoluinvestujte se zkušenými angel investory a sdílejte poznatky a rizika"
       - "Zjednodušený investiční proces se šablonovým právním rámcem"
       - "Aktivní řízení vztahu investor-startup pro udržitelný růst"
@@ -77,12 +77,11 @@ features:
     image: "/images/service-4.png"
     content: "Gluon Syndicate pohrdá predátorskými praktikami a nabízí investice prostřednictvím smluv o konvertibilních půjčkách, které odkládají diskusi o valuaci až do nadcházejícího kvalifikovaného kola."
     bulletpoints:
-      – „Zaměřujeme se na startupy ze střední a východní Evropy ve fázi pilotních projektů a prvních tržeb (bez preference konkrétního odvětví)“
+      - "Zaměřujeme se na startupy ze střední a východní Evropy ve fázi pilotních projektů a prvních tržeb (bez preference konkrétního odvětví)"
       - "Náš investiční sweet spot je v rozmezí 50-300 tis. Eur, zakladatelé si sami stanovují investiční cíle"
-      – „Dosažení investičního cíle na pitch eventu spuští celou investici“
+      - "Dosažení investičního cíle na pitch eventu spuští celou investici"
       - "Jakmile startup dosáhne svůj cíl, může pokračovat v raisování peněz až na dvojnásobnou částku"
       - "Financování na základě CLA s 30% slevou na valuaci pro následující investiční kolo a valuation cap ve výši 10-násobku investičního cíle"
-      
     buttons:
       - label_key: "investment_process"
         link:  "/how-we-invest"
