@@ -53,7 +53,7 @@ link = "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln
 [search]
 enable = true
 primary_color = "#121212"
-include_sections = ["blog"]
+include_sections = ["resources"]
 show_image = true
 show_description = true
 show_tags = true

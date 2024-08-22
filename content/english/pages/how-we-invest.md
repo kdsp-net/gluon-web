@@ -8,217 +8,14 @@ description: "This is meta description"
 draft: false
 ---
 
-<style>
-  .mermaidTooltip {
-      position: absolute;
-      text-align: center;
-      max-width: 200px;
-      padding: 2px;
-      font-family: 'trebuchet ms', verdana, arial;
-      font-size: 12px;
-      background: #ffffde;
-      border: 1px solid #aaaa33;
-      border-radius: 2px;
-      pointer-events: none;
-      z-index: 100;
-    }
-  .page-columns .column-page-inset {
-      z-index: 100;                     /* default z-index: 998; */
-    }
-</style>
-
-{{< toc >}}
-
-Here is an example of headings. You can use this heading by the following markdown rules. For example: use `#` for heading 1 and use `######` for heading 6.
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-<hr>
-
-### Emphasis
-
-The emphasis, aka italics, with _asterisks_ or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
-
-The combined emphasis with **asterisks and _underscores_**.
-
-Strike through uses two tildes. ~~Scratch this.~~
-
-<hr>
-
-### Button
-
-{{< button label="Button" link="/" style="solid" >}}
-
-<hr>
-
-### Link
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-<http://www.example.com> or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.themefisher.com
-[1]: https://gethugothemes.com
-[link text itself]: https://www.getjekyllthemes.com
-
-<hr>
-
-### Paragraph
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
-
-<hr>
-
-### Ordered List
-
-1. List item
-2. List item
-3. List item
-4. List item
-5. List item
-
-<hr>
-
-### Unordered List
-
-- List item
-- List item
-- List item
-- List item
-- List item
-
-<hr>
-
-### Notice
-
-{{< notice "note" >}}
-This is a simple note.
-{{< /notice >}}
-
-{{< notice "tip" >}}
-This is a simple tip.
-{{< /notice >}}
-
-{{< notice "info" >}}
-This is a simple info.
-{{< /notice >}}
-
-{{< notice "warning" >}}
-This is a simple warning.
-{{< /notice >}}
-
-<hr>
-
-### Tab
-
-{{< tabs >}}
-{{< tab "Tab 1" >}}
-
-#### Hey There, I am a tab
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-{{< /tab >}}
-
-{{< tab "Tab 2" >}}
-
-#### I wanna talk about the assassination attempt
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-{{< /tab >}}
-
-{{< tab "Tab 3" >}}
-
-#### We know you’re dealing in stolen ore
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-
-{{< /tab >}}
-{{< /tabs >}}
-
-<hr>
-
-### Accordions
-
-{{< accordion "Why should you need to do this?" >}}
-
-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-- Lorem ipsum dolor sit amet consectetur
-
-{{< /accordion >}}
-
-{{< accordion "How can I adjust Horizontal centering" >}}
-
-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-- Lorem ipsum dolor sit amet consectetur
-
-{{< /accordion >}}
-
-{{< accordion "Should you use Negative margin?" >}}
-
-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-- Lorem ipsum dolor sit amet consectetur
-
-{{< /accordion >}}
-
-<hr>
-
-### Code and Syntax Highlighting
-
-This is an `Inline code` sample.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
 ```mermaid
 
-flowchart LR
+flowchart TD
 
 inbound("Inbound")
 events("Startup Events & Network")
 accelerators("Accelerators & Incubators")
-members("Syndicate members")
+members("Syndicate Members")
 inbox("Inbox")
 prescreening("Pre-screening")
 screening("Screening")
@@ -226,100 +23,97 @@ shortlist("Shortlist")
 vc("VC Funds")
 followup("Follow Up")
 archive("Archive")
-pitchevent("Pitch Event")
-duedilligence("Due Dilligence")
+firstRound("First Round")
+secondRound("Second Round")
+extraFunding("Extra Funding")
+dueDilligence("Due Dilligence")
 cla("Convertible Loan")
-qualifiedround("Subsequent Qualified Round(s)")
+qualifiedRound("Subsequent Qualified Round(s)")
 conversion("Conversion to Equity")
 exit("Exit")
 
-click inbound callback "Tooltip for Inbound"
+click inbox href "#inbox"
+click prescreening href "#pre-screening"
+click screening href "#screening"
+click shortlist href "#shortlist"
+click firstRound href "#first-round"
+click secondRound href "#second-round"
+click extraFunding href "#extra-funding"
 
-members --> selection
-members -. Wildcard .-> pitchevent
-accelerators --> selection
-events --> selection
-inbound --> selection
-
-subgraph selection ["Selection Process"]
-    direction TB
-    inbox --> prescreening
-    prescreening --> screening
-    screening --> shortlist
+subgraph sourcing ["Sourcing"]
+  inbound
+  events
+  accelerators
 end
 
-selection --> followup
-followup --> selection
+sourcing ==> selection
+members --> selection
+
+subgraph selection ["Selection Process"]
+  direction LR
+  inbox --> prescreening
+  prescreening --> screening
+  screening --> shortlist
+end
+
+selection <--> followup
+selection ==> event
 selection --> archive
-selection -- "Later Stage" --> vc
-vc -- "Early Stage<br>/ Co-investment" --> selection
-selection ==> pitchevent
-pitchevent ==> investment
+selection <-- "Co-investment" --> vc
+
+members -. "Wildcard" .-> event
+
+subgraph event ["Pitching Event"]
+  direction LR
+  firstRound --> secondRound
+  secondRound --> extraFunding
+end
+
+event ==> investment
 
 subgraph investment ["Investment Process"]
-direction TB
-duedilligence --> cla
-cla --> qualifiedround
-qualifiedround --> conversion
+  direction LR
+  dueDilligence --> cla
+  cla --> qualifiedRound
+  qualifiedRound --> conversion
 end
 
 investment ==> exit    
-    
-style inbox color:#FFFFFF, fill:#000
-style prescreening color:#FFFFFF, fill:#000
-style screening color:#FFFFFF, fill:#000
-style shortlist color:#FFFFFF, fill:#000
-style pitchevent color:#FFFFFF, fill:#000
-style duedilligence color:#FFFFFF, fill:#000
-style cla color:#FFFFFF, fill:#000
-style qualifiedround color:#FFFFFF, fill:#000
-style conversion color:#FFFFFF, fill:#000
-style exit color:#FFFFFF, fill:#000
 
 ```
 
 <hr>
 
-### Blockquote
+## Selection
 
-> Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once.
+### Inbox
 
-<hr>
+Každá nová príležitosť nám pristane do inboxu, najčastejšie na základe online prihlášky u nás na webe. Snažíme sa, aby founderi ešte pred vyplnením prihlášky poznali fungovanie Gluon Syndicate a podmienky, za akých investujeme. Do ďalšej fázy posúvame projekty, ktoré spĺňajú základné investičné kritériá (fáza projektu, veľkosť potrebnej investície, očakávania founders)
 
-### Tables
+### Pre-screening
 
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
+V prvej fáze výberového procesu hodnotíme odpovede na otázky z prihlášky ohľadom problému a riešenia, trhu a konkurencie, inovatívnosti konceptu, sily týmu a biznis modelu, atď. Projekty, ktoré vyhodnotíme ako zaujímavé posunujeme do ďalšej fázy.
 
-<hr>
+### Screening
 
-### Image
+V druhej fáze výberového procesu ideme významne viacej do detailu prezentovaného biznisu. Analýza pozostáva z rozšírenej sady otázok a odpovedí a 30-60 minútového callu s foundermi startupu. Na základe zistení vyberáme startupy na shortlist, pričom vždy mesiac pred pitch eventom chceme mať na shortliste 30 najzaujímavejších startupov, ktoré sme za posledný kvartál videli.
 
-{{< image src="images/image-placeholder.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+### Shortlist
+
+Z 30 shortlistovaných startupov vyberáme 15 najlepších, ktoré dostanú príležitosť zabojovať o investíciu na pitch evente. O nominácii na každý event rozhoduje bodovacie hlasovanie zakladateľov a VIP členovi Gluon Syndicate, ktoré prebieha prostredníctvom vlastnej online platformy. Nominácie na event sú známe 14 dní pred jeho uskutočnením.
 
 <hr>
 
-### Gallery
+## Event
 
-{{< gallery dir="images/gallery" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+### First Round
 
-<hr>
+V prvej časti eventu majú postupne všetky startupy na stagi 5 minútový priestor na pitch. Okrem toho majú founderi od začiatku eventu k dispozícii vlastný prezentačný stánok. Od štartu eventu môžu všetci prítomní investori vyjadriť predbežný záujem investovať do konkrétneho startupu zadaním predbežného ticketu v konkrétnej výške do mobilnej aplikácie. Kvantifikovaný predbežný záujem o investície do všetkých startupov je vizualizovaný na displejoch. Na konci prvého kola sa vyhodnotí predbežný záujem a 6 startupov s najväčšou sumou postupuje do druhého kola na stagi (nepostupujúce startupy naďalej môžu nariasovať počas eventu svoje ciele, len už nedostávajú ďalší priestor na stagi).
 
-### Slider
+### Second Round
 
-{{< slider dir="images/gallery" class="max-w-[600px] ml-0" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+V druhom kole dostáva 6 startupov s najvyššou sumou kvantifikovaného záujmu o investíciu príležitosť odprezentovať na stagi svoj biznis model (a prípadne aj produktové demo). Na konci každej prezentácie prebieha krátka Q&A session. Od začiatku druhého kola môžu investori  konvertovať predbežný záujem na záväznú ponuku (a naďalej ľubovoľne  vyjadrovať a meniť predbežné záujmy). Vyjadrením záväznej ponuky získava startup prísĺub investície od daného investora. Ak suma prísľubov na evente dosiahne, resp. prekročí hranicu investičného cieľa, ktorú si founderi definovali, investícia sa bude realizovať. Ak sa počas eventu founderom nepodarí získať sumu záväzných ponúk na úrovni investičného cieľa, žiadna investícia sa nerealizuje.
 
-<hr>
+### Extra Funding
 
-### Youtube video
-
-{{< youtube ResipmZmpDU >}}
-
-<hr>
-
-### Custom video
-
-{{< video src="https://www.w3schools.com/html/mov_bbb.mp4" width="100%" height="auto" autoplay="false" loop="false" muted="false" controls="true" class="rounded-lg" >}}
+Founderi jednotlivých startupov si vopred určujú okrem svojho investičného cieľa (ktorý je zároveň tresholdom celej investície) aj možnosť naraisovať "extra funding" vo výške 0-100% investičného cieľa, teda možnosť až zdvojnásobiť investíciu. Ak úspešný startup dosiahne hranicu extra fundingu priamo na evente, investičná príležitosť sa uzatvára a už nie je možné do startupu ďalej investovať. Ak startup dosiahne na evente svoj investičný cieľ ale nedosiahne hranicu extra fundingu, ostane táto príležitosť otvorená pre angel investorov ešte 5 dní prostredníctvom mobilnej aplikácie (ak sa počas tohto obdobia naplní extra funding, príležitosť sa zatvorí).
