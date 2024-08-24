@@ -1,6 +1,6 @@
 +++
-title = "Ako investujeme?"
-meta_title = "Ako investujeme?"
+title = "How We Invest"
+meta_title = "How We Invest"
 +++
 
 ```mermaid
