@@ -28,8 +28,9 @@ secondRound("Second Round")
 extraFunding("Extra Funding")
 dueDilligence("Due Dilligence")
 cla("Convertible Loan")
-qualifiedRound("Subsequent Qualified Round(s)")
-conversion("Conversion to Equity")
+qualifiedRound("Equity Round")
+conversion("Conversion")
+subsequentRounds("Subsequent Rounds")
 exit("Exit")
 
 click inbox href "#inbox"
@@ -44,10 +45,12 @@ subgraph sourcing ["Sourcing"]
   inbound
   events
   accelerators
+  vc
+  members
 end
 
+vc <-. "Co-investments" .-> selection
 sourcing ==> selection
-members --> selection
 
 subgraph selection ["Selection Process"]
   direction LR
@@ -59,14 +62,13 @@ end
 selection <--> followup
 selection ==> event
 selection --> archive
-selection <-- "Co-investment" --> vc
 
-members -. "Wildcard" .-> event
+members -. "Wildcards" .-> event
 
 subgraph event ["Pitching Event"]
   direction LR
   firstRound --> secondRound
-  secondRound --> extraFunding
+  secondRound .-> extraFunding
 end
 
 event ==> investment
@@ -78,7 +80,8 @@ subgraph investment ["Investment Process"]
   qualifiedRound --> conversion
 end
 
-investment ==> exit    
+investment ==> subsequentRounds
+subsequentRounds ==> exit    
 
 ```
 

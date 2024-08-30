@@ -125,3 +125,23 @@ member_link = "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1t
 enable = true
 date = "2024-10-03T16:00:00+02:00"
 location = "Bratislava, SK"
+
+[pricing]
+title = "Choose your plan"
+subtitle = "7 Days free trial. No credit card required."
+monthlyLabel = "Bill Monthly"
+yearlyLabel = "Bill Yearly"
+
+[[pricing.plans]]
+name = "Basic"
+price = "€1000"
+isPopular = true
+popularText = "MOST POPULAR"
+features = ["Deal flow", "Quarterly pitching events", "Online community"]
+link = "#"
+
+[[pricing.plans]]
+name = "Premium"
+price = "$3000"
+features = ["All Basic features", "Companion tickets", "Shortlist voting", "Wildcard"]
+link = "#"
