@@ -1,12 +1,7 @@
----
-title: "Elements"
-# meta title
-meta_title: ""
-# meta description
-description: "This is meta description"
-# save as draft
-draft: false
----
++++
+title = "How We Invest"
+meta_title = "How We Invest"
++++
 
 ```mermaid
 
@@ -31,7 +26,7 @@ cla("Convertible Loan")
 qualifiedRound("Equity Round")
 conversion("Conversion")
 subsequentRounds("Subsequent Rounds")
-exit("Exit")
+exit("EXIT") 
 
 click inbox href "#inbox"
 click prescreening href "#pre-screening"
@@ -42,50 +37,49 @@ click secondRound href "#second-round"
 click extraFunding href "#extra-funding"
 
 subgraph sourcing ["Sourcing"]
-  inbound
-  events
-  accelerators
-  vc
-  members
+  inbound
+  events
+  accelerators
+  vc
+  members
 end
 
 vc <-. "Co-investments" .-> selection
 sourcing ==> selection
 
 subgraph selection ["Selection Process"]
-  direction LR
-  inbox --> prescreening
-  prescreening --> screening
-  screening --> shortlist
-end
+  direction LR
+  inbox --> prescreening
+  prescreening --> screening
+  screening --> shortlist
+end 
 
 selection <--> followup
 selection ==> event
 selection --> archive
 
-members -. "Wildcards" .-> event
+members -. "Wildcards" .-> event  
 
 subgraph event ["Pitching Event"]
-  direction LR
-  firstRound --> secondRound
-  secondRound .-> extraFunding
-end
+  direction LR
+  firstRound --> secondRound
+  secondRound .-> extraFunding
+end 
 
-event ==> investment
+event ==> investment  
 
 subgraph investment ["Investment Process"]
-  direction LR
-  dueDilligence --> cla
-  cla --> qualifiedRound
-  qualifiedRound --> conversion
+  direction LR
+  dueDilligence --> cla
+  cla --> qualifiedRound
+  qualifiedRound --> conversion
 end
 
 investment ==> subsequentRounds
-subsequentRounds ==> exit    
+subsequentRounds ==> exit
 
 ```
-
-<hr>
+ 
 
 ## Selection
 
@@ -105,17 +99,15 @@ V druhej fáze výberového procesu ideme významne viacej do detailu prezentova
 
 Z 30 shortlistovaných startupov vyberáme 15 najlepších, ktoré dostanú príležitosť zabojovať o investíciu na pitch evente. O nominácii na každý event rozhoduje bodovacie hlasovanie zakladateľov a VIP členovi Gluon Syndicate, ktoré prebieha prostredníctvom vlastnej online platformy. Nominácie na event sú známe 14 dní pred jeho uskutočnením.
 
-<hr>
+## Event  
 
-## Event
-
-### First Round
+### First Round 
 
 V prvej časti eventu majú postupne všetky startupy na stagi 5 minútový priestor na pitch. Okrem toho majú founderi od začiatku eventu k dispozícii vlastný prezentačný stánok. Od štartu eventu môžu všetci prítomní investori vyjadriť predbežný záujem investovať do konkrétneho startupu zadaním predbežného ticketu v konkrétnej výške do mobilnej aplikácie. Kvantifikovaný predbežný záujem o investície do všetkých startupov je vizualizovaný na displejoch. Na konci prvého kola sa vyhodnotí predbežný záujem a 6 startupov s najväčšou sumou postupuje do druhého kola na stagi (nepostupujúce startupy naďalej môžu nariasovať počas eventu svoje ciele, len už nedostávajú ďalší priestor na stagi).
 
 ### Second Round
 
-V druhom kole dostáva 6 startupov s najvyššou sumou kvantifikovaného záujmu o investíciu príležitosť odprezentovať na stagi svoj biznis model (a prípadne aj produktové demo). Na konci každej prezentácie prebieha krátka Q&A session. Od začiatku druhého kola môžu investori  konvertovať predbežný záujem na záväznú ponuku (a naďalej ľubovoľne  vyjadrovať a meniť predbežné záujmy). Vyjadrením záväznej ponuky získava startup prísĺub investície od daného investora. Ak suma prísľubov na evente dosiahne, resp. prekročí hranicu investičného cieľa, ktorú si founderi definovali, investícia sa bude realizovať. Ak sa počas eventu founderom nepodarí získať sumu záväzných ponúk na úrovni investičného cieľa, žiadna investícia sa nerealizuje.
+V druhom kole dostáva 6 startupov s najvyššou sumou kvantifikovaného záujmu o investíciu príležitosť odprezentovať na stagi svoj biznis model (a prípadne aj produktové demo). Na konci každej prezentácie prebieha krátka Q&A session. Od začiatku druhého kola môžu investori  konvertovať predbežný záujem na záväznú ponuku (a naďalej ľubovoľne  vyjadrovať a meniť predbežné záujmy). Vyjadrením záväznej ponuky získava startup prísĺub investície od daného investora. Ak suma prísľubov na evente dosiahne, resp. prekročí hranicu investičného cieľa, ktorú si founderi definovali, investícia sa bude realizovať. Ak sa počas eventu founderom nepodarí získať sumu záväzných ponúk na úrovni investičného cieľa, žiadna investícia sa nerealizuje.
 
 ### Extra Funding
 

@@ -1,5 +1,6 @@
 +++
 title = "Startup Criteria"
+meta_title = "Startup Criteria"
 +++
 
 In Gluon Syndicate we are looking for startups that meet these criteria:

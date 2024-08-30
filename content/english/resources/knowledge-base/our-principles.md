@@ -1,5 +1,6 @@
 +++
 title = "Our Principles"
+meta_title = "Our Principles"
 +++
 
 #### Syndication
