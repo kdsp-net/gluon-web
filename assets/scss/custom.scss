@@ -18,7 +18,7 @@ h6 {
 }
 
 .btn {
-  @apply rounded-none font-secondary font-semibold uppercase;
+  @apply font-secondary font-semibold uppercase;
   span {
     @apply font-normal;
   }
@@ -27,19 +27,25 @@ h6 {
 .btn-primary {
   @apply
     border-dark bg-dark text-darkmode-dark
-    dark:border-darkmode-dark dark:bg-darkmode-dark dark:text-dark;
+    dark:border-darkmode-dark dark:bg-darkmode-dark dark:text-dark
+    disabled:border-border disabled:bg-border
+    disabled:dark:border-darkmode-border disabled:dark:bg-darkmode-border;
 }
 
 .btn-secondary {
   @apply
     border-dark bg-transparent text-dark
-    dark:border-darkmode-dark dark:text-darkmode-dark;
+    dark:border-darkmode-dark dark:text-darkmode-dark
+    disabled:border-border disabled:text-border
+    disabled:dark:border-darkmode-border disabled:dark:text-darkmode-border;
 }
 
 .btn-tertiary {
   @apply
     border-transparent bg-transparent text-dark
-    dark:text-darkmode-dark;
+    dark:text-darkmode-dark
+    disabled:text-border
+    disabled:dark:text-darkmode-border;
 }
 
 .nav-link {

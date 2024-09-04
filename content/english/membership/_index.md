@@ -46,15 +46,20 @@ pricing:
           tooltip: "Get your brand featured on our website and at the events."
       link: "#"
 form:
-  - id: first_name
-    label: "First Name"
-    placeholder: "John"
+  - id: name
+    label: "Name"
+    placeholder: "John Appleseed"
     type: text
     required: true
-  - id: last_name
-    label: "Last Name"
-    placeholder: "Appleseed"
-    type: text
+  - id: email
+    label: "Email"
+    placeholder: "johnappleseed@email.com"
+    type: email
+    required: true
+  - id: phone
+    label: "Telephone"
+    placeholder: "+1 234 567 890"
+    type: tel
     required: true
   - id: company
     label: "Company (optional)"
