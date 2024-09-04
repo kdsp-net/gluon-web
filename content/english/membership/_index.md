@@ -47,13 +47,59 @@ pricing:
       link: "#"
 form:
   - id: first_name
-    label: First Name
-    placeholder: John
-    type: text
-    required: false
-  - id: last_name
-    label: Last Name
-    placeholder: Appleseed
+    label: "First Name"
+    placeholder: "John"
     type: text
     required: true
+  - id: last_name
+    label: "Last Name"
+    placeholder: "Appleseed"
+    type: text
+    required: true
+  - id: company
+    label: "Company (optional)"
+    placeholder: "Gluon Syndicate, s. r. o."
+    type: text
+    required: false
+  - id: address-1
+    label: "Address (1st line)"
+    placeholder: "Pribinova 17954/10"
+    type: text
+    required: true
+  - id: address-1
+    label: "Address (2nd line)"
+    placeholder: "Apt. or building"
+    type: text
+    required: false
+  - id: city
+    label: "City"
+    placeholder: "Bratislava"
+    type: text
+    required: true
+  - id: post-code
+    label: "Post Code"
+    placeholder: "811 09"
+    type: text
+    required: true
+  - id: country
+    label: "Country"
+    placeholder: "Slovakia"
+    type: text
+    required: true
+  - id: company_id
+    label: "Company ID (Optional)"
+    placeholder: ""
+    type: text
+    required: false
+  - id: tax_id
+    label: "Tax ID (Optional)"
+    placeholder: ""
+    type: text
+    required: false
+  - id: vat_id
+    label: "VAT ID (Optional)"
+    placeholder: ""
+    type: text
+    required: false
+
 ---
