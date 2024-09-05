@@ -1,6 +1,7 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+{{ partial "page-header" . }}
 
+<form id="membership_order">
   <!-- Stepper -->
   <div class="py-24 relative w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto" data-hs-stepper="">
     <!-- Stepper Nav -->
@@ -15,7 +16,7 @@
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </span>
-          <span class="ms-2 text-sm font-medium text-gray-800 dark:text-neutral-200">
+          <span class="ms-2 text-sm font-medium text-text dark:text-darkmode-text">
             {{ .Params.step_1.title }}
           </span>
         </span>
@@ -32,7 +33,7 @@
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </span>
-          <span class="ms-2 text-sm font-medium text-gray-800 dark:text-neutral-200">
+          <span class="ms-2 text-sm font-medium text-text dark:text-darkmode-text">
             {{ .Params.step_2.title }}
           </span>
         </span>
@@ -49,7 +50,7 @@
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </span>
-          <span class="ms-2 text-sm font-medium text-gray-800 dark:text-neutral-200">
+          <span class="ms-2 text-sm font-medium text-text dark:text-darkmode-text">
             {{ .Params.step_3.title }}
           </span>
         </span>
@@ -72,7 +73,7 @@
                   {{ range .Params.step_1.plans }}
                   <!-- Card-->
                   <input id="{{ .id }}" type="radio" name="membership" class="hidden peer/{{ .id }} {{ if .multiple }}multiple{{ end }}" value="{{ .name }}">
-                  <label for="{{ .id }}" class="lg:h-full cursor-pointer flex flex-col mx-auto w-full max-w-xl border border-border dark:border-darkmode-border text-gray-900 rounded-2xl bg-theme-light dark:bg-darkmode-theme-light peer-checked/{{ .id }}:outline peer-checked/{{ .id }}:outline-offset-2 peer-checked/{{ .id }}:outline-2 peer-checked/{{ .id }}:outline-dark dark:peer-checked/{{ .id }}:outline-darkmode-dark">
+                  <label for="{{ .id }}" class="lg:h-full cursor-pointer flex flex-col mx-auto w-full max-w-xl border border-border dark:border-darkmode-border text-dark dark:text-darkmode-dark rounded-2xl bg-theme-light dark:bg-darkmode-theme-light peer-checked/{{ .id }}:outline peer-checked/{{ .id }}:outline-offset-2 peer-checked/{{ .id }}:outline-2 peer-checked/{{ .id }}:outline-dark dark:peer-checked/{{ .id }}:outline-darkmode-dark">
                       <div class="p-6 xl:py-9 xl:px-12">
                           <h3 class="font-manrope text-2xl font-bold mb-3">{{ .name }}</h3>
                           {{ if .multiple }}
@@ -107,7 +108,7 @@
               <!--Grid End-->
               
               <!-- Input Number -->
-              <div class="mx-auto max-w-md mt-16 py-2 px-3 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg" data-hs-input-number="">
+              <div class="hidden mx-auto max-w-md mt-16 py-2 px-3 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg" data-hs-input-number="">
                   <div class="w-full flex justify-between items-center gap-x-3">
                   <div>
                       <span class="block font-medium text-xl text-dark dark:text-darkmode-dark">
@@ -123,7 +124,7 @@
                           <path d="M5 12h14"></path>
                       </svg>
                       </button>
-                      <input class="text-xl p-0 w-12 bg-transparent border-0 text-gray-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-white" style="-moz-appearance: textfield;" type="number" aria-roledescription="Number field" value="0" data-hs-input-number-input="">
+                      <input class="text-xl p-0 w-12 bg-transparent border-0 text-dark-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-darkmode-dark" style="-moz-appearance: textfield;" type="number" aria-roledescription="Number field" value="0" data-hs-input-number-input="">
                       <button type="button" class="size-12 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light text-dark dark:text-darkmode-dark shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" aria-label="Increase" data-hs-input-number-increment="">
                       <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <path d="M5 12h14"></path>
@@ -150,7 +151,7 @@
                     <!-- Form -->
                     {{ range .Params.step_2.form }}
                     <div class="flex flex-col mx-auto w-full max-w-xl">
-                        <label for="{{ .id }}" class="flex gap-1 items-center text-light dark:text-darkmode-light text-base leading-relaxed">{{ .label }} {{ if .hint }} <span class="text-border dark:text-darkmode-border">({{.hint}})</span> {{ end }}
+                        <label for="{{ .id }}" class="flex gap-1 items-center text-text dark:text-darkmode-text text-base leading-relaxed">{{ .label }} {{ if .hint }} <span class="text-light dark:text-darkmode-light">({{.hint}})</span> {{ end }}
                             {{ if .required }}
                             <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
                                 <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
@@ -190,7 +191,7 @@
             {{ range .Params.step_3.consents }}
             <div class="flex items-center">
               <input id="{{ .id }}" type="checkbox" value="" class="w-6 h-6 text-blue-600 bg-body border-border rounded focus:dark dark:focus:darkmode-dark dark:ring-offset-gray-800 focus:ring-2 dark:bg-darkmode-body dark:border-darkmode-border">
-              <label for="{{ .id }}" class="ms-4 text-md text-gray-900 dark:text-gray-300">
+              <label for="{{ .id }}" class="ms-4 text-md text-dark dark:text-darkmode-dark">
                 {{ .label.text }}
                 {{ with .label.link }} 
                 <a href="{{ .ulr }}" class="text-blue-600 dark:text-blue-500 hover:underline">
@@ -213,24 +214,24 @@
           <div id="total" class="flex flex-wrap">
             <p class="flex-none text-dark dark:text-darkmode-dark">
               <span id="total_units">
-                3
+                --
               </span> 
               &times; 
               <span id="total_plan">
-                Corporate Membership
+                --
               </span>
             </p>
-            <p class="flex-auto text-text dark:text-darkmode-text">
+            <p class="flex-auto text-text dark:text-darkmode-text"> 
               (€
               <span id="unit_price">
-                2000 
+                -- 
               </span>
-               per unit)
+               {{ i18n "membership.plan.per_person" }})
             </p>
             <p class="flex-none text-dark dark:text-darkmode-dark">
               €
               <span id="total_price">
-                6000
+                --
               </span>
             </p>
           </div>
@@ -253,19 +254,19 @@
 
       <!-- Button Group -->
       <div class="mt-16 flex justify-between items-center gap-x-2">
-        <button type="button" class="py-2 px-3 inline-flex items-center gap-x-1 btn btn-secondary" data-hs-stepper-back-btn="">
+        <button type="button" class="inline-flex items-center gap-x-1 btn btn-secondary" data-hs-stepper-back-btn="">
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m15 18-6-6 6-6"></path>
           </svg>
           {{ i18n "button_labels.back" }}
         </button>
-        <button type="button" class="py-2 px-3 inline-flex items-center gap-x-1 btn btn-primary disabled:pointer-events-none" data-hs-stepper-next-btn="">
+        <button type="button" class="inline-flex items-center gap-x-1 btn btn-primary" data-hs-stepper-next-btn="">
           {{ i18n "button_labels.next" }}
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m9 18 6-6-6-6"></path>
           </svg>
         </button>
-        <button type="button" class="py-2 px-3 inline-flex items-center gap-x-1 btn btn-primary disabled:opacity-50 disabled:pointer-events-none" data-hs-stepper-finish-btn="" style="display: none;">
+        <button type="button" class="inline-flex items-center gap-x-1 btn btn-primary" data-hs-stepper-finish-btn="" style="display: none;">
           {{ i18n "button_labels.submit" }}
         </button>
       </div>
@@ -274,5 +275,5 @@
     <!-- End Stepper Content -->
   </div>
   <!-- End Stepper -->
-
+</form>
 {{ end }}
