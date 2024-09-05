@@ -3,24 +3,23 @@ title: "Join"
 meta_title: ""
 description: "this is meta description"
 draft: false
-pricing:
-  title: "Choose your plan"
-  subtitle: "7 Days free trial. No credit card required."
+
+step_1:
+  title: "Membership Plan"
   plans:
     - name: "Basic"
       id: "basic-membership"
       price: 1000
-      isPopular: false
-      popularText: "MOST POPULAR"
+      multiple: false
       features:
         - title: "Deal flow"
         - title: "Quarterly pitching events"
         - title: "Online community"
           tooltip: "Get access to our invite-only LinkedIn community and Whatsapp group."
-      link: "#"
     - name: "Premium"
       id: "premium-membership"
       price: 3000
+      multiple: false
       features:
         - title: "All Basic features"
         - title: "Companion tickets"
@@ -29,7 +28,6 @@ pricing:
           tooltip: "Take an early look at our shortlisted startups and vote for the ones that you want to see pitch on the stage"
         - title: "Wildcard"
           tooltip: "Send any one startup directly to pitch on the stage without having to go through the qualification process."
-      link: "#"
     - name: "Corporate"
       id: "corporate-membership"
       price: 2000
@@ -44,8 +42,10 @@ pricing:
           tooltip: "Send any one startup directly to pitch on the stage without having to go through the qualification process."
         - title: "Visibility"
           tooltip: "Get your brand featured on our website and at the events."
-      link: "#"
-form:
+
+step_2:
+  title: "Billing Information"
+  form:
   - id: name
     label: "Name"
     placeholder: "John Appleseed"
@@ -62,18 +62,20 @@ form:
     type: tel
     required: true
   - id: company
-    label: "Company (optional)"
+    label: "Company"
+    hint: "Optional"
     placeholder: "Gluon Syndicate, s. r. o."
     type: text
     required: false
   - id: address-1
-    label: "Address (1st line)"
+    label: "Address Line 2"
     placeholder: "Pribinova 17954/10"
     type: text
     required: true
   - id: address-1
-    label: "Address (2nd line)"
-    placeholder: "Apt. or building"
+    label: "Address Line 2"
+    hint: "apt. or building"
+    placeholder: ""
     type: text
     required: false
   - id: city
@@ -92,19 +94,45 @@ form:
     type: text
     required: true
   - id: company_id
-    label: "Company ID (Optional)"
+    label: "Company ID"
+    hint: "Optional"
     placeholder: ""
     type: text
     required: false
   - id: tax_id
-    label: "Tax ID (Optional)"
+    label: "Tax ID"
+    hint: "Optional"
     placeholder: ""
     type: text
     required: false
   - id: vat_id
-    label: "VAT ID (Optional)"
+    label: "VAT ID"
+    hint: "Optional"
     placeholder: ""
     type: text
     required: false
+
+step_3:
+  title: Summary
+  consents:
+    - id: tos
+      label:
+        text: "I agree to the"
+        link: 
+          text: "Terms of Service"
+          url: "#"
+      required: true
+    - id: gdpr
+      label:
+        text: "I agree to the data processing according to the"
+        link:
+          text: "Privacy Policy"
+          url: "#"
+      required: true
+    - id: nl
+      label:
+        text: "I want to sign up to the newsletter"
+
+complete_message: "Your order was submited successfully"
 
 ---

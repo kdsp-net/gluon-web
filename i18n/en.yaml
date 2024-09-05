@@ -19,6 +19,9 @@ button_labels:
   investment_process: How We Invest
   investor_deck: Investor Deck
   investment_criteria: Investment Criteria
+  next: Next
+  back: Back
+  submit: Submit
 announcement:
   message: "Are you an investor, startupist, or tech enthusiast planing to go to Web Summit 2024? **We've booked a plane from Prague, Brno, Bratislava and Kosice for you!** Fly with us and enjoy great deals on hotel, tickets and side events."
   link: "https://www.pelikan.sk/sk/pobyt/web-summit-lisabon-gluon-syndicate"
@@ -31,3 +34,9 @@ timer:
   hours: Hours
   minutes: Minutes
   seconds: Seconds
+membership:
+  plan:
+    from: From
+    per_year: / year
+    per_person: / person
+    persons: Persons
