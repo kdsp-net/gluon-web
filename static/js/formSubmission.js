@@ -21,57 +21,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Ensure we only process elements with a name (ignore buttons and others)
             if (name) {
+                let inputType = type || 'text'; // Default type is 'text' if type is not defined
                 if (type === 'checkbox') {
-                    formJson[name] = checked; // Store checkbox state as boolean
+                    formJson[name] = {
+                        value: checked, // Store checkbox state as boolean
+                        type: inputType
+                    };
                 } else if (type === 'radio') {
                     if (checked) {
-                        formJson[name] = value; // Store value of checked radio button
+                        formJson[name] = {
+                            value: value,
+                            type: inputType
+                        };
                     }
                 } else {
-                    formJson[name] = value; // Store value of other inputs
+                    formJson[name] = {
+                        value: value,
+                        type: inputType
+                    };
                 }
             }
         });
 
         // Handle the case for multiple cards and quantity
-        let quantity = 1;
         if (isMultiple) {
             const quantityInput = document.querySelector('#multipleInput input[type="number"]');
-            quantity = quantityInput ? parseInt(quantityInput.value, 10) : 1; // Use the value from input, default to 1
+            formJson['quantity'] = {
+                value: quantityInput ? quantityInput.value : '1', // If multiple, use the value from input, otherwise default to 1
+                type: 'number'
+            };
+        } else {
+            // For non-multiple, set quantity to 1
+            formJson['quantity'] = {
+                value: '1',
+                type: 'number'
+            };
         }
-
-        // Get the unit price from the selected card
-        const label = document.querySelector(`label[for="${selectedRadio.id}"]`);
-        const priceTag = label.querySelector('.price-tag');
-        const unitPrice = parseFloat(priceTag.dataset.unitprice); // Get unit price from data attribute
-
-        // Calculate total price
-        const totalPrice = unitPrice * quantity;
-
-        // Add quantity, unit price, and total price to formJson
-        formJson['quantity'] = quantity.toString();
-        formJson['unit_price'] = unitPrice.toFixed(2); // Format the unit price to 2 decimal places
-        formJson['total_price'] = totalPrice.toFixed(2); // Format the total price to 2 decimal places
 
         // Debugging: Check what data is being sent
         console.log('Form Data:', formJson);
 
-        // Send the JSON data to the Cloudflare Worker
+        // Send the JSON data to the webhook URL
         fetch('https://form2obsidian.disruptivebros.workers.dev/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formJson),
+            body: JSON.stringify(formJson)
         })
-        .then(response => response.json()) // If the worker responds with JSON
-        .then(data => {
-            console.log('Worker response:', data);
-            alert('Form submitted successfully!');
+        .then(response => {
+            if (response.ok) {
+                alert('Form submitted successfully');
+            } else {
+                alert('Form submission failed');
+            }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('There was an issue submitting the form.');
         });
     });
 });
