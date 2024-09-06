@@ -1,51 +1,75 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Wait for Preline's autoInit to finish (or hook into it)
+    // Wait for Preline's autoInit to finish
     window.addEventListener('load', function () {
-        console.log('Preline autoInit completed');
-
         // Get the HSInputNumber instance for the input number element
         const inputNumberElement = HSInputNumber.getInstance('#multipleInput');
 
         if (inputNumberElement) {
-            console.log('HSInputNumber instance found for #multipleInput');
             inputNumberElement.on('change', ({ inputValue }) => {
-                console.log('Input number changed to:', inputValue);
-                updatePrice(inputValue);
+                // Only update the price if the multiple card is selected
+                const selectedRadio = document.querySelector('input[name="membership"]:checked');
+                if (selectedRadio && selectedRadio.classList.contains('multiple')) {
+                    updatePrice(inputValue);
+                    updateNumberInputValue(inputValue); // Update the number input field with the correct value
+                }
             });
-        } else {
-            console.error('HSInputNumber instance not found for #multipleInput');
         }
 
+        // Function to update the price when the quantity changes
         function updatePrice(quantity) {
-            console.log('Running updatePrice with quantity:', quantity);
-
             const selectedRadio = document.querySelector('input[name="membership"]:checked');
-            if (!selectedRadio) {
-                console.error('No radio button selected');
-                return;
-            }
+            if (!selectedRadio) return;
 
             const label = document.querySelector(`label[for="${selectedRadio.id}"]`);
-            if (!label) {
-                console.error('No label found for the selected radio button');
-                return;
-            }
+            if (!label) return;
 
             const priceTag = label.querySelector('.price-tag');
-            if (!priceTag) {
-                console.error('No price tag found on selected card');
-                return;
-            }
+            if (!priceTag) return;
 
             const unitPrice = parseFloat(priceTag.dataset.unitprice);
-            if (isNaN(unitPrice)) {
-                console.error('Invalid unit price');
-                return;
-            }
+            if (isNaN(unitPrice)) return;
 
             const totalPrice = Math.round(unitPrice * quantity);
             priceTag.textContent = totalPrice;
-            console.log(`Updated price to: €${totalPrice}`);
         }
+
+        // Function to revert the price of the multiple card when it is deselected
+        function resetMultipleCardPrice() {
+            const multipleCardRadio = document.querySelector('input[name="membership"].multiple');
+            if (multipleCardRadio) {
+                const label = document.querySelector(`label[for="${multipleCardRadio.id}"]`);
+                const priceTag = label.querySelector('.price-tag');
+                if (priceTag) {
+                    const unitPrice = parseFloat(priceTag.dataset.unitprice);
+                    priceTag.textContent = Math.round(unitPrice * 2); // Revert to 2x unit price
+                }
+            }
+        }
+
+        // Function to update the number input value in the DOM
+        function updateNumberInputValue(value) {
+            const quantityInput = document.querySelector('#quantityInput');
+            if (quantityInput) {
+                quantityInput.value = value;
+            }
+        }
+
+        // Listen for changes to the selected radio buttons
+        const radioButtons = document.querySelectorAll('input[name="membership"]');
+        radioButtons.forEach((radio) => {
+            radio.addEventListener('change', function () {
+                const selectedRadio = document.querySelector('input[name="membership"]:checked');
+                if (selectedRadio && selectedRadio.classList.contains('multiple')) {
+                    const inputValue = inputNumberElement.inputValue || 2; // Default to 2 if no value
+                    updatePrice(inputValue);
+                    updateNumberInputValue(inputValue); // Ensure the input field shows the correct value
+                } else {
+                    resetMultipleCardPrice();
+                }
+            });
+        });
+
+        // Initial state: reset the price of the multiple card on page load
+        resetMultipleCardPrice();
     });
 });
