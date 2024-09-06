@@ -1,9 +1,10 @@
 +++
-title = "Ako investujeme?"
-meta_title = "Ako investujeme?"
+title = "Jak investujeme?"
+meta_title = "Jak investujeme?"
 +++
 
-V Gluon Syndicate veríme, že transparentný a vopred jasný investičný proces spolu s férovými podmienkami sú základnými predpokladmi vzniku kvalitného vzťahu medzi zakladateľmi startupu a ich investormi. A radi sa obklopujeme rovnako zmýšľajúcimi ľuďmi. Preto na tomto mieste nájdu potenciálni záujemcovia o investíciu, ako aj investori, ktorí zvažujú možnosť sa ku nám pridať, všetko podstatné o tom, ako pristupujeme ku investovaniu.
+V Gluon Syndicate věříme, že transparentní a předem jasný investiční proces společne s férovými podmínkami jsou základními předpoklady zrodu kvalitního vztahu mezi zakladateli startupu a jejich investory. A rádi se obklopujeme stejně smýšlejícími lidmi. Proto na tomto místě najdou potenciální zájemci o investíci, stejně jako investoři, kteří zvažují možnost se k nám přidat, vše podstatné o tom, jak přistupujeme k investování.
+
 
 ```mermaid
 
