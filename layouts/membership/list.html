@@ -256,13 +256,13 @@
 
       <!-- Button Group -->
       <div class="mt-16 flex justify-between items-center gap-x-2">
-        <button type="button" class="inline-flex items-center gap-x-1 btn btn-secondary" data-hs-stepper-back-btn="">
+        <button type="button" class="inline-flex items-center gap-x-1 btn btn-secondary" data-hs-stepper-back-btn="" disabled>
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m15 18-6-6 6-6"></path>
           </svg>
           {{ i18n "button_labels.back" }}
         </button>
-        <button type="button" class="inline-flex items-center gap-x-1 btn btn-primary" data-hs-stepper-next-btn="">
+        <button type="button" class="inline-flex items-center gap-x-1 btn btn-primary" data-hs-stepper-next-btn="" disabled>
           {{ i18n "button_labels.next" }}
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m9 18 6-6-6-6"></path>
@@ -281,4 +281,5 @@
 
 <script src='{{ "/js/toggleNumberInput.js" | absURL }}'></script>
 <script src='{{ "/js/updatePrice.js" | absURL }}'></script>
+<script src='{{ "/js/orderForm.js" | absURL }}'></script>
 {{ end }}

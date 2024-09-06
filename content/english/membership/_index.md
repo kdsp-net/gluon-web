@@ -68,7 +68,7 @@ step_2:
     type: text
     required: false
   - id: address-1
-    label: "Address Line 2"
+    label: "Address Line 1"
     placeholder: "Pribinova 17954/10"
     type: text
     required: true
