@@ -22,7 +22,7 @@ archive("Archive")
 firstRound("First Round")
 secondRound("Second Round")
 extraFunding("Extra Funding")
-dueDilligence("Due Dilligence")
+dueDiligence("Due Diligence")
 cla("Convertible Loan")
 qualifiedRound("Equity Round")
 conversion("Conversion")
@@ -30,8 +30,8 @@ subsequentRounds("Subsequent Rounds")
 exit("EXIT") 
 
 click members href "#syndicate-members"
-click events href "#startup-events-&-network"
-click accelerators href "#accelerators-&-incubators"
+click events href "#startup-events--network"
+click accelerators href "#accelerators--incubators"
 click inbound href "#inbound"
 click vc href "#vc-funds"
 click inbox href "#inbox"
@@ -42,7 +42,7 @@ click selectedForEvent href "#selected-for-event"
 click firstRound href "#first-round"
 click secondRound href "#second-round"
 click extraFunding href "#extra-funding"
-click dueDilligence href "#due-dilligence-(dd)"
+click dueDiligence href "#due-diligence-dd"
 click cla href "#convertible-loan"
 click qualifiedRound href "#equity-round"
 click conversion href "#Conversion"
@@ -84,7 +84,7 @@ event ==> investment
 
 subgraph investment ["Investment Process"]
   direction LR
-  dueDilligence --> cla
+  dueDiligence --> cla
   cla --> qualifiedRound
   qualifiedRound --> conversion
 end
@@ -112,6 +112,8 @@ Aktívne promujeme aktivity a fungovanie syndikátu s cieľom zasiahnuť zakľad
 ### VC Funds
 Sme v blízkom kontakte s poprednými VC fondami zo CEE ((Presto, Tensor, Kaya, 0100, Zaka, atď.), ktoré ku nám smerujú startupy z ich deal flow, ktoré im prídu zaujímavé, ale sú pre nich príliš early-stage. A navyše s nami vybrané VCs pravideľne zdieľajú zaujímavé co-investičné príležitosti.
 
+---
+
 ## Selection
 
 ### Inbox
@@ -130,6 +132,8 @@ Z 30 shortlistovaných startupov vyberáme 15 najlepších, ktoré dostanú prí
 So startupmi vybranými na event vopred podpisujeme základnú investičnú dokumentáciu - zmluvu o konvertibilnom úvere (CLA) - tak aby všetky podmienky boli jasné a zakotvené ešte pred pitch eventom (najdôležitejšie parametre našej CLA nájdete tu). Súčasťou tejto zmluvy je aktivačná klauzula, ktorá spustí investičný proces za dohodnutých podmienok, ak sa zakladateľom startupu podarí na pitch evente naraisovať prostriedky v hodnote investičného cieľa, ktorý si vopred sami určia (v rozsahu €50-300k). 
 NB: Startup za účasť na evente ani za prípadnú realizáciu investície a s tým súvisiace činnosti neplatí žiadne poplatky.
 
+---
+
 ## EVENT
 
 ### First round
@@ -141,6 +145,8 @@ V druhom kole dostáva 6 startupov s najvyššou sumou kvantifikovaného záujmu
 ### Extra funding
 Founderi jednotlivých startupov si vopred určujú okrem svojho investičného cieľa (ktorý je zároveň tresholdom celej investície) aj možnosť naraisovať "extra funding" vo výške 0-100% investičného cieľa, teda možnosť až zdvojnásobiť investíciu. Ak úspešný startup dosiahne hranicu extra fundingu priamo na evente, investičná príležitosť sa uzatvára a už nie je možné do startupu ďalej investovať. Ak startup dosiahne na evente svoj investičný cieľ ale nedosiahne hranicu extra fundingu, ostane táto príležitosť otvorená pre angel investorov ešte 5 dní prostredníctvom mobilnej aplikácie (ak sa počas tohto obdobia naplní extra funding, príležitosť sa zatvorí).
 NB: Výška valuation cap v CLA je závislá od stanoveného investičného cieľa a extra funding na ňu nemá žiaden dodatočný vplyv. Preto sa founderi pred eventom musia rozhodnúť, či majú za daných podmienok záujem raisovať aj extra funding a v akej výške.
+
+---
 
 ## INVESTMENT
 
@@ -156,8 +162,12 @@ Spoločným cieľom zakladateľov aj angel investorov je okrem iného aj realiz�
 ### Conversion
 Ak sa zakladateľom startupu podarí uzatvoriť kvalifikované investičné kolo, SPV konvertuje pri tejto príležitosti svoj úver na equity (na základe podmienok definovaných v CLA). Ku takejto konverzii úveru na podiel v cieľovom startupe môže dojsť za špecifických podmienok aj na základe uplynutia časového obdobia definovaného v CLA (v prípade, že sa počas tohto obdobia nepodarí uzatvoriť nasledujúce kvalifikované investičné kolo). Od okamihu konverzie sa SPV stáva plnohodnotným spoločníkom v cieľovom startupe.
 
+---
+
 ## Subsequent rounds
 V prípade, že sa cieľovému startupu podarí uzatvoriť ďalšie investičné kola, SPV zastúpená Gluon Syndicate sa týchto nasledujucích kôl zúčastňuje ako štandardný early-stage investor (vyjednáva s pristupujucími investormi, uplatňuje si svoje práva a pomáha zakladateľom s nastavením fundraisingovej stratégie).
+
+---
 
 ## Exit
 Pre Gluon Syndicate a zúčastnených angel investorov - rovnako ako pre každého investora na VC trhu - je primárnou motiváciou investície do startupu potenciálny exit. Primárnou stratégiou GS je ostať na palube startupu až do akvizície spoločnosti strategickým investorom alebo IPO, preto je predpokladaným investičným horizontom v prípade úspešných investícií obdobie cca. 7-15 rokov. V niektorých prípadoch, ak to dáva zmysel pre strategické smerovanie spoločnosti, môže byť podiel na cieľovom startupe čiastočne alebo úplne predaný novovstupujúcemu alebo inému existujúcemu investorovi, napríklad v rámci niektorého nasledujúceho investičného kola alebo podobne.
