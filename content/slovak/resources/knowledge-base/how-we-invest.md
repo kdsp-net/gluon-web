@@ -76,7 +76,7 @@ selection --> archive
 
 members -. "Wildcards" .-> event  
 
-subgraph event ["Pitching Event"]
+subgraph event ["Pitch Event"]
   direction LR
   firstRound --> secondRound
   secondRound .-> extraFunding
@@ -100,7 +100,7 @@ subsequentRounds ==> exit
 ## Sourcing
 
 ### Syndicate Members
-Naši členovia majú možnosť navrhovať startupy hľadajúce investíciu, ktoré následne prechádzajú našim výberovým procesom. Navyše - investori s prémiovým členstvom - majú právo raz ročne nominovať priamo na event jeden startup, do ktorého chcú investovať a hľadajú co-investorov. 
+Naši členovia majú možnosť navrhovať startupy hľadajúce investíciu, ktoré následne prechádzajú našim výberovým procesom. Navyše - investori s prémiovým členstvom majú právo raz ročne nominovať priamo na event jeden startup, do ktorého chcú investovať a hľadajú co-investorov. 
 
 ### Startup Events & Network
 Aktívne vyhľadávame nádejné startupy naprieč CEE prostredníctvom osobných stretnutí na startupistických eventoch a súťažiach aj online prieskumu. Taktiež sme si za 15 rokov v biznise vybudovali širokú sieť kontaktov z radov founderov, investorov, novinárov a ďalších startup entuziastov, ktorá nám pomáha ostať v obraze ohľadom diania na startupistickej scéne v regióne.
@@ -112,7 +112,7 @@ Vytvorili sme a rozvíjame partnerstvá s akcelerátormi a inkubátormi v regió
 Aktívne promujeme aktivity a fungovanie syndikátu s cieľom zasiahnuť zakľadateľov najzaujímavejších early-stage startupov z regiónu. Snažíme sa jasne odkomunikovať svoje princípy a výhody, aby sme boli medzi prvými, komu pošlú svoj pitch deck, keď začnú hľadať angel investíciu.
 
 ### VC Funds
-Sme v blízkom kontakte s poprednými VC fondami zo CEE ((Presto, Tensor, Kaya, 0100, Zaka, atď.), ktoré ku nám smerujú startupy z ich deal flow, ktoré im prídu zaujímavé, ale sú pre nich príliš early-stage. A navyše s nami vybrané VCs pravideľne zdieľajú zaujímavé co-investičné príležitosti.
+Sme v blízkom kontakte s poprednými VC fondami zo CEE ((Presto, Tensor, Kaya, 0100, Zaka, atď.), ktoré ku nám smerujú startupy z ich deal flow, ktoré im prídu zaujímavé, ale sú pre nich príliš early-stage. A navyše s nami vybrané VCs pravideľne zdieľajú zaujímavé co-investičné príležitosti a recipročne my máme možnosť niektoré naše príležitosti zdieľať s nimi.
 
 ---
 
@@ -136,7 +136,7 @@ NB: Startup za účasť na evente ani za prípadnú realizáciu investície a s 
 
 ---
 
-## EVENT
+## Pitch Event
 
 ### First round
 V prvej časti eventu majú postupne všetky startupy na stagi 5 minútový priestor na pitch. Okrem toho majú founderi od začiatku eventu k dispozícii vlastný prezentačný stánok. Od zahájenia eventu môžu všetci prítomní investori vyjadriť predbežný záujem investovať do konkrétneho startupu zadaním indikatívneho ticketu v konkrétnej výške do mobilnej aplikácie. Kvantifikovaný predbežný záujem o investície do všetkých startupov je vizualizovaný na displejoch. Na konci prvého kola sa vyhodnotí predbežný záujem a 6 startupov s najväčšou indikovanou sumou postupuje do druhého kola na stagi (nepostupujúce startupy naďalej môžu nariasovať počas eventu svoje ciele, len už nedostávajú ďalší priestor na stagi).
@@ -150,7 +150,7 @@ NB: Výška valuation cap v CLA je závislá od stanoveného investičného cie�
 
 ---
 
-## INVESTMENT
+## Investment
 
 ### Due Diligence (DD)
 Ak sa startupu na evente podarí naraisovať vytýčený investičný cieľ (prípadne aj voliteľný extra funding), zaháji sa bezprostredne po evente (resp. po ukončenia obdobia určeného pre extra funding) ostrá fáza investičného procesu. Tá začína základným due diligence - teda overením skutočností, ktoré founderi uviedli v priebehu procesu výberu. To trvá zpravidla niekoľko dní. Vo fáze early-stage investícií nie je DD proces taký obsiahly a detailný ako v neskorších investičných kolách a kontrolujú sa najmä bazálne prerekvizity (corporate governance, cap table, dôležité zmluvné záväzky startupu, forma ošetrenia IP a prípadne deklarovaná existujúca trakcia).
