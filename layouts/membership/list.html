@@ -126,7 +126,7 @@
                         <path d="M5 12h14"></path>
                       </svg>
                     </button>
-                    <input id="quantityInput" class="text-xl p-0 w-12 bg-transparent border-0 text-dark-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-darkmode-dark" style="-moz-appearance: textfield;" type="number" aria-roledescription="Number field" data-hs-input-number-input="">
+                    <input id="quantityInput" name="quantity" class="text-xl p-0 w-12 bg-transparent border-0 text-dark-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-darkmode-dark" style="-moz-appearance: textfield;" type="number" aria-roledescription="Number field" data-hs-input-number-input="">
                     <button type="button" class="size-12 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light text-dark dark:text-darkmode-dark shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" aria-label="Increase" data-hs-input-number-increment="">
                       <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14"></path>
@@ -160,7 +160,7 @@
                             </svg>
                             {{ end }}
                         </label>
-                        <input type="{{ .type }}" id="{{ .id }}" {{ if .required }} required {{ end }} class="w-full focus:outline-none bg-body dark:bg-darkmode-body text-text dark:text-darkmode-text placeholder-border dark:placeholder-darkmode-border text-lg font-normal leading-relaxed px-5 py-3 rounded-lg  border border-border dark:border-darkmode-border justify-start items-center gap-2 inline-flex" placeholder="{{ .placeholder }}">
+                        <input type="{{ .type }}" id="{{ .id }}" name="{{ .id }}" {{ if .required }} required {{ end }} class="w-full focus:outline-none bg-body dark:bg-darkmode-body text-text dark:text-darkmode-text placeholder-border dark:placeholder-darkmode-border text-lg font-normal leading-relaxed px-5 py-3 rounded-lg  border border-border dark:border-darkmode-border justify-start items-center gap-2 inline-flex" placeholder="{{ .placeholder }}">
                     </div>
                     {{ end }}
                 </div>
@@ -193,7 +193,7 @@
             <div class="space-y-8">
               {{ range .Params.step_3.consents }}
               <div class="flex items-center">
-                <input id="{{ .id }}" type="checkbox" value="" class="w-6 h-6 text-blue-600 bg-body border-border rounded focus:dark dark:focus:darkmode-dark dark:ring-offset-gray-800 focus:ring-2 dark:bg-darkmode-body dark:border-darkmode-border" {{ if .required }} required {{ end }}>
+                <input id="{{ .id }}" name="{{ .id }}" type="checkbox" value="" class="w-6 h-6 text-blue-600 bg-body border-border rounded focus:dark dark:focus:darkmode-dark dark:ring-offset-gray-800 focus:ring-2 dark:bg-darkmode-body dark:border-darkmode-border" {{ if .required }} required {{ end }}>
                 <label for="{{ .id }}" class="ms-4 text-md text-dark dark:text-darkmode-dark">
                   {{ .label.text }}
                   {{ with .label.link }} 
@@ -257,7 +257,7 @@
             <path d="m9 18 6-6-6-6"></path>
           </svg>
         </button>
-        <button type="button" class="inline-flex items-center gap-x-1 btn btn-primary" data-hs-stepper-finish-btn="" disabled style="display: none;">
+        <button type="submit" class="inline-flex items-center gap-x-1 btn btn-primary" data-hs-stepper-finish-btn="" disabled style="display: none;">
           {{ i18n "button_labels.submit" }}
         </button>
       </div>
@@ -271,4 +271,5 @@
 <script src='{{ "/js/toggleNumberInput.js" | absURL }}'></script>
 <script src='{{ "/js/updatePrice.js" | absURL }}'></script>
 <script src='{{ "/js/orderForm.js" | absURL }}'></script>
+<script src='{{ "/js/formSubmission.js" | absURL }}'></script>
 {{ end }}
