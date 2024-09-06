@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Add event listener for form submission
     const form = document.querySelector('#membership_order');
+    const successMessageElement = document.getElementById('success_message');
+    const errorMessageElement = document.getElementById('error_message');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the form from actually submitting
@@ -10,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Get all form elements
         const formElements = form.querySelectorAll('input, select, textarea');
-        
+
         // Get the selected membership card
         const selectedRadio = document.querySelector('input[name="membership"]:checked');
         const isMultiple = selectedRadio && selectedRadio.classList.contains('multiple');
@@ -19,25 +21,24 @@ document.addEventListener('DOMContentLoaded', function () {
         formElements.forEach(element => {
             const { name, type, value, checked } = element;
 
-            // Ensure we only process elements with a name (ignore buttons and others)
+            // Ensure we only process elements with a name
             if (name) {
-                let inputType = type || 'text'; // Default type is 'text' if type is not defined
                 if (type === 'checkbox') {
                     formJson[name] = {
-                        value: checked, // Store checkbox state as boolean
-                        type: inputType
+                        value: checked,
+                        type: type
                     };
                 } else if (type === 'radio') {
                     if (checked) {
                         formJson[name] = {
                             value: value,
-                            type: inputType
+                            type: type
                         };
                     }
                 } else {
                     formJson[name] = {
                         value: value,
-                        type: inputType
+                        type: type
                     };
                 }
             }
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isMultiple) {
             const quantityInput = document.querySelector('#multipleInput input[type="number"]');
             formJson['quantity'] = {
-                value: quantityInput ? quantityInput.value : '1', // If multiple, use the value from input, otherwise default to 1
+                value: quantityInput ? quantityInput.value : '1',
                 type: 'number'
             };
         } else {
@@ -58,10 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
         }
 
-        // Debugging: Check what data is being sent
-        console.log('Form Data:', formJson);
-
-        // Send the JSON data to the webhook URL
+        // Send the JSON data to the worker endpoint
         fetch('https://form2obsidian.disruptivebros.workers.dev/', {
             method: 'POST',
             headers: {
@@ -71,13 +69,19 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => {
             if (response.ok) {
-                alert('Form submitted successfully');
+                // On success, show the success message and hide the error message
+                successMessageElement.classList.remove('hidden');
+                errorMessageElement.classList.add('hidden');
             } else {
-                alert('Form submission failed');
+                // On failure, show the error message and hide the success message
+                successMessageElement.classList.add('hidden');
+                errorMessageElement.classList.remove('hidden');
             }
         })
         .catch(error => {
-            console.error('Error:', error);
+            // On fetch error, show the error message and hide the success message
+            successMessageElement.classList.add('hidden');
+            errorMessageElement.classList.remove('hidden');
         });
     });
 });

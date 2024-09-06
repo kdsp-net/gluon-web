@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const radioButtons = document.querySelectorAll('input[name="membership"]');
         
         // Initially disable the Next and Finish buttons
-        console.log("Finish Button: " + finishButton)
         nextButton.disabled = true;
         finishButton.disabled = true;
 
@@ -126,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const consentCheckboxes = document.querySelectorAll('#step-3 input[type="checkbox"][required]');
         consentCheckboxes.forEach(checkbox => {
             checkbox.addEventListener('change', validateConsents);
-            console.log("Checkbox clicked")
         });
 
         // Function to handle step changes and update summary/total

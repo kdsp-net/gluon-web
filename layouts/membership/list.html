@@ -236,8 +236,11 @@
         "isFinal": true
       }' style="display: none;">
         <div class="p-4 h-48 flex justify-center items-center border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg">
-          <h3 class="text-dark dark:text-darkmode-dark">
-            {{ .Params.complete_message }}
+          <h3 id="success_message" class="text-dark dark:text-darkmode-dark">
+            {{ .Params.success_message }}
+          </h3>
+          <h3 id="error_message" class="text-dark dark:text-darkmode-dark hidden">
+            {{ .Params.error_message }}
           </h3>
         </div>
       </div>
