@@ -4,143 +4,179 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get the HSStepper instance
         const stepper = HSStepper.getInstance('[data-hs-stepper]');
         const nextButton = document.querySelector('[data-hs-stepper-next-btn]');
+        const finishButton = document.querySelector('[data-hs-stepper-finish-btn]');
         const radioButtons = document.querySelectorAll('input[name="membership"]');
         
-        // Initially disable the Next button
+        // Initially disable the Next and Finish buttons
+        console.log("Finish Button: " + finishButton)
         nextButton.disabled = true;
+        finishButton.disabled = true;
 
         // Step 1: Enable "Next" button when a card is selected
         function handleCardSelection() {
             const selectedRadio = document.querySelector('input[name="membership"]:checked');
             
-            if (selectedRadio && stepper.currentIndex === 1) { // Adjusted for currentIndex starting at 1
-                // Enable the Next button in step 1
+            if (selectedRadio && stepper.currentIndex === 1) {
                 nextButton.disabled = false;
             } else {
-                nextButton.disabled = true; // If no card is selected, keep Next button disabled
+                nextButton.disabled = true;
             }
         }
 
         // Step 2: Enable "Next" button when all required fields are filled and valid
         function handleFormValidation() {
-            if (stepper.currentIndex === 2) { // Ensure we're checking step 2 form fields
+            if (stepper.currentIndex === 2) {
                 const formFields = document.querySelectorAll('#step-2 input[required]');
                 let allValid = true;
 
                 formFields.forEach(field => {
                     const fieldType = field.getAttribute('type');
                     
-                    // Remove previous error classes if any
                     removeErrorOutline(field);
-
-                    // Check the field based on its type
+                    
                     let isValid = true;
                     if (fieldType === 'email') {
                         isValid = validateEmail(field.value);
-                    } else if (fieldType === 'text') {
-                        isValid = field.value.trim() !== '';
-                    } else if (fieldType === 'number') {
-                        isValid = validateNumber(field);
                     } else if (fieldType === 'tel') {
-                        isValid = validateTel(field.value); // Validate phone numbers
-                    } else if (fieldType === 'checkbox') {
-                        isValid = field.checked;
+                        isValid = validateTel(field.value);
                     } else {
                         isValid = field.value.trim() !== '';
                     }
 
-                    if (!isValid && field.value !== '') { // Only add the outline for fields that have been filled out
+                    if (!isValid && field.value !== '') {
                         addErrorOutline(field);
                     }
 
-                    // Only set to false if the field is invalid
                     allValid = isValid && allValid;
                 });
 
-                // Enable/Disable the next button based on validation
                 nextButton.disabled = !allValid;
             }
         }
 
-        // Function to add red outline to invalid fields
-        function addErrorOutline(field) {
-            field.classList.remove('text-text', 'dark:text-darkmode-text');
-            field.classList.add('text-red-500', 'dark:text-red-500');
+        // Task 1: Update the Summary in Step 3
+        function updateSummary() {
+            const formFields = document.querySelectorAll('#step-2 input');
+            formFields.forEach(field => {
+                const summaryElement = document.getElementById(`summary_${field.id}`);
+                if (summaryElement) {
+                    summaryElement.textContent = field.value || '--';
+                }
+            });
         }
 
-        // Function to remove red outline from fields
-        function removeErrorOutline(field) {
-            field.classList.remove('text-red-500', 'dark:text-red-500');
-            field.classList.add('text-text', 'dark:text-darkmode-text');
+        // Task 2: Validate required consents in Step 3
+        function validateConsents() {
+            const consentCheckboxes = document.querySelectorAll('#step-3 input[type="checkbox"][required]');
+            let allChecked = true;
+
+            consentCheckboxes.forEach(checkbox => {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+            });
+
+            finishButton.disabled = !allChecked;
         }
 
-        // Function to validate email input
-        function validateEmail(email) {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailPattern.test(email);
+        // Task 3: Update the Total Section
+        function updateTotal() {
+            const selectedRadio = document.querySelector('input[name="membership"]:checked');
+            const totalUnitsElement = document.getElementById('total_units');
+            const totalPlanElement = document.getElementById('total_plan');
+            const unitPriceElement = document.getElementById('unit_price');
+            const totalPriceElement = document.getElementById('total_price');
+
+            if (!selectedRadio) return;
+
+            const label = document.querySelector(`label[for="${selectedRadio.id}"]`);
+            const priceTag = label.querySelector('.price-tag');
+            const h3Element = label.querySelector('h3');
+            
+            const isMultiple = selectedRadio.classList.contains('multiple');
+            const unitPrice = parseFloat(priceTag.dataset.unitprice);
+            const quantity = isMultiple ? HSInputNumber.getInstance('#multipleInput').inputValue : 1;
+            const totalPrice = unitPrice * quantity;
+
+            // Update the total section values
+            totalUnitsElement.textContent = quantity;
+            totalPlanElement.textContent = `${h3Element.textContent} membership`;
+            unitPriceElement.textContent = unitPrice;
+            totalPriceElement.textContent = Math.round(totalPrice);
         }
 
-        // Function to validate number input
-        function validateNumber(field) {
-            const value = parseFloat(field.value);
-            const min = field.getAttribute('min');
-            const max = field.getAttribute('max');
-
-            if (isNaN(value)) return false; // Ensure value is a number
-            if (min && value < min) return false; // Ensure value meets minimum requirement
-            if (max && value > max) return false; // Ensure value meets maximum requirement
-
-            return true; // If all checks pass, return true
-        }
-
-        // Function to validate phone number input
-        function validateTel(phone) {
-            const phonePattern = /^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/; // Simple regex for phone numbers
-            return phonePattern.test(phone);
-        }
-
-        // Function to handle button state based on current step
-        function handleStepChange() {
-            if (stepper.currentIndex === 1) {
-                // Step 1: Disable Next button until a card is selected
-                handleCardSelection();
-            } else if (stepper.currentIndex === 2) {
-                // Step 2: Validate form fields and enable/disable Next button
-                handleFormValidation();
-            }
-        }
-
-        // Add event listeners to radio buttons for step 1
+        // Add event listeners for Step 1 (radio selection)
         radioButtons.forEach(radio => {
-            radio.addEventListener('change', handleCardSelection);
+            radio.addEventListener('change', function () {
+                handleCardSelection();
+                if (stepper.currentIndex === 3) {
+                    updateTotal();
+                }
+            });
         });
 
-        // Add event listeners to form inputs for step 2
+        // Add event listeners for form validation in Step 2
         const formInputs = document.querySelectorAll('#step-2 input[required]');
         formInputs.forEach(input => {
             input.addEventListener('input', handleFormValidation);
-            input.addEventListener('blur', handleFormValidation); // Validate on blur
+            input.addEventListener('blur', handleFormValidation); 
         });
+
+        // Add event listeners for consents in Step 3
+        const consentCheckboxes = document.querySelectorAll('#step-3 input[type="checkbox"][required]');
+        consentCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', validateConsents);
+            console.log("Checkbox clicked")
+        });
+
+        // Function to handle step changes and update summary/total
+        function handleStepChange() {
+            if (stepper.currentIndex === 1) {
+                handleCardSelection();
+            } else if (stepper.currentIndex === 2) {
+                handleFormValidation();
+            } else if (stepper.currentIndex === 3) {
+                updateSummary();
+                updateTotal();
+                validateConsents();
+            }
+        }
 
         // Hook into Preline's stepper events
-        // Listen for stepper events to handle step changes dynamically
         stepper.on('active', function () {
-            handleStepChange(); // Update button state when step becomes active
-        });
-
-        stepper.on('beforeNext', function () {
-            handleStepChange(); // Check before moving to the next step
+            handleStepChange();
         });
 
         stepper.on('next', function () {
-            handleStepChange(); // Check when the next step is reached
+            handleStepChange();
         });
 
         stepper.on('back', function () {
-            handleStepChange(); // Handle when the back button is clicked
+            handleStepChange();
         });
 
         // On page load, check the initial state of the stepper and update button state
         handleStepChange();
     });
 });
+
+// Utility functions for validation and styling
+function addErrorOutline(field) {
+    field.classList.remove('text-text', 'dark:text-darkmode-text');
+    field.classList.add('text-red-500', 'dark:text-red-500');
+}
+
+function removeErrorOutline(field) {
+    field.classList.remove('text-red-500', 'dark:text-red-500');
+    field.classList.add('text-text', 'dark:text-darkmode-text');
+}
+
+function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+function validateTel(phone) {
+    const phonePattern = /^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/;
+    return phonePattern.test(phone);
+}
