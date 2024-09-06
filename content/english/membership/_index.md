@@ -72,7 +72,7 @@ step_2:
     placeholder: "Pribinova 17954/10"
     type: text
     required: true
-  - id: address-1
+  - id: address-2
     label: "Address Line 2"
     hint: "apt. or building"
     placeholder: ""

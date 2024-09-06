@@ -70,21 +70,21 @@
           <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <!-- Grid -->
               <div class="lg:auto-rows-max space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
-                  {{ range .Params.step_1.plans }}
-                  <!-- Card-->
-                  <input id="{{ .id }}" type="radio" name="membership" class="hidden peer/{{ .id }} {{ if .multiple }}multiple{{ end }}" value="{{ .name }}">
-                  <label for="{{ .id }}" class="lg:h-full cursor-pointer flex flex-col mx-auto w-full max-w-xl border border-border dark:border-darkmode-border text-dark dark:text-darkmode-dark rounded-2xl bg-theme-light dark:bg-darkmode-theme-light peer-checked/{{ .id }}:outline peer-checked/{{ .id }}:outline-offset-2 peer-checked/{{ .id }}:outline-2 peer-checked/{{ .id }}:outline-dark dark:peer-checked/{{ .id }}:outline-darkmode-dark">
-                      <div class="p-6 xl:py-9 xl:px-12">
-                          <h3 class="font-manrope text-2xl font-bold mb-3">{{ .name }}</h3>
-                          {{ if .multiple }}
-                          <p class="text-xl text-text dark:text-darkmode-text">{{ i18n "membership.plan.from" }}</p>
-                          <div class="flex items-center mb-6">
-                              <span class="font-manrope mr-2 text-6xl font-semibold text-dark dark:text-darkmode-dark">€{{ mul 2 .price }}</span>
-                              {{ else }}
-                          <div class="flex items-center mb-6">
-                              <span class="font-manrope mr-2 text-6xl font-semibold text-dark dark:text-darkmode-dark">€{{ .price }}</span>
-                              {{ end }}
-                              <span class="text-xl text-text dark:text-darkmode-text">{{ i18n "membership.plan.per_year" }}</span>
+                {{ range .Params.step_1.plans }}
+                <!-- Card-->
+                <input id="{{ .id }}" type="radio" name="membership" class="hidden peer/{{ .id }} {{ if .multiple }}multiple{{ end }}" value="{{ .name }}">
+                <label for="{{ .id }}" class="lg:h-full cursor-pointer flex flex-col mx-auto w-full max-w-xl border border-border dark:border-darkmode-border text-dark dark:text-darkmode-dark rounded-2xl bg-theme-light dark:bg-darkmode-theme-light peer-checked/{{ .id }}:outline peer-checked/{{ .id }}:outline-offset-2 peer-checked/{{ .id }}:outline-2 peer-checked/{{ .id }}:outline-dark dark:peer-checked/{{ .id }}:outline-darkmode-dark">
+                    <div class="p-6 xl:py-9 xl:px-12">
+                        <h3 class="font-manrope text-2xl font-bold mb-3">{{ .name }}</h3>
+                        {{ if .multiple }}
+                        <p class="text-xl text-text dark:text-darkmode-text from-tag">{{ i18n "membership.plan.from" }}</p>
+                        <div class="flex items-center mb-6">
+                            <span class="font-manrope mr-2 text-6xl font-semibold text-dark dark:text-darkmode-dark">€<span class="price-tag" data-unitPrice="{{ .price }}">{{ mul 2 .price }}</span></span>
+                        {{ else }}
+                        <div class="flex items-center mb-6">
+                            <span class="font-manrope mr-2 text-6xl font-semibold text-dark dark:text-darkmode-dark">€{{ .price }}</span>
+                        {{ end }}
+                        <span class="text-xl text-text dark:text-darkmode-text">{{ i18n "membership.plan.per_year" }}</span>
                           </div>
   
                           <!-- List -->
@@ -108,7 +108,9 @@
               <!--Grid End-->
               
               <!-- Input Number -->
-              <div id="multipleInput" class="hidden mx-auto max-w-md mt-16 py-2 px-3 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg" data-hs-input-number="">
+              <div id="multipleInput" class="hidden mx-auto max-w-md mt-16 py-2 px-3 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg" data-hs-input-number='{
+                "min": 2
+              }'>
                 <div class="w-full flex justify-between items-center gap-x-3">
                   <div>
                     <span class="block font-medium text-xl text-dark dark:text-darkmode-dark">
@@ -124,7 +126,7 @@
                         <path d="M5 12h14"></path>
                       </svg>
                     </button>
-                    <input class="text-xl p-0 w-12 bg-transparent border-0 text-dark-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-darkmode-dark" style="-moz-appearance: textfield;" type="number" aria-roledescription="Number field" value="0" data-hs-input-number-input="">
+                    <input id="quantityInput" class="text-xl p-0 w-12 bg-transparent border-0 text-dark-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-darkmode-dark" style="-moz-appearance: textfield;" type="number" aria-roledescription="Number field" data-hs-input-number-input="">
                     <button type="button" class="size-12 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light text-dark dark:text-darkmode-dark shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" aria-label="Increase" data-hs-input-number-increment="">
                       <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14"></path>
@@ -277,5 +279,6 @@
   <!-- End Stepper -->
 </form>
 
-<script src='{{ "/js/orderForm.js" | absURL }}'></script>
+<script src='{{ "/js/toggleNumberInput.js" | absURL }}'></script>
+<script src='{{ "/js/updatePrice.js" | absURL }}'></script>
 {{ end }}
