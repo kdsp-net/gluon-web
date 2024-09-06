@@ -3,6 +3,8 @@ title = "Ako investujeme?"
 meta_title = "Ako investujeme?"
 +++
 
+V Gluon Syndicate veríme, že transparentný a vopred známy investičný proces je základným predpokladom kvalitného vzťahu zakladateľov startupu a ich investorov.
+
 ```mermaid
 
 flowchart TD
