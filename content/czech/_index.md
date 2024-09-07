@@ -4,6 +4,7 @@ banner:
   title: "Formujeme prostředí pro early-stage investice"
   content: "Ať už jste angel investor, který hledá možnosti růstu a diverzifikace svého portfolia, nebo startup hledající férové early-stage financování, Gluon Syndicate je tu pro vás. Připojte se k nám a staňte se součástí komunity, která formuje budoucnost angel investování v CEE!"
   image: "/images/banner.png"
+  image_dark: "/images/banner_dark.png"
   buttons:
     - label_key: "startup"
       link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
@@ -17,7 +18,8 @@ banner:
 # Features
 features:
   - title: "Propojit. Investovat. Růst."
-    image: "/images/service-1.png"
+    image: "/images/feature_1.png"
+    image_dark: "/images/feature_1_dark.png"
     content: "Stavíme most mezi angel investory a začínajícími startupy a podporujeme inovace a růst v regionu střední a východní Evropy."
     bulletpoints:
       - "Čtyři prestižní fyzické pitch eventy ročně na Slovensku a v Česku"
@@ -35,7 +37,8 @@ features:
         enable: true
 
   - title: "Angel investoři, maximalizujte svůj investiční potenciál"
-    image: "/images/service-2.png"
+    image: "/images/feature_2.png"
+    image_dark: "/images/feature_2_dark.png"
     content: "Gluon Syndicate nabízí investorům jedinečné příležitosti ke vstupu do nejslibnějších startupů v regionu střední a východní Evropy."
     bulletpoints:
       - "Získejte přístup k prvotřídnímu deal flow prostřednictvím rozsáhlého networku a partnerství"
@@ -54,7 +57,8 @@ features:
         enable: true
 
   - title: "Startupy, nakopněte svůj růst"
-    image: "/images/service-3.png"
+    image: "/images/feature_3.png"
+    image_dark: "/images/feature_3_dark.png"
     content: "Gluon Syndicate nabízí efektivní způsob jak představit svůj byznys mnoha prověřeným angel investorům současně a zajišťuje férové a transparentní financování pro začínající startupy."
     bulletpoints:
       - "Oslovte více investorů současně a zvyšte tak své šance na úspěch"
@@ -69,12 +73,13 @@ features:
         type: "primary"
         enable: true
       - label_key: "investment_process"
-        link:  "/resources/how-we-invest"
+        link:  "/resources/knowledge-base/how-we-invest/"
         type: "secondary"
         enable: true
 
   - title: "Férové ​​nabídky, jasné podmínky"
-    image: "/images/service-4.png"
+    image: "/images/feature_4.png"
+    image_dark: "/images/feature_4_dark.png"
     content: "Gluon Syndicate pohrdá predátorskými praktikami a nabízí investice prostřednictvím smluv o konvertibilních půjčkách, které odkládají diskusi o valuaci až do nadcházejícího kvalifikovaného kola."
     bulletpoints:
       - "Zaměřujeme se na startupy ze střední a východní Evropy ve fázi pilotních projektů a prvních tržeb (bez preference konkrétního odvětví)"
@@ -84,7 +89,7 @@ features:
       - "Financování na základě CLA s 30% slevou na valuaci pro následující investiční kolo a valuation cap ve výši 10-násobku investičního cíle"
     buttons:
       - label_key: "investment_process"
-        link:  "/resources/how-we-invest"
+        link:  "/resources/knowledge-base/how-we-invest/"
         type: "primary"
         enable: true
       - label_key: "investment_criteria"

@@ -16,9 +16,10 @@
               {{ if .enable }}
                 <a
                   class="btn btn-{{ .type }} {{ if gt $index 0 }}mt-4 md:mt-6 md:ml-4{{ end }}"
-                  href="{{ .link | absURL }}"
                   {{ if strings.HasPrefix .link `http` }}
-                    target="_blank" rel="noopener"
+                    href="{{ .link | absURL }}" target="_blank" rel="noopener"
+                  {{ else }}
+                    href="{{ .link | absLangURL }}"
                   {{ end }}>
                   {{ i18n (printf "button_labels.%s" .label_key) | safeHTML }}
                   <i class="fa fa-arrow-right pl-2"></i>
@@ -104,9 +105,10 @@
               {{ if .enable }}
                 <a
                   class="btn btn-{{ .type }} {{ if gt $index 0 }}mt-4 md:mt-6 md:ml-4{{ end }}"
-                  href="{{ .link | absURL }}"
                   {{ if strings.HasPrefix .link `http` }}
-                    target="_blank" rel="noopener"
+                    href="{{ .link | absURL }}" target="_blank" rel="noopener"
+                  {{ else }}
+                    href="{{ .link | absLangURL }}"
                   {{ end }}>
                   {{ i18n (printf "button_labels.%s" .label_key) | safeHTML }}
                   <i class="fa fa-arrow-right pl-2"></i>

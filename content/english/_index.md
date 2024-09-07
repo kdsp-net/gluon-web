@@ -73,7 +73,7 @@ features:
         type: "primary"
         enable: true
       - label_key: "investment_process"
-        link:  "/resources/how-we-invest"
+        link:  "/resources/knowledge-base/how-we-invest"
         type: "secondary"
         enable: true
 
@@ -89,7 +89,7 @@ features:
       - "Funding based on CLAs with 30% discount on a subsequent round and a valuation cap in the amount of 10&times; the investment target"
     buttons:
       - label_key: "investment_process"
-        link:  "/resources/how-we-invest"
+        link:  "/resources/knowledge-base/how-we-invest"
         type: "primary"
         enable: true
       - label_key: "investment_criteria"
