@@ -132,8 +132,8 @@ V druhé fázi výběrového procesu jdeme významně více do detailu prezentov
 Z 30 shortlistovaných startupů vybíráme 15 nejlepších, které dostanou příležitost zabojovat o investici na pitch eventu. O nominaci na každý event rozhoduje bodovací hlasování zakladatelů a VIP členů Gluon Syndicate, které probíhá prostřednictvím vlastní online platformy. Nominace na event jsou známy 14 dní před jeho uskutečněním.
 
 ### Selected for event
-Se startupy vybranými na event předem podepisujeme základní investiční dokumentaci - smlouvu o konvertibilní půjčce (CLA) - tak aby všechny podmínky byly jasné a zakotvené ještě před pitch eventem (nejdůležitější parametry naší standardizované CLA najdete zde). Součástí této smlouvy je aktivační klauzule, ktorá spustí investičný proces za dohodnutých podmienok, ak sa zakladateľom startupu podarí na pitch evente naraisovať prostriedky v hodnote investičného cieľa, ktorý si vopred sami určia (v rozsahu €50-300k). 
-NB: Startup za účasť na evente ani za prípadnú realizáciu investície a s tým súvisiace činnosti neplatí žiadne poplatky.
+Se startupy vybranými na event předem podepisujeme základní investiční dokumentaci - smlouvu o konvertibilní půjčce (CLA) - tak aby všechny podmínky byly jasné a zakotvené ještě před pitch eventem (nejdůležitější parametry naší standardizované CLA najdete zde). Součástí této smlouvy je aktivační klauzule, která spustí investiční proces za dohodnutých podmínek, pokud se zakladatelům startupu podaří na pitch eventu naraisovat prostředky v hodnotě investičního cíle, který si předem sami určí (v rozsahu €50-300k). 
+NB: Startup za účast na eventu ani za případnou realizaci investice a s tím související činnosti neplatí žádné poplatky.
 
 ---
 
