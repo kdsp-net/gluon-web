@@ -50,7 +50,7 @@ click extraFunding href "#extra-funding"
 click dueDiligence href "#due-diligence-dd"
 click cla href "#convertible-loan"
 click qualifiedRound href "#equity-round"
-click conversion href "#Conversion"
+click conversion href "#conversion"
 click subsequentRounds href "#subsequent-rounds"
 click exit href "#exit"
 
