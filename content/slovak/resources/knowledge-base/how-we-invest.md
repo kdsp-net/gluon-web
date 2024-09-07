@@ -112,7 +112,7 @@ Vytvorili sme a rozvíjame partnerstvá s akcelerátormi a inkubátormi v regió
 Aktívne promujeme aktivity a fungovanie syndikátu s cieľom zasiahnuť zakľadateľov najzaujímavejších early-stage startupov z regiónu. Snažíme sa jasne odkomunikovať svoje princípy a výhody, aby sme boli medzi prvými, komu pošlú svoj pitch deck, keď začnú hľadať angel investíciu.
 
 ### VC Funds
-Sme v blízkom kontakte s poprednými VC fondami zo CEE ((Presto, Tensor, Kaya, 0100, Zaka, atď.), ktoré ku nám smerujú startupy z ich deal flow, ktoré im prídu zaujímavé, ale sú pre nich príliš early-stage. A navyše s nami vybrané VCs pravideľne zdieľajú zaujímavé co-investičné príležitosti a recipročne my máme možnosť niektoré naše príležitosti zdieľať s nimi.
+Sme v blízkom kontakte s poprednými VC fondami zo CEE (Presto, Tensor, Kaya, 0100, Zaka, atď.), ktoré ku nám smerujú startupy z ich deal flow, ktoré im prídu zaujímavé, ale sú pre nich príliš early-stage. A navyše s nami vybrané VCs pravideľne zdieľajú zaujímavé co-investičné príležitosti a recipročne my máme možnosť niektoré naše príležitosti zdieľať s nimi.
 
 ---
 

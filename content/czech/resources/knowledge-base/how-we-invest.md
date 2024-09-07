@@ -107,13 +107,13 @@ Naši členové mají možnost navrhovat startupy hledající investici a ty ná
 Aktivně vyhledáváme nadějné startupy napříč střední a východní Evropou formou osobních setkání na startupistických eventech a soutěžích i prostřednictvím online průzkumu. A díky široké síti kontaktů z řad founderů, investorů, novinářů a dalších startup nadšenců, kterou jsme si za 15 let v byznysu vybudovali, zůstáváme v obraze o aktuálním dění na startupistické scéně v regionu.
 
 ### Accelerators & Incubators
-Vytvorili sme a rozvíjame partnerstvá s akcelerátormi a inkubátormi v regióne (AceON, StartupYard, InQb, SaaS Garden, atď.), pričom v niektorých z nich aj priamo mentorujeme. Vďaka tejto spolupráci získavame prístup k ich najlepším alumni startupom.
+Vytvořili jsme a rozvíjíme partnerství s několika regionálními akcelerátory a inkubátory (AceON, StartupYard, InQb, SaaS Garden, atd.), přičem v některých z nich i přímo mentorujeme. Díky této spolupráci získáváme přístup k jejich nejlepším alumni startupům.
 
 ### Inbound
-Aktívne promujeme aktivity a fungovanie syndikátu s cieľom zasiahnuť zakľadateľov najzaujímavejších early-stage startupov z regiónu. Snažíme sa jasne odkomunikovať svoje princípy a výhody, aby sme boli medzi prvými, komu pošlú svoj pitch deck, keď začnú hľadať angel investíciu.
+Aktivně promujeme aktivity a fungování syndikátu s cílem zasáhnout zakladatele nejzajímavějších early-stage startupů z regionu. Snažíme sa jasně odkomunikovat své principy a výhody, abychom byli mezi prvními, komu pošlou svůj pitch deck, ve chvíli kdy začnou hledat angel investici.
 
 ### VC Funds
-Sme v blízkom kontakte s poprednými VC fondami zo CEE ((Presto, Tensor, Kaya, 0100, Zaka, atď.), ktoré ku nám smerujú startupy z ich deal flow, ktoré im prídu zaujímavé, ale sú pre nich príliš early-stage. A navyše s nami vybrané VCs pravideľne zdieľajú zaujímavé co-investičné príležitosti a recipročne my máme možnosť niektoré naše príležitosti zdieľať s nimi.
+Jsme v blízkém kontaktu s předními VC fondy ze CEE (Presto, Tensor, Kaya, 0100, Zaka, atd.) a ty k nám směrují startupy z jejich deal flow, které jim připadají zajímavé, ale jsou pro ně příliš early-stage. Navíc s námi vybrané VCs pravidelně sdílejí zajímavé koinvestiční příležitosti a recipročně my máme možnost některé naše příležitosti sdílet s nimi.
 
 ---
 
