@@ -6,11 +6,11 @@
 name = "Investoři"
 weight = 1
 
-[[main]]
-parent = "Investoři"
-name = "Zakladatelé syndikátu"
-pageRef = "/founders"
-weight = 1
+# [[main]]
+# parent = "Investoři"
+# name = "Zakladatelé syndikátu"
+# pageRef = "/founders"
+# weight = 1
 
 [[main]]
 parent = "Investoři"
