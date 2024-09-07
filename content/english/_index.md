@@ -4,6 +4,7 @@ banner:
   title: "Shaping the Early-Stage Funding Landscape"
   content: "Whether you’re an angel investor looking to diversify and maximize your portfolio or a startup seeking fair and early-stage funding, Gluon Syndicate is here for you. Join us and become a part of a community that’s shaping the future of angel investments in CEE!"
   image: "/images/banner.png"
+  image_dark: "/images/banner_dark.png"
   buttons:
     - label_key: "startup"
       link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
@@ -17,7 +18,8 @@ banner:
 # Features
 features:
   - title: "Connect. Invest. Grow."
-    image: "/images/service-1.png"
+    image: "/images/feature_1.png"
+    image_dark: "/images/feature_1_dark.png"
     content: "We bridge the gap between angel investors and early-stage startups, fostering innovation and growth in the CEE region."
     bulletpoints:
       - "Four prestigious live pitch events annually in Slovakia and Czechia"
@@ -35,7 +37,8 @@ features:
         enable: true
 
   - title: "Angels, Maximize Your Investment Potential"
-    image: "/images/service-2.png"
+    image: "/images/feature_2.png"
+    image_dark: "/images/feature_2_dark.png"
     content: "Gluon Syndicate offers unparalleled opportunities for investors to engage with the most promising startups in the CEE region."
     bulletpoints:
       - "Access premier deal flow through extensive networks and partnerships"
@@ -54,7 +57,8 @@ features:
         enable: true
 
   - title: "Startups, Fuel Your Growth"
-    image: "/images/service-3.png"
+    image: "/images/feature_3.png"
+    image_dark: "/images/feature_3_dark.png"
     content: "Gluon Syndicate offers a streamlined process to pitch to multiple vetted angel investors, ensuring fair and transparent funding opportunities for early-stage startups."
     bulletpoints:
       - "Pitch to multiple investors simultaneously for higher funding potential"
@@ -74,7 +78,8 @@ features:
         enable: true
 
   - title: "Fair Deals, Clear Conditions"
-    image: "/images/service-4.png"
+    image: "/images/feature_4.png"
+    image_dark: "/images/feature_4_dark.png"
     content: "Gluon Syndicate despises predatory deals and offers investment through convertible loan agreements that postpone the discussion about valuation until the upcoming qualified round."
     bulletpoints:
       - "We target pre-revenue and first-revenue CEE startups (industry-agnostic)"
