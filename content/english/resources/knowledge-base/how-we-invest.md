@@ -3,7 +3,7 @@ title = "How We Invest?"
 meta_title = "How We Invest?"
 +++
 
-At Gluon Syndicate, a transparent and clear investment process together with fair conditions are the basic prerequisites for the beginning of a quality relationship between startup founders and their investors. We like to surround ourselves with like-minded people. Therefore, this is where potential investors, as well as investors who are considering joining us, will find everything important about how we approach investing.
+At Gluon Syndicate, we believe that a transparent and clear investment process together with fair conditions are the basic prerequisites for the beginning of a quality relationship between startup founders and their investors. And we like to surround ourselves with like-minded people. Therefore, whether you are a founder seeking investment, or an investor considering joining us, here you can find everything important about how we approach investing.
 
 
 ```mermaid
@@ -101,38 +101,38 @@ subsequentRounds ==> exit
 ## Sourcing
 
 ### Syndicate Members
-Our members have the opportunity to propose startups looking for investment and they then go through our selection process. In addition, investors with a premium membership can nominate directly to the event one startup per year in which they want to invest and are looking for co-investors.
+Our members have the opportunity to propose startups looking for investment which then go through our selection process. In addition, investors with a premium membership can nominate directly to the event a startup in which they want to invest and are looking for co-investors (every premium member has one wildcard per year).
 
 ### Startup Events & Network
-We actively search for promising startups across Central and Eastern Europe in the form of personal meetings at startup events and competitions as well as through online research. And thanks to the wide network of contacts from the ranks of founders, investors, journalists and other startup enthusiasts, which we have built up over 15 years in business, we stay up-to-date on current events on the startup scene in the region.
+We actively source promising startups across Central and Eastern Europe using in-person meetings at startup events and competitions as well as online research. And thanks to the wide network of founders, investors, journalists, and other startup enthusiasts, which we have built up over 15 years in business, we stay up-to-date on the startup scene in the region.
 
 ### Accelerators & Incubators
-We have created and are developing partnerships with several regional accelerators and incubators (AceON, StartupYard, InQb, SaaS Garden, etc.), and we directly mentor in some of them. Thanks to this cooperation, we get access to their best alumni startups.
+We have created partnerships with several regional accelerators and incubators (AceON, StartupYard, InQb, SaaS Garden, etc.) and we are also mentors in some of them. Thanks to this cooperation, we get access to their best alumni startups.
 
 ### Inbound
-We actively promote the activities and functioning of the syndicate with the aim of reaching the founders of the most interesting early-stage startups from the region. We strive to clearly communicate our principles and benefits so that we are among the first to whom they send their pitch deck when they start looking for angel investment.
+We actively promote the activities and functioning of the syndicate intending to reach the founders of the most interesting early-stage startups from the region. We strive to communicate our principles and benefits so that we are among the first to whom they send their pitch deck when they start looking for angel investment.
 
 ### VC Funds
-We are in close contact with leading VC funds from CEE (Presto, Tensor, Kaya, 0100, Zaka, etc.) and they direct us startups from their deal flow that they find interesting, but are too early-stage for them. In addition, selected VCs regularly share interesting co-investment opportunities with us, and reciprocally we have the opportunity to share some of our opportunities with them.
+We are in close contact with leading VC funds from CEE (Presto, Tensor, Kaya, 0100, Zaka, etc.) and they are sending us startups from their deal flow that they find interesting, but are too early-stage for them. In addition, selected VCs regularly share interesting co-investment opportunities with us, and reciprocally we have the opportunity to share some of our opportunities with them.
 
 ---
 
 ## Selection
 
 ### Inbox
-Every new opportunity lands in our inbox, most often based on an online application on our website. We try to ensure that founders know how Gluon Syndicate works and the conditions under which we invest before filling out the application. We advance projects that meet the basic investment criteria to the next phase (project phase, volume of planned investment, founders' expectations, etc.)
+Every new opportunity lands in our inbox, most often based on an online application on our website. We try to ensure that founders know how Gluon Syndicate works (and what are the conditions under which we invest) before filling out the application. We advance projects that meet the basic investment criteria to the next phase (project phase, volume of planned investment, founders' expectations, etc.)
 
 ### Pre-screening
-In the first stage of the selection process, we evaluate the answers to the questions from the application with regard to the problem and its solution, the market and competition, the innovativeness of the concept, the strength of the team, the business model, etc. Projects that we evaluate as interesting at first glance are moved to the next stage.
+In the first stage of the selection process, we evaluate the answers to the questions from the application concerning the problem and its solution, the market and competition, the innovativeness of the concept, the strength of the team, the business model, etc. Projects that we evaluate as interesting at first glance are moved to the next stage.
 
 ### Screening
-In the second phase of the selection process, we go significantly more into the details of the presented business. The analysis consists of an extended set of questions and answers and a 30-60 minute call with the founders of the startup. Based on the findings, we select startups for the shortlist, and always a month before the pitch event, we want to have the 30 most interesting startups that we have seen in the last quarter on the shortlist.
+In the second phase of the selection process, we go significantly more into the details of the presented business. The analysis consists of an extended set of questions and answers and a 30 to 60-minute call with the founders of the startup. Based on the findings, we select startups for the shortlist. A month before each pitch event, we want to have the 30 most interesting startups that we have seen in the last quarter on the shortlist.
 
 ### Shortlist
-From the 30 shortlisted startups, we select the 15 best, which will get the opportunity to fight for investment at the pitch event. The nomination for each event is decided by a points vote of the founders and VIP members of the Gluon Syndicate, which takes place through its own online platform. Nominations for the event are known 14 days before it takes place.
+From the 30 shortlisted startups, we select the 15 best, which will get the opportunity to fight for investment at the pitch event. The nomination for each event is decided by a points vote of the founders and VIP members of the Gluon Syndicate, which takes place through its online platform. Nominations for the event are known 14 days before it takes place.
 
 ### Selected for event
-With startups selected for the event, we sign basic investment documentation in advance - a convertible loan agreement (CLA) - so that all conditions are clear and established before the pitch event (you can find the most important parameters of our standardized CLA here). Part of this contract is an activation clause, which will start the investment process under agreed conditions, if the startup founders manage to raise funds at the pitch event in the amount of the investment goal, which they determine in advance (in the range of €50-300k).
+With startups selected for the event, we sign basic investment documentation in advance - a convertible loan agreement (CLA) - so that all conditions are clear and established before the pitch event (you can find the most important parameters of our standardized CLA here). Part of this contract is an activation clause, which will start the investment process under agreed conditions in case the startup founders manage to raise funds at the pitch event in the amount of the investment goal, which they determine in advance (in the range of €50-300k).
 NB: The startup does not pay any fees for participating in the event or for the possible realization of the investment and related activities.
 
 ---
@@ -140,10 +140,10 @@ NB: The startup does not pay any fees for participating in the event or for the 
 ## Pitch Event
 
 ### First round
-In the first part of the event, all startups on the stage gradually have a 5-minute pitch. In addition, the founders have their own presentation stand available from the start of the event. From the start of the event, all present investors can express a preliminary interest in investing in a specific startup by entering an indicative ticket in a specific amount into the mobile application. Quantified preliminary investment interest in all startups is visualized on the displays. At the end of the first round, the preliminary interest is evaluated and the 6 startups with the largest indicated amount advance to the second round for the stagi (non-advancing startups can still raise their goals during the event, but they no longer receive additional room for the stagi).
+In the first part of the event, all startups have a 5-minute pitch on the stage. In addition, the founders have their presentation booths available from the start of the event. From the start of the event, all present investors can express a preliminary interest in investing in a specific startup by entering an indicative ticket (specific amount) into the mobile application. Quantified preliminary investment interest in all startups is visualized on the displays. At the end of the first round, the preliminary interest is evaluated and the 6 startups with the largest indicated amount advance to the second round for the stage (non-advancing startups can still raise their goals during the event, but they no longer receive additional stage opportunities).
 
 ### Second round
-In the second round, 6 startups with the highest amount of quantified investment interest get the opportunity to present their business model (and possibly a product demo) at the stage. At the end of each presentation there is a short Q&A session. From the beginning of the second round, investors can convert preliminary interest into a binding offer (and can still freely express and change preliminary interests). By expressing a binding offer, the startup obtains a promise of investment from the given investor. The investor digitally signs this commitment via a mobile application. If the amount of pledges at the event reaches or exceeds the limit of the investment goal defined by the founders, the investment will be realized. If during the event the founders fail to obtain the amount of binding bids at the level of the investment goal, no investment will be made and the signed CLA will not enter into force, but expire.
+In the second round, 6 startups with the highest amount of quantified investment interest get the opportunity to present their business model (and possibly a product demo) at the stage. At the end of each presentation, there is a short Q&A session. From the beginning of the second round, investors can convert preliminary interest into a binding offer (and they can still freely express and adjust their preliminary interests). By expressing a binding offer, the startup obtains a promise of investment from the given investor. The investor digitally signs this commitment via a mobile application. If the amount of pledges at the event reaches or exceeds the limit of the investment goal defined by the founders, the investment will be realized. If the founders fail to obtain the amount of commitments at the level of the investment goal, no investment will be made and the signed CLA will not enter into force, but expire.
 
 ### Extra funding
 The founders of individual startups determine in advance, in addition to their investment goal (which is also the threshold value of the entire investment), the possibility of raising "extra funding" in the amount of 0-100% of the investment goal, i.e. the possibility of doubling the investment. If a successful startup reaches the threshold of extra funding directly at the event, the investment opportunity is closed and it is no longer possible to invest in the startup. If a startup reaches its investment goal at the event but does not reach the extra funding threshold, the opportunity will remain open to angel investors for another 5 days via the mobile app (if extra funding is met during this period, the opportunity will close at that point).
