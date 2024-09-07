@@ -1,56 +1,58 @@
-############# Slovak navigation ##############
+############# English navigation ##############
 
 # main menu
+
 [[main]]
-name = "Domov"
-pageRef = "/"
+name = "Investori"
 weight = 1
 
 [[main]]
-name = "O nás"
+parent = "Investori"
+name = "Zakladatelia syndikátu"
+pageRef = "/founders"
+weight = 1
+
+[[main]]
+parent = "Investori"
+name = "Prezentácia pre investorov"
+url = "https://slides.gluon.vc/investor-deck"
 weight = 2
 
 [[main]]
-parent = "O nás"
-name = "Zakladatelia"
-pageRef = "founders"
-
-[[main]]
-parent = "O nás"
-name = "Členovia"
-pageRef = "members"
-
-[[main]]
-name = "Informácie"
+parent = "Investori"
+name = "Pridajte sa"
+pageRef = "/membership"
 weight = 3
 
 [[main]]
-parent = "Informácie"
-name = "Blog"
-pageRef = "resources/blog"
+name = "Ako investujeme"
+pageRef = "/how-we-invest"
+weight = 2
 
 [[main]]
-parent = "Informácie"
-name = "Znalostná báza"
-pageRef = "resources/knowledge-base"
+name = "Zdroje"
+weight = 3
 
 [[main]]
-name = "Kontakt"
-pageRef = "contact"
-weight = 4
-
-# footer menu
-[[footer]]
-name = "O nás"
-pageRef = "/about"
+parent = "Zdroje"
+name = "Wiki"
+pageRef = "/resources/knowledge-base"
 weight = 1
 
-[[footer]]
-name = "Verejné obchodné podmienky"
-pageRef = "/terms-of-service"
+[[main]]
+parent = "Zdroje"
+name = "Blog"
+pageRef = "/resources/blog"
 weight = 2
+
+# footer menu
+
+[[footer]]
+name = "Všeobecné pbchodné podmienky"
+pageRef = "/resources/terms-of-service"
+weight = 1
 
 [[footer]]
 name = "Zásady ochrany osobných údajov"
-pageRef = "/privacy-policy"
-weight = 3
+pageRef = "/resources/privacy-policy"
+weight = 2

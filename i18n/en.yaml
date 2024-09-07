@@ -18,18 +18,18 @@ button_labels:
   subscribe: Subscirbe
   investment_process: How We Invest
   investor_deck: Investor Deck
-  investment_criteria: Investment Criteria
+  investment_criteria: Investment Criteria & Conditions
   next: Next
   back: Back
   submit: Submit
 announcement:
-  message: "Are you an investor, startupist, or tech enthusiast planing to go to Web Summit 2024? **We've booked a plane from Prague, Brno, Bratislava and Kosice for you!** Fly with us and enjoy great deals on hotel, tickets and side events."
+  message: "Are you an investor, startupist, or tech enthusiast? Join our **Mission to Web Summit 2024** and enjoy great mix of networking, flight and event tickets, accomodation, and side events."
   link: "https://www.pelikan.sk/sk/pobyt/web-summit-lisabon-gluon-syndicate"
 beehiiv_url:
   default: "https://embeds.beehiiv.com/04babe21-4fa5-4161-acd6-2638316a6a13"
   dark: "https://embeds.beehiiv.com/27541c05-650d-4afc-a803-d7d74cb375d2"
 timer:
-  title: "Upcoming Pitching Event:"
+  title: "Upcoming Pitch Event:"
   days: Days
   hours: Hours
   minutes: Minutes
@@ -38,5 +38,5 @@ membership:
   plan:
     from: From
     per_year: / year
-    per_person: / person
-    persons: Persons
+    per_person: / investor
+    persons: Investors

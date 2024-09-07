@@ -1,56 +1,58 @@
 ############# Czech navigation ##############
 
 # main menu
+
 [[main]]
-name = "Domů"
-pageRef = "/"
+name = "Investoři"
 weight = 1
 
 [[main]]
-name = "O nás"
+parent = "Investoři"
+name = "Zakladatelé syndikátu"
+pageRef = "/founders"
+weight = 1
+
+[[main]]
+parent = "Investoři"
+name = "Prezentace pro investory"
+url = "https://slides.gluon.vc/investor-deck"
 weight = 2
 
 [[main]]
-parent = "O nás"
-name = "Zakladatelé"
-pageRef = "founders"
-
-[[main]]
-parent = "O nás"
-name = "Členové"
-pageRef = "members"
-
-[[main]]
-name = "Informace"
+parent = "Investoři"
+name = "Přidejte se"
+pageRef = "/membership"
 weight = 3
 
 [[main]]
-parent = "Informace"
-name = "Blog"
-pageRef = "resources/blog"
+name = "Jak investujeme"
+pageRef = "/how-we-invest"
+weight = 2
 
 [[main]]
-parent = "Informace"
-name = "Znalostní báze"
-pageRef = "resources/knowledge-base"
+name = "Zdroje"
+weight = 3
 
 [[main]]
-name = "Kontakt"
-pageRef = "contact"
-weight = 4
-
-# footer menu
-[[footer]]
-name = "O nás"
-pageRef = "/about"
+parent = "Zdroje"
+name = "Wiki"
+pageRef = "/resources/knowledge-base"
 weight = 1
 
-[[footer]]
-name = "Veřejné obchodní podmínky"
-pageRef = "/terms-of-service"
+[[main]]
+parent = "Zdroje"
+name = "Blog"
+pageRef = "/resources/blog"
 weight = 2
+
+# footer menu
+
+[[footer]]
+name = "Všeobecné obchodní podmínky"
+pageRef = "/resources/terms-of-service"
+weight = 1
 
 [[footer]]
 name = "Zásady ochrany osobních údajů"
-pageRef = "/privacy-policy"
-weight = 3
+pageRef = "/resources/privacy-policy"
+weight = 2

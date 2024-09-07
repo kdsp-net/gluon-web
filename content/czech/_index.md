@@ -10,7 +10,7 @@ banner:
       type: "primary"
       enable: true
     - label_key: "member"
-      link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
+      link:  "/membership"
       type: "secondary"
       enable: true
 
@@ -30,7 +30,7 @@ features:
         type: "primary"
         enable: true
       - label_key: "member"
-        link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
+        link:  "/membership"
         type: "secondary"
         enable: true
 
@@ -69,7 +69,7 @@ features:
         type: "primary"
         enable: true
       - label_key: "investment_process"
-        link:  "/how-we-invest"
+        link:  "/resources/how-we-invest"
         type: "secondary"
         enable: true
 
@@ -84,11 +84,11 @@ features:
       - "Financování na základě CLA s 30% slevou na valuaci pro následující investiční kolo a valuation cap ve výši 10-násobku investičního cíle"
     buttons:
       - label_key: "investment_process"
-        link:  "/how-we-invest"
+        link:  "/resources/how-we-invest"
         type: "primary"
         enable: true
       - label_key: "investment_criteria"
-        link:  "/resources/knowledge-base/startup-criteria"
+        link:  "/resources/knowledge-base/investment-criteria-and-conditions"
         type: "secondary"
         enable: true
 ---

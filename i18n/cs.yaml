@@ -18,16 +18,25 @@ button_labels:
   subscribe: Odebírat
   investment_process: Jak investujeme
   investor_deck: Prezentace pro investory
-  investment_criteria: Investiční kritéria
+  investment_criteria: Investiční kritéria a podmínky
+  next: Další
+  back: Zpět
+  submit: Odeslat
 announcement:
-  message: "Jsi investor, startupista nebo technologický nadšenec a plánuješ navštívit Web Summit 2024? **Rezervovali jsme pro tebe letadlo z Prahy, Brna, Bratislavy a Košic!** Poleťte s námi a užijte si skvělou kombinaci ubytování, vstupenek a doprovodného programu."
+  message: "Jsi investor, startupista nebo technologický nadšenec? Přidej se k naší **Mission to Web Summit 2024** a užij si skvělou kombinaci networkingu, letenek, vstupenek, ubytování a doprovodného programu."
   link: "https://www.pelikan.cz/cs/pobyt/web-summit-lisabon-gluon-syndicate"
 beehiiv_url:
   default: "https://embeds.beehiiv.com/d1961360-055e-42e3-9ed9-d355489da9cb"
   dark: "https://embeds.beehiiv.com/6e9538b1-e558-4795-850e-04ec4c48a6da"
 timer:
-  title: "Příští Pitching Event:"
+  title: "Příští Pitch Event:"
   days: Dnů
   hours: Hodin
   minutes: Minut
   seconds: Sekund
+membership:
+  plan:
+    from: Od
+    per_year: / rok
+    per_person: / investor
+    persons: Počet investorů

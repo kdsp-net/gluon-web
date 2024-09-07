@@ -1,19 +1,28 @@
 ############# English navigation ##############
 
 # main menu
+
 [[main]]
-name = "About"
+name = "Investors"
 weight = 1
 
 [[main]]
-parent = "About"
+parent = "Investors"
 name = "Founders"
 pageRef = "/founders"
+weight = 1
 
 [[main]]
-parent = "About"
-name = "Members"
-pageRef = "/members"
+parent = "Investors"
+name = "Investor Deck"
+url = "https://slides.gluon.vc/investor-deck"
+weight = 2
+
+[[main]]
+parent = "Investors"
+name = "Join Us"
+pageRef = "/membership"
+weight = 3
 
 [[main]]
 name = "How We Invest"
@@ -26,36 +35,24 @@ weight = 3
 
 [[main]]
 parent = "Resources"
-name = "Blog"
-pageRef = "/resources/blog"
-
-[[main]]
-parent = "Resources"
 name = "Knowledge Base"
 pageRef = "/resources/knowledge-base"
+weight = 1
 
 [[main]]
 parent = "Resources"
-name = "Investor Deck"
-url = "https://slides.gluon.vc/investor-deck"
-
-[[main]]
-name = "Contact"
-pageRef = "/contact"
-weight = 4
+name = "Blog"
+pageRef = "/resources/blog"
+weight = 2
 
 # footer menu
-[[footer]]
-name = "About"
-pageRef = "/about"
-weight = 1
 
 [[footer]]
 name = "Terms of Service"
-pageRef = "/terms-of-service"
-weight = 2
+pageRef = "/resources/terms-of-service"
+weight = 1
 
 [[footer]]
 name = "Privacy Policy"
-pageRef = "/privacy-policy"
-weight = 3
+pageRef = "/resources/privacy-policy"
+weight = 2
