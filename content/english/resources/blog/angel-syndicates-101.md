@@ -1,5 +1,7 @@
 +++
-description = "this is meta description"
+description = "Basic principles of angel syndication."
+categories = [ "For Investors",]
+tags = [ "syndication", "co-investing", "deal flow", "diversification",]
 title = "Angel Syndicates 101"
 meta_title = "Angel Syndicates 101"
 type = "blog"
@@ -24,7 +26,7 @@ Angel syndicates provide access to a larger number of investment opportunities t
 ### 2. Portfolio Diversification
 Diversification is a critical strategy in managing the high risk associated with startup investments. By pooling resources, syndicate members can spread their investments across a broader array of startups, reducing the impact of any single failure. This approach mitigates the inherent risk of investing in early-stage companies.
 
-**Example:** Ten individual investors each with a ?100K budget might invest in one startup each. In a syndicate, they could collectively invest in ten different startups, with each investor putting ?10K into each one. This strategy spreads their risk and increases their exposure to potential high returns.
+**Example:** Ten individual investors each with a €100K budget might invest in one startup each. In a syndicate, they could collectively invest in ten different startups, with each investor putting €10K into each one. This strategy spreads their risk and increases their exposure to potential high returns.
 
 ### 3. Shared Expertise and Mentorship
 Syndicate members benefit from the collective knowledge and experience of the group. Experienced investors can provide valuable mentorship and guidance, helping newer members navigate the complexities of startup investing. This collaborative environment fosters learning and reduces the likelihood of costly mistakes.

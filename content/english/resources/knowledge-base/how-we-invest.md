@@ -176,3 +176,5 @@ If the target startup succeeds in concluding further investment rounds, the SPV 
 
 ## Exit
 For the Gluon Syndicate and the participating angel investors – as for any investor in the VC market – the primary motivation for investing in a startup is the potential exit. The basic strategy of Gluon Syndicate is to stay on board the startup until the acquisition of the company by a strategic investor or until the IPO, therefore the expected investment horizon in the case of successful investments is a period of approx. 7-15 years. In some cases, if it makes sense for the strategic direction of the company, the share in the target startup can be partially or completely sold to a new entrant or another existing investor, for example in a subsequent investment round or similar.
+
+---
