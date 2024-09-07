@@ -120,16 +120,16 @@ Jsme v blízkém kontaktu s předními VC fondy ze CEE (Presto, Tensor, Kaya, 01
 ## Selection
 
 ### Inbox
-Každá nová příležitost nám přistane do inboxu, nejčastěji na základě online přihlášky u nás na webu. Snažíme sa, aby founderi ešte pred vyplnením prihlášky poznali fungovanie Gluon Syndicate a podmienky, za akých investujeme. Do ďalšej fázy posúvame projekty, ktoré spĺňajú základné investičné kritériá (fáza projektu, veľkosť potrebnej investície, očakávania founderov, apod.)
+Každá nová příležitost nám přistane do inboxu, nejčastěji na základě online přihlášky u nás na webu. Snažíme sa, aby foundeři ještě před vyplněním přihlášky znali fungování Gluon Syndicate a podmínky, za kterých investujeme. Do další fáze posouváme projekty, které splňují základní investiční kriteria (fáze projektu, objem plánované investice, očekávání founders, apod.)
 
 ### Pre-screening
-V prvej fáze výberového procesu hodnotíme odpovede na otázky z prihlášky ohľadom problému a jeho riešenia, trhu a konkurencie, inovatívnosti konceptu, sily týmu, biznis modelu, atď. Projekty, ktoré na prvý pohľad vyhodnotíme ako zaujímavé, posunujeme do ďalšej fázy.
+V první fázi výběrového procesu hodnotíme odpovědi na otázky z prihlášky ohledem problému a jeho řešení, trhu a konkurence, inovativnosti konceptu, síly týmu, biznis modelu, atd. Projekty, které na první pohled vyhodnotíme jako zajímavé, posunujeme do další fáze.
 
 ### Screening
-V druhej fáze výberového procesu ideme významne viacej do detailu prezentovaného biznisu. Analýza pozostáva z rozšírenej sady otázok a odpovedí a 30-60 minútového callu s foundermi startupu. Na základe zistení vyberáme startupy na shortlist, pričom vždy mesiac pred pitch eventom chceme mať na shortliste 30 najzaujímavejších startupov, ktoré sme za posledný kvartál videli.
+V druhé fázi výběrového procesu jdeme významně více do detailu prezentovaného byznysu. Analýza se skládá z rozšířené sady otázek a odpovědí a 30-60 minutového callu se zakladateli startupu. Na základě zjištění vybíráme startupy na shortlist, přičem vždy měsíc před pitch eventem chceme mít na shortlistu 30 nejzajímavějších startupů, které jsme za poslední kvartál viděli.
 
 ### Shortlist
-Z 30 shortlistovaných startupov vyberáme 15 najlepších, ktoré dostanú príležitosť zabojovať o investíciu na pitch evente. O nominácii na každý event rozhoduje bodovacie hlasovanie zakladateľov a VIP členov Gluon Syndicate, ktoré prebieha prostredníctvom vlastnej online platformy. Nominácie na event sú známe 14 dní pred jeho uskutočnením.
+Z 30 shortlistovaných startupů vybíráme 15 nejlepších, které dostanou příležitost zabojovat o investici na pitch eventu. O nominaci na každý event rozhoduje bodovací hlasování zakladatelů a VIP členů Gluon Syndicate, které probíhá prostřednictvím vlastní online platformy. Nominace na event jsou známy 14 dní před jeho uskutečněním.
 
 ### Selected for event
 So startupmi vybranými na event vopred podpisujeme základnú investičnú dokumentáciu - zmluvu o konvertibilnom úvere (CLA) - tak aby všetky podmienky boli jasné a zakotvené ešte pred pitch eventom (najdôležitejšie parametre našej CLA nájdete tu). Súčasťou tejto zmluvy je aktivačná klauzula, ktorá spustí investičný proces za dohodnutých podmienok, ak sa zakladateľom startupu podarí na pitch evente naraisovať prostriedky v hodnote investičného cieľa, ktorý si vopred sami určia (v rozsahu €50-300k). 

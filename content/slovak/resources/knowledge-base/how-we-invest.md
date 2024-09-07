@@ -122,7 +122,7 @@ Sme v blízkom kontakte s poprednými VC fondami zo CEE (Presto, Tensor, Kaya, 0
 Každá nová príležitosť nám pristane do inboxu, najčastejšie na základe online prihlášky u nás na webe. Snažíme sa, aby founderi ešte pred vyplnením prihlášky poznali fungovanie Gluon Syndicate a podmienky, za akých investujeme. Do ďalšej fázy posúvame projekty, ktoré spĺňajú základné investičné kritériá (fáza projektu, veľkosť potrebnej investície, očakávania founderov, apod.)
 
 ### Pre-screening
-V prvej fáze výberového procesu hodnotíme odpovede na otázky z prihlášky ohľadom problému a jeho riešenia, trhu a konkurencie, inovatívnosti konceptu, sily týmu, biznis modelu, atď. Projekty, ktoré na prvý pohľad vyhodnotíme ako zaujímavé, posunujeme do ďalšej fázy.
+V prvej fáze výberového procesu hodnotíme odpovede na otázky z prihlášky ohľadom problému a jeho riešenia, trhu a konkurencie, inovatívnosti konceptu, sily tímu, biznis modelu, atď. Projekty, ktoré na prvý pohľad vyhodnotíme ako zaujímavé, posunujeme do ďalšej fázy.
 
 ### Screening
 V druhej fáze výberového procesu ideme významne viacej do detailu prezentovaného biznisu. Analýza pozostáva z rozšírenej sady otázok a odpovedí a 30-60 minútového callu s foundermi startupu. Na základe zistení vyberáme startupy na shortlist, pričom vždy mesiac pred pitch eventom chceme mať na shortliste 30 najzaujímavejších startupov, ktoré sme za posledný kvartál videli.
