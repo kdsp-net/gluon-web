@@ -120,7 +120,7 @@ Jsme v blízkém kontaktu s předními VC fondy ze CEE (Presto, Tensor, Kaya, 01
 ## Selection
 
 ### Inbox
-Každá nová príležitosť nám pristane do inboxu, najčastejšie na základe online prihlášky u nás na webe. Snažíme sa, aby founderi ešte pred vyplnením prihlášky poznali fungovanie Gluon Syndicate a podmienky, za akých investujeme. Do ďalšej fázy posúvame projekty, ktoré spĺňajú základné investičné kritériá (fáza projektu, veľkosť potrebnej investície, očakávania founderov, apod.)
+Každá nová příležitost nám přistane do inboxu, nejčastěji na základě online přihlášky u nás na webu. Snažíme sa, aby founderi ešte pred vyplnením prihlášky poznali fungovanie Gluon Syndicate a podmienky, za akých investujeme. Do ďalšej fázy posúvame projekty, ktoré spĺňajú základné investičné kritériá (fáza projektu, veľkosť potrebnej investície, očakávania founderov, apod.)
 
 ### Pre-screening
 V prvej fáze výberového procesu hodnotíme odpovede na otázky z prihlášky ohľadom problému a jeho riešenia, trhu a konkurencie, inovatívnosti konceptu, sily týmu, biznis modelu, atď. Projekty, ktoré na prvý pohľad vyhodnotíme ako zaujímavé, posunujeme do ďalšej fázy.
