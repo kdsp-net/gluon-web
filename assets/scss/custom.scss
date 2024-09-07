@@ -141,16 +141,14 @@ h6 {
   @apply bg-body dark:bg-darkmode-body text-dark dark:text-darkmode-dark font-primary font-medium #{!important}
 }
 
-.mermaidTooltip {
-  @apply fill-theme-light dark:fill-darkmode-theme-light stroke-border dark:stroke-darkmode-border text-dark dark:text-darkmode-dark font-primary font-medium #{!important};
-  position: absolute;
-  text-align: center;
-  max-width: 200px;
-  padding: 2px;
-  border-radius: 2px;
-  pointer-events: none;
-  z-index: 100;
+.mermaid .labelBkg {
+  @apply bg-body dark:bg-darkmode-body #{!important}
 }
+
+.mermaid .edgeLabel p {
+  @apply bg-body dark:bg-darkmode-body #{!important}
+}
+
 .page-columns .column-page-inset {
   z-index: 100; /* default z-index: 998; */
 }

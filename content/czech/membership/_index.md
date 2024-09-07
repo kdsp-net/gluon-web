@@ -1,11 +1,11 @@
 ---
-title: "Join"
-meta_title: ""
-description: "this is meta description"
+title: "Přidat se"
+meta_title: "Přihláška pro angel investory"
+description: "Přidejte se k Gluon Syndicate"
 draft: false
 
 step_1:
-  title: "Membership Plan"
+  title: "Možnosti členství"
   plans:
     - name: "Basic"
       id: "basic-membership"
@@ -13,41 +13,41 @@ step_1:
       multiple: false
       features:
         - title: "Deal flow"
-        - title: "Quarterly pitching events"
-        - title: "Online community"
-          tooltip: "Get access to our invite-only LinkedIn community and Whatsapp group."
+        - title: "Kvartální pitch events"
+        - title: "Online komunita"
+          tooltip: "Získejte přístup k naší LinkedIn komunitě a WhatsApp skupine členů."
     - name: "Premium"
       id: "premium-membership"
       price: 3000
       multiple: false
       features:
-        - title: "All Basic features"
-        - title: "Companion tickets"
-          tooltip: "Get one free additional non‑investor ticket for each event and the possibility to buy up to 3 more at €200 per person."
-        - title: "Shortlist voting"
-          tooltip: "Take an early look at our shortlisted startups and vote for the ones that you want to see pitch on the stage"
-        - title: "Wildcard"
-          tooltip: "Send any one startup directly to pitch on the stage without having to go through the qualification process."
+        - title: "Všechny výhody Basic členství"
+        - title: "Vstup na event pro doprovod"
+          tooltip: "Získejte jednu neinvestorskou vstupenku na každý event a možnost přikoupit si až tři další za 200€/osoba."
+        - title: "Nominační hlasování"
+          tooltip: "Podívejte se jako první na shortlistované startupy a hlasujte pro ty, které chcete vidět na pitch eventu."
+        - title: "Divoká karta"
+          tooltip: "Vyberte si jeden startup ročně, který prostřednictvím divoké karty nominujete přimo na event."
     - name: "Corporate"
       id: "corporate-membership"
       price: 2000
       multiple: true
       features:
-        - title: "All Basic features"
-        - title: "Companion tickets"
-          tooltip: "Every member gets one additional non‑investor ticket for each event and the possibility to buy up to 3 more at €200 per person"
-        - title: "Shortlist voting"
-          tooltip: "Take an early look at our shortlisted startups and vote for the ones that you want to see pitch on the stage"
-        - title: "Wildcard"
-          tooltip: "Send any one startup directly to pitch on the stage without having to go through the qualification process."
-        - title: "Visibility"
-          tooltip: "Get your brand featured on our website and at the events."
+        - title: "Všechny výhody Basic členství"
+        - title: "Vstup na event pro doprovod"
+          tooltip: "Každý investor získává jednu neinvestorskou vstupenku na každý event a možnost přikoupit si až tři další za 200€/osoba."
+        - title: "Nominační hlasování"
+          tooltip: "Podívejte se jako první na shortlistované startupy a hlasujte pro ty, které chcete vidět na pitch eventu."
+        - title: "Divoká karta"
+          tooltip: "Vyberte si jeden startup ročně, který prostřednictvím divoké karty nominujete přimo na event."
+        - title: "Partnerská visibilita"
+          tooltip: "Odkomunikujte svůj brand v partnerské sekci na našem webu i na každém našem pitch eventu."
 
 step_2:
-  title: "Billing Information"
+  title: "Fakturační údaje"
   form:
   - id: name
-    label: "Name"
+    label: "Jméno a příjmení"
     placeholder: "John Appleseed"
     type: text
     required: true
@@ -57,83 +57,77 @@ step_2:
     type: email
     required: true
   - id: phone
-    label: "Telephone"
+    label: "Telefon"
     placeholder: "+1 234 567 890"
     type: tel
     required: true
   - id: company
-    label: "Company"
+    label: "Společnost"
     hint: "Optional"
     placeholder: "Gluon Syndicate, s. r. o."
     type: text
     required: false
   - id: address-1
-    label: "Address Line 1"
-    placeholder: "Pribinova 17954/10"
+    label: "Adresa (ulice a číslo domu)"
+    placeholder: "Václavské náměstí 1"
     type: text
     required: true
   - id: address-2
-    label: "Address Line 2"
+    label: "Adresa (doplnění)"
     hint: "apt. or building"
     placeholder: ""
     type: text
     required: false
   - id: city
-    label: "City"
-    placeholder: "Bratislava"
+    label: "Město"
+    placeholder: "Praha"
     type: text
     required: true
   - id: post-code
     label: "Post Code"
-    placeholder: "811 09"
+    placeholder: "110 00"
     type: text
     required: true
   - id: country
     label: "Country"
-    placeholder: "Slovakia"
+    placeholder: "Česko"
     type: text
     required: true
   - id: company_id
-    label: "Company ID"
+    label: "IČ"
     hint: "Optional"
     placeholder: ""
     type: text
     required: false
   - id: tax_id
-    label: "Tax ID"
-    hint: "Optional"
-    placeholder: ""
-    type: text
-    required: false
-  - id: vat_id
-    label: "VAT ID"
+    label: "DIČ"
     hint: "Optional"
     placeholder: ""
     type: text
     required: false
 
 step_3:
-  title: Summary
+  title: Souhrn
   consents:
     - id: tos
       label:
-        text: "I agree to the"
+        text: "Souhlasím se"
         link: 
-          text: "Terms of Service"
+          text: "Všeobecnými obchodními podmínkami"
           url: "#"
       required: true
     - id: gdpr
       label:
-        text: "I agree to the data processing according to the"
+        text: "Vyjadřuji"
         link:
-          text: "Privacy Policy"
+          text: "Souhlas se spracováním osobních údajů"
           url: "#"
       required: true
     - id: nl
       label:
-        text: "I want to sign up to the newsletter"
+        text: "Chci se přihlásit k odběru newsletteru"
 
-success_message: "Your order was submited successfully"
-error_message: "We are sorry, there was a problem submiting your order, please try again later."
+success_message: "Vaše objednávka byla úspěšně přijata"
+error_message: "Omlouváme se, ale při zpracování objednávky se vyskytla chyba. Prosím zadejte ji znovu."
 
 ---

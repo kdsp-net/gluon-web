@@ -133,7 +133,7 @@ step_3:
       label:
         text: "I want to sign up to the newsletter"
 
-success_message: "Your order was submited successfully"
-error_message: "We are sorry, there was a problem submiting your order, please try again later."
+success_message: "Your order was submitted successfully"
+error_message: "We are sorry, there was a problem submitting your order, please try again later."
 
 ---

@@ -1,11 +1,11 @@
 ---
-title: "Join"
-meta_title: ""
-description: "this is meta description"
+title: "Pridať sa"
+meta_title: "Prihláška pre angel investorov"
+description: "Pridajte sa ku Gluon Syndicate"
 draft: false
 
 step_1:
-  title: "Membership Plan"
+  title: "Možnosti členstva"
   plans:
     - name: "Basic"
       id: "basic-membership"
@@ -13,41 +13,41 @@ step_1:
       multiple: false
       features:
         - title: "Deal flow"
-        - title: "Quarterly pitching events"
-        - title: "Online community"
-          tooltip: "Get access to our invite-only LinkedIn community and Whatsapp group."
+        - title: "Kvartálne pitch events"
+        - title: "Online komunita"
+          tooltip: "Získajte prístup ku našej LinkedIn komunite a WhatsApp skupine členov."
     - name: "Premium"
       id: "premium-membership"
       price: 3000
       multiple: false
       features:
-        - title: "All Basic features"
-        - title: "Companion tickets"
-          tooltip: "Get one free additional non‑investor ticket for each event and the possibility to buy up to 3 more at €200 per person."
-        - title: "Shortlist voting"
-          tooltip: "Take an early look at our shortlisted startups and vote for the ones that you want to see pitch on the stage"
-        - title: "Wildcard"
-          tooltip: "Send any one startup directly to pitch on the stage without having to go through the qualification process."
+        - title: "Všetky výhody Basic členstva"
+        - title: "Vstup na event pre sprievodnú osobu"
+          tooltip: "Získajte jednu neinvestorskú vstupenku na každý event a možnosť prikúpiť si až tri ďalšie za 200€/osoba."
+        - title: "Nominačné hlasovanie"
+          tooltip: "Preskúmajte ako prví shortlistované startupy a hlasujte pre tie, ktoré chcete vidieť na pitch evente."
+        - title: "Divoká karta"
+          tooltip: "Vyberte si jeden startup ročne, ktorý prostredníctvom divokej karty nominujete priamo na event."
     - name: "Corporate"
       id: "corporate-membership"
       price: 2000
       multiple: true
       features:
-        - title: "All Basic features"
-        - title: "Companion tickets"
-          tooltip: "Every member gets one additional non‑investor ticket for each event and the possibility to buy up to 3 more at €200 per person"
-        - title: "Shortlist voting"
-          tooltip: "Take an early look at our shortlisted startups and vote for the ones that you want to see pitch on the stage"
-        - title: "Wildcard"
-          tooltip: "Send any one startup directly to pitch on the stage without having to go through the qualification process."
-        - title: "Visibility"
-          tooltip: "Get your brand featured on our website and at the events."
+        - title: "Všetky výhody Basic členstva"
+        - title: "Vstup na event pre sprievodnú osobu"
+          tooltip: "Získajte jednu neinvestorskú vstupenku na každý event a možnosť prikúpiť si až tri ďalšie za 200€/osoba."
+        - title: "Nominačné hlasovanie"
+          tooltip: "Preskúmajte ako prví shortlistované startupy a hlasujte pre tie, ktoré chcete vidieť na pitch evente."
+        - title: "Divoká karta"
+          tooltip: "Vyberte si jeden startup ročne, ktorý prostredníctvom divokej karty nominujete priamo na event."
+        - title: "Partnerská vizibilita"
+          tooltip: "Odkomunikujte svoj brand v partnerskej sekcii na našom webe aj na každom našom pitch evente."
 
 step_2:
-  title: "Billing Information"
+  title: "Fakturačné údaje"
   form:
   - id: name
-    label: "Name"
+    label: "Meno a priezvisko"
     placeholder: "John Appleseed"
     type: text
     required: true
@@ -57,29 +57,29 @@ step_2:
     type: email
     required: true
   - id: phone
-    label: "Telephone"
+    label: "Telefón"
     placeholder: "+1 234 567 890"
     type: tel
     required: true
   - id: company
-    label: "Company"
+    label: "Spoločnosť"
     hint: "Optional"
     placeholder: "Gluon Syndicate, s. r. o."
     type: text
     required: false
   - id: address-1
-    label: "Address Line 1"
+    label: "Adresa (ulica a číslo domu)"
     placeholder: "Pribinova 17954/10"
     type: text
     required: true
   - id: address-2
-    label: "Address Line 2"
+    label: "Adresa (doplnenie)"
     hint: "apt. or building"
     placeholder: ""
     type: text
     required: false
   - id: city
-    label: "City"
+    label: "Mesto"
     placeholder: "Bratislava"
     type: text
     required: true
@@ -90,50 +90,51 @@ step_2:
     required: true
   - id: country
     label: "Country"
-    placeholder: "Slovakia"
+    placeholder: "Slovensko"
     type: text
     required: true
   - id: company_id
-    label: "Company ID"
+    label: "IČO"
     hint: "Optional"
     placeholder: ""
     type: text
     required: false
   - id: tax_id
-    label: "Tax ID"
+    label: "DIČ"
     hint: "Optional"
     placeholder: ""
     type: text
     required: false
   - id: vat_id
-    label: "VAT ID"
+    label: "IČ DPH"
     hint: "Optional"
     placeholder: ""
     type: text
     required: false
 
+
 step_3:
-  title: Summary
+  title: Súhrn
   consents:
     - id: tos
       label:
-        text: "I agree to the"
+        text: "Súhlasím so"
         link: 
-          text: "Terms of Service"
+          text: "Všeobecnými obchodnými podmienkami"
           url: "#"
       required: true
     - id: gdpr
       label:
-        text: "I agree to the data processing according to the"
+        text: "Vyjadrujem"
         link:
-          text: "Privacy Policy"
+          text: "Súhlas so spracovaním osobných údajov"
           url: "#"
       required: true
     - id: nl
       label:
-        text: "I want to sign up to the newsletter"
+        text: "Chcem sa prihlásiť ku odberu newslettera"
 
-success_message: "Your order was submited successfully"
-error_message: "We are sorry, there was a problem submiting your order, please try again later."
+success_message: "Vaša objednávka bola úspešne prijatá."
+error_message: "Ospravedlňujeme sa, ale pri spracovaní objednávky sa vyskytla chyba. Prosím, zadajte ju znova."
 
 ---
