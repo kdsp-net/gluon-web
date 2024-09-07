@@ -103,7 +103,7 @@ subsequentRounds ==> exit
 Naši členovia majú možnosť navrhovať startupy hľadajúce investíciu, ktoré následne prechádzajú našim výberovým procesom. Navyše - investori s prémiovým členstvom majú právo raz ročne nominovať priamo na event jeden startup, do ktorého chcú investovať a hľadajú co-investorov. 
 
 ### Startup Events & Network
-Aktívne vyhľadávame nádejné startupy naprieč CEE prostredníctvom osobných stretnutí na startupistických eventoch a súťažiach aj online prieskumu. Taktiež sme si za 15 rokov v biznise vybudovali širokú sieť kontaktov z radov founderov, investorov, novinárov a ďalších startup entuziastov, ktorá nám pomáha ostať v obraze ohľadom diania na startupistickej scéne v regióne.
+Aktívne vyhľadávame nádejné startupy naprieč strednou a východnou Európou formou osobných stretnutí na startupistických eventoch a súťažiach aj prostredníctvom online prieskumu. A vďaka širokej sieti kontaktov z radov founderov, investorov, novinárov a ďalších startup entuziastov, ktorú sme si za 15 rokov v biznise vybudovali, ostávame v obraze ohľadom aktuálneho diania na startupistickej scéne v regióne.
 
 ### Accelerators & Incubators
 Vytvorili sme a rozvíjame partnerstvá s akcelerátormi a inkubátormi v regióne (AceON, StartupYard, InQb, SaaS Garden, atď.), pričom v niektorých z nich aj priamo mentorujeme. Vďaka tejto spolupráci získavame prístup k ich najlepším alumni startupom.

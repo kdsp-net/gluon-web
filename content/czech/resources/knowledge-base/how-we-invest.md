@@ -101,10 +101,10 @@ subsequentRounds ==> exit
 ## Sourcing
 
 ### Syndicate Members
-Naši členovia majú možnosť navrhovať startupy hľadajúce investíciu, ktoré následne prechádzajú našim výberovým procesom. Navyše - investori s prémiovým členstvom majú právo raz ročne nominovať priamo na event jeden startup, do ktorého chcú investovať a hľadajú co-investorov. 
+Naši členové mají možnost navrhovat startupy hledající investici a ty následně prochází našim výběrovým procesem. Navíc - investoři s prémiovým členstvím mají právo jednou ročně nominovat přímo na event jeden startup, do kterého chtějí investovat a hledají co-investory. 
 
 ### Startup Events & Network
-Aktívne vyhľadávame nádejné startupy naprieč CEE prostredníctvom osobných stretnutí na startupistických eventoch a súťažiach aj online prieskumu. Taktiež sme si za 15 rokov v biznise vybudovali širokú sieť kontaktov z radov founderov, investorov, novinárov a ďalších startup entuziastov, ktorá nám pomáha ostať v obraze ohľadom diania na startupistickej scéne v regióne.
+Aktivně vyhledáváme nadějné startupy napříč střední a východní Evropou formou osobních setkání na startupistických eventech a soutěžích i prostřednictvím online průzkumu. A díky široké síti kontaktů z řad founderů, investorů, novinářů a dalších startup nadšenců, kterou jsme si za 15 let v byznysu vybudovali, zůstáváme v obraze o aktuálním dění na startupistické scéně v regionu.
 
 ### Accelerators & Incubators
 Vytvorili sme a rozvíjame partnerstvá s akcelerátormi a inkubátormi v regióne (AceON, StartupYard, InQb, SaaS Garden, atď.), pričom v niektorých z nich aj priamo mentorujeme. Vďaka tejto spolupráci získavame prístup k ich najlepším alumni startupom.
