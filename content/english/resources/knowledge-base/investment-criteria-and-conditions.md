@@ -1,6 +1,6 @@
 +++
-title = "Startup Criteria"
-meta_title = "Startup Criteria"
+title = "Investment Criteria and Conditions"
+meta_title = "Investment Criteria and Conditions"
 +++
 
 In Gluon Syndicate we are looking for startups that meet these criteria:
