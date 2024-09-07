@@ -1,5 +1,7 @@
 +++
 title = "How We Invest?"
+categories = [ "For Startups", "For Investors",]
+tags = [ "process", "conditions", "policy", "raising capital", "sourcing", "selection", "event", "investment",]
 meta_title = "How We Invest?"
 +++
 
