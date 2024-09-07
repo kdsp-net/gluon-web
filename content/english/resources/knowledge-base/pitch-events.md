@@ -1,4 +1,6 @@
 +++
+categories = [ "For Startups", "Events",]
+tags = [ "pitch", "event", "raising capital",]
 title = "Pitch Events"
 meta_title = "Pitch Events"
 +++
