@@ -84,26 +84,26 @@ h6 {
 
 .timer {
   div {
-    @apply pr-1.5 pl-2 relative bg-darkmode-border dark:bg-border w-max before:absolute before:h-full before:w-0.5 before:top-0 before:left-1/2 before:-translate-x-1/2 before:bg-darkmode-body dark:before:bg-body before:z-10
+    @apply pr-1.5 pl-2 relative bg-body dark:bg-darkmode-body w-max before:absolute before:h-full before:w-0.5 before:top-0 before:left-1/2 before:-translate-x-1/2 before:bg-theme-light dark:before:bg-darkmode-theme-light before:z-10
   };
   h3 {
-    @apply font-semibold text-2xl text-darkmode-dark dark:text-dark tracking-[15.36px] max-w-[44px] text-center relative z-20
+    @apply font-semibold text-2xl text-dark dark:text-darkmode-dark tracking-[15.36px] max-w-[44px] text-center relative z-20
   };
   p {
-    @apply text-sm font-medium text-darkmode-dark dark:text-dark mt-1 text-center w-full
+    @apply text-sm font-medium text-dark dark:text-darkmode-dark mt-1 text-center w-full
   }
 }
 
 .next-event {
-  @apply bg-dark dark:bg-darkmode-dark;
+  @apply bg-theme-light dark:bg-darkmode-theme-light;
   h2 {
-    @apply mb-4 text-h3 lg:text-h3 text-darkmode-dark dark:text-dark
+    @apply mb-4 text-h3 lg:text-h3 text-dark dark:text-darkmode-dark
   };
   ul {
     @apply mt-4 flex flex-wrap items-center justify-center space-x-4 md:space-x-6
   };
   li {
-    @apply text-sm font-medium text-darkmode-dark dark:text-dark
+    @apply text-sm font-medium text-dark dark:text-darkmode-dark
   }
 }
 

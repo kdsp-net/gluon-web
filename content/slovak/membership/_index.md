@@ -63,7 +63,7 @@ step_2:
     required: true
   - id: company
     label: "Spoločnosť"
-    hint: "Optional"
+    hint: "Nepovinné"
     placeholder: "Gluon Syndicate, s. r. o."
     type: text
     required: false
@@ -74,7 +74,7 @@ step_2:
     required: true
   - id: address-2
     label: "Adresa (doplnenie)"
-    hint: "apt. or building"
+    hint: ""
     placeholder: ""
     type: text
     required: false
@@ -84,12 +84,12 @@ step_2:
     type: text
     required: true
   - id: post-code
-    label: "Post Code"
+    label: "PSČ"
     placeholder: "811 09"
     type: text
     required: true
   - id: country
-    label: "Country"
+    label: "Štát"
     placeholder: "Slovensko"
     type: text
     required: true
@@ -101,13 +101,13 @@ step_2:
     required: false
   - id: tax_id
     label: "DIČ"
-    hint: "Optional"
+    hint: "Nepovinné"
     placeholder: ""
     type: text
     required: false
   - id: vat_id
     label: "IČ DPH"
-    hint: "Optional"
+    hint: "Nepovinné"
     placeholder: ""
     type: text
     required: false

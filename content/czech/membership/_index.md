@@ -63,7 +63,7 @@ step_2:
     required: true
   - id: company
     label: "Společnost"
-    hint: "Optional"
+    hint: "Nepovinné"
     placeholder: "Gluon Syndicate, s. r. o."
     type: text
     required: false
@@ -74,7 +74,7 @@ step_2:
     required: true
   - id: address-2
     label: "Adresa (doplnění)"
-    hint: "apt. or building"
+    hint: ""
     placeholder: ""
     type: text
     required: false
@@ -84,24 +84,24 @@ step_2:
     type: text
     required: true
   - id: post-code
-    label: "Post Code"
+    label: "PSČ"
     placeholder: "110 00"
     type: text
     required: true
   - id: country
-    label: "Country"
+    label: "Stát"
     placeholder: "Česko"
     type: text
     required: true
   - id: company_id
     label: "IČ"
-    hint: "Optional"
+    hint: "Nepovinné"
     placeholder: ""
     type: text
     required: false
   - id: tax_id
     label: "DIČ"
-    hint: "Optional"
+    hint: "Nepovinné"
     placeholder: ""
     type: text
     required: false

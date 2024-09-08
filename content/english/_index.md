@@ -48,7 +48,7 @@ features:
       - "Active investor-startup relationship management for sustained growth"
     buttons:
       - label_key: "member"
-        link:  "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
+        link:  "/membership"
         type: "primary"
         enable: true
       - label_key: "investor_deck"

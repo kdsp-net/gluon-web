@@ -1,11 +1,22 @@
 ---
-title: "Founding Investors"
+title: Founding Investors
+weight: 2
 founders:
   - name: "Tana Ondrejkova"
-    linkedin: "https://www.linkedin.com/in/tatiana-ondrejkova-759a7b2"
-    web: "https://www.tanaondrejkova.sk/"
+    image: "/images/founders/tana-ondrejkova.jpg"
+    social:
+      - title: "LinkedIn"
+        url: "https://www.linkedin.com/in/tatiana-ondrejkova-759a7b2"
+        icon: "fab fa-linkedin"
+      - title: "Web"
+        url: "https://www.tanaondrejkova.sk/"
+        icon: "fas fa-globe"
   - name: "Vlado Hudec"
-    linkedin: "https://www.linkedin.com/in/vladimirhudec"
+    image: "/images/founders/vlado-hudec.jpg"
+    social:
+      - title: "LinkedIn"
+        url: "https://www.linkedin.com/in/vladimirhudec"
+        icon: "fab fa-linkedin"
 ---
 
 Tana and Vlado are partners both in life and in business. Tana co-founded Pelikan, a top-tier online travel agency in the CEE region, and has launched several other successful e-commerce ventures in travel and fashion, achieving annual revenues exceeding 100 million euros.

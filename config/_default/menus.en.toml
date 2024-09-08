@@ -6,11 +6,11 @@
 name = "Investors"
 weight = 1
 
-# [[main]]
-# parent = "Investors"
-# name = "Founders"
-# pageRef = "/founders"
-# weight = 1
+[[main]]
+parent = "Investors"
+name = "Founders"
+pageRef = "/founders"
+weight = 1
 
 [[main]]
 parent = "Investors"

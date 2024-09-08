@@ -1,11 +1,22 @@
 ---
 title: Founding Partners
+weight: 1
 founders:
   - name: "Alex Janušek"
-    linkedin: "https://www.linkedin.com/alexjanusek"
+    image: "/images/founders/alex-janusek.jpg"
+    social:
+      - title: "LinkedIn"
+        url: "https://www.linkedin.com/in/alexanderjanusek"
+        icon: "fab fa-linkedin"
   - name: "Patrik Janušek"
-    linkedin: "https://www.linkedin.com/patrikjanusek"
-    web: "www.kdsp.net"
+    image: "/images/founders/patrik-janusek.jpg"
+    social:
+      - title: "LinkedIn"
+        url: "https://www.linkedin.com/in/patjanusek"
+        icon: "fab fa-linkedin"
+      - title: "Web"
+        url: "https://www.kdsp.net"
+        icon: "fas fa-globe"
 ---
 
 Alex a Patrik jsou zakládajícími partnery Gluon Syndicate, rozvíjející vizi propojení andělských investorů s nadějnými pre-seed startupy v rámci střední a východní Evropy již od počátků své podnikatelské cesty. Oba bratři milují podnikání a mají více než 15 let zkušeností z rozběhu několika společných byznysů i poradenství pro začínající firmy a jejich zakladatele.

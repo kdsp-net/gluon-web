@@ -1,11 +1,22 @@
 ---
-title: "Founding Investors"
+title: Founding Investors
+weight: 2
 founders:
   - name: "Táňa Ondrejková"
-    linkedin: "https://www.linkedin.com/in/tatiana-ondrejkova-759a7b2"
-    web: "https://www.tanaondrejkova.sk/"
+    image: "/images/founders/tana-ondrejkova.jpg"
+    social:
+      - title: "LinkedIn"
+        url: "https://www.linkedin.com/in/tatiana-ondrejkova-759a7b2"
+        icon: "fab fa-linkedin"
+      - title: "Web"
+        url: "https://www.tanaondrejkova.sk/"
+        icon: "fas fa-globe"
   - name: "Vlado Hudec"
-    linkedin: "https://www.linkedin.com/in/vladimirhudec"
+    image: "/images/founders/vlado-hudec.jpg"
+    social:
+      - title: "LinkedIn"
+        url: "https://www.linkedin.com/in/vladimirhudec"
+        icon: "fab fa-linkedin"
 ---
 
 Táňa a Vlado sú partneri v živote aj v podnikaní. Táňa spoluzaložila Pelikán, jednu z najväčších online cestovných kancelárií v regióne strednej Európy, a spustila niekoľko ďalších úspešných e-commerce firiem v oblasti cestovania a módy, ktoré dosahujú ročné príjmy presahujúce 100 miliónov eur.

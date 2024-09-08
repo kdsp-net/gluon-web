@@ -1,38 +1,71 @@
 {{ define "main" }}
   {{ partial "page-header" . }}
 
-
   <section class="section">
     <div class="container">
-      <div class="row justify-center">
-        {{ range .RegularPages }}
-          <div class="lg:col-10 mb-10">
-            <h2 class="mb-6">
-              {{ .Params.title }}
-            </h2>
-            {{ range .Params.founders }}
-              <ul class="social-icons founder-socials mt-4">
-                <li class="founder">{{ .name }}</li>
-                {{ range .social }}
-                  <li>
-                    <a href="{{ .link | safeURL }}" target="_blank" rel="noopener nofollow">
-                      <span class="sr-only">{{ .title }}</span>
-                      <i class="{{ .icon }}"></i>
-                    </a>
-                  </li>
-                {{ end }}
-              </ul>
-            {{ end }}
-            <div class="content mt-8">
-              {{ .Content }}
-            </div>
-          </div>
-        {{ end }}
-      </div>
       <div class="row justify-center">
         <div class="lg:col-10 mb-10">
           {{ .Content }}
         </div>
+      </div>
+      <div class="row justify-center">
+        {{ range .RegularPages }}
+        {{- $slug := strings.Replace .Params.title " " "-" -1 | lower | safeHTMLAttr -}}
+          <div class="lg:col-10 mb-10">
+            <h2 class="mb-6">
+              {{ .Params.title }}
+            </h2>
+            <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+              {{ range .Params.founders }}
+                <div class="flex flex-col bg-theme-light border border-border rounded-xl p-4 md:p-5 dark:bg-darkmode-theme-light dark:border-darkmode-border">
+                  <div class="shrink-0 group block">
+                    <div class="flex items-center">
+                      <img class="inline-block shrink-0 size-[62px] rounded-full" src="{{ .image | absURL }}" alt="{{ .name }}">
+                      <div class="ms-6">
+                        <h3 class="text-lg">{{ .name }}</h3>
+                        <p class="text-sm">
+                          <ul class="social-icons founder-socials mt-4">
+                            {{ range .social }}
+                              <li>
+                                <a href="{{ .url | safeURL }}" target="_blank" rel="noopener nofollow">
+                                  <span class="sr-only">{{ .title }}</span>
+                                  <i class="{{ .icon }}"></i>
+                                </a>
+                              </li>
+                            {{ end }}
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+  
+            <!-- Get the first paragraph using Hugo's Summary function -->
+            <div class="mt-8">
+              {{ .Summary | markdownify }}
+            </div>
+
+            <!-- Rest of the content -->
+            <div>
+              <div id="{{ $slug }}-hs-show-hide-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="{{ $slug }}-hs-show-hide-collapse">
+                <div class="space-y-4">
+                  {{ replace .Content .Summary "" | markdownify }}
+                </div>
+              </div>
+  
+              <p class="mt-2">
+                <button type="button" class="hs-collapse-toggle inline-flex items-center gap-x-1 font-bold rounded-lg border border-transparent text-dark decoration-2 hover:underline focus:outline-none focus:underline disabled:opacity-50 disabled:pointer-events-none dark:text-darkmode-dark" id="{{ $slug }}-hs-show-hide-collapse" aria-expanded="false" aria-controls="{{ $slug }}-hs-show-hide-collapse-heading" data-hs-collapse="#{{ $slug }}-hs-show-hide-collapse-heading">
+                  <span class="hs-collapse-open:hidden">{{ i18n "read_more"}}</span>
+                  <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </button>
+              </p>
+            </div>
+          </div> 
+        {{ end }}
       </div>
     </div>
   </section>
