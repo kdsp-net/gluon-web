@@ -1,4 +1,6 @@
 +++
+categories = [ "For Startups", "For Investors",]
+tags = [ "principles", "syndication", "raising capital",]
 title = "Our Principles"
 meta_title = "Our Principles"
 +++

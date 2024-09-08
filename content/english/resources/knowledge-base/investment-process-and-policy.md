@@ -1,4 +1,6 @@
 +++
+categories = [ "For Startups", "For Investors",]
+tags = [ "process", "event", "policy",]
 title = "Investment Process and Policy"
 meta_title = "Investment Process and Policy"
 +++

@@ -1,5 +1,7 @@
 +++
 title = "Ako investujeme?"
+categories = [ "For Startups", "For Investors",]
+tags = [ "process", "conditions", "policy", "raising capital", "sourcing", "selection", "event", "investment",]
 meta_title = "Ako investujeme?"
 +++
 
@@ -47,7 +49,7 @@ click extraFunding href "#extra-funding"
 click dueDiligence href "#due-diligence-dd"
 click cla href "#convertible-loan"
 click qualifiedRound href "#equity-round"
-click conversion href "#Conversion"
+click conversion href "#conversion"
 click subsequentRounds href "#subsequent-rounds"
 click exit href "#exit"
 
@@ -173,3 +175,5 @@ V prípade, že sa cieľovému startupu podarí uzatvoriť ďalšie investičné
 
 ## Exit
 Pre Gluon Syndicate a zúčastnených angel investorov - rovnako ako pre každého investora na VC trhu - je primárnou motiváciou investície do startupu potenciálny exit. Základnou stratégiou GS je ostať na palube startupu až do akvizície spoločnosti strategickým investorom alebo do IPO, preto je predpokladaným investičným horizontom v prípade úspešných investícií obdobie cca. 7-15 rokov. V niektorých prípadoch, ak to dáva zmysel pre strategické smerovanie spoločnosti, môže byť podieľ na cieľovom startupe čiastočne alebo úplne predaný novovstupujúcemu alebo inému existujúcemu investorovi, napríklad v rámci niektorého nasledujúceho investičného kola alebo podobne.
+
+---

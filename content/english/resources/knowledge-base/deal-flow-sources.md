@@ -1,9 +1,11 @@
 +++
+categories = [ "For Investors",]
+tags = [ "deal flow", "sources",]
 title = "Deal Flow Sources"
 meta_title = "Deal Flow Sources"
 +++
 
-#### Screening
+####  
 
 We screen hundreds of startups every year, pre-selecting 60 of them for pitching events (15 per event).
 
