@@ -62,6 +62,7 @@ show_categories = true
 # announcement
 [announcement]
 enable = true
+dismissable = false
 expire_days = 30
 
 # seo meta data for OpenGraph / Twitter Card

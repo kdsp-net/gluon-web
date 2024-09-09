@@ -15,20 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedRadio = document.querySelector('input[name="membership"]:checked');
 
         // Find the label corresponding to the selected radio button
-        const label = document.querySelector(`label[for="${selectedRadio.id}"]`);
+        if (selectedRadio !== null) {
+            const label = document.querySelector(`label[for="${selectedRadio.id}"]`);      
 
-        // Reset visibility of all "From" tags before updating the current card
-        resetFromTags();
+            // Reset visibility of all "From" tags before updating the current card
+            resetFromTags();
 
-        if (selectedRadio.classList.contains('multiple')) {
-            // Show number input and hide "From" tag for multiple selections
-            multipleInput.classList.remove('hidden');
-            numberInput.value = 2; // Default value to 2 for multiple offers
-            const fromTag = label.querySelector('.from-tag');
-            if (fromTag) fromTag.classList.add('hidden');
-        } else {
-            // Hide number input and show "From" tag for non-multiple selections
-            multipleInput.classList.add('hidden');
+            if (selectedRadio.classList.contains('multiple')) {
+                // Show number input and hide "From" tag for multiple selections
+                multipleInput.classList.remove('hidden');
+                numberInput.value = 2; // Default value to 2 for multiple offers
+                const fromTag = label.querySelector('.from-tag');
+                if (fromTag) fromTag.classList.add('hidden');
+            } else {
+                // Hide number input and show "From" tag for non-multiple selections
+                multipleInput.classList.add('hidden');
+            }
         }
     }
 
