@@ -11,7 +11,7 @@ logo_height = "32px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "Hugoplate"
+logo_text = "Gluon Syndicate"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
@@ -27,7 +27,7 @@ google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 # copyright
-copyright = "Designed & Developed by [Zeon Studio](https://zeon.studio)"
+copyright = "© 2024 Gluon Syndicate"
 
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
@@ -35,36 +35,41 @@ copyright = "Designed & Developed by [Zeon Studio](https://zeon.studio)"
 enable = false
 preloader = "" # use jpg, png, svg or gif format.
 
-# Navigation button
-[navigation_button]
+# Navigation buttons
+[[navigation_buttons]]
 enable = true
-label = "get a quote"
-link = "contact"
+type = "primary"
+label_key = "startup"
+link = "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+
+[[navigation_buttons]]
+enable = true
+type = "secondary"
+label_key = "member"
+link = "/membership"
 
 # search
 # search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
 [search]
 enable = true
 primary_color = "#121212"
-include_sections = ["blog"]
+include_sections = ["resources"]
 show_image = true
 show_description = true
 show_tags = true
 show_categories = true
 
 # announcement
-# announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement
 [announcement]
 enable = true
-expire_days = 7
-content = "You must replace the **baseURL** in **hugo.toml** file when deploying, you can manage this announcement from the **params.toml** file."
+expire_days = 30
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Boilerplate", "Hugo"]
-description = "Hugo & Tailwindcss Starter"
-author = "zeon.studio"
+keywords = ["Investment", "Angel", "Startup", "Funding"]
+description = "Gluon Syndicate"
+author = "Gluon Syndicate"
 image = "images/og-image.png"
 
 
@@ -105,7 +110,18 @@ map_marker = "images/marker.png"
 
 # Subscription
 [subscription]
-enable = false
+enable = true
 # mailchimp subsciption
 mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
 mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074"
+
+# Dealum
+[dealum]
+startup_link = "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+member_link = "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1txo5oyln1tmlcoic3vr"
+
+# Next Event
+[next_event]
+enable = false
+date = "2024-10-22T16:00:00+02:00"
+location = "Bratislava, SK"

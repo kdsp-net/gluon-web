@@ -1,16 +1,17 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
 baseURL = "/"
+languageCode = "en-us"
 # Title of your website (required).
-title = "Hugoplate"
+title = "Gluon Syndicate"
 # Your theme name
 theme = "hugoplate"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
-timeZone = "America/New_York"
+timeZone = "Europe/Bratislava"
 # post pagination
 paginate = 2 # see https://gohugo.io/extras/pagination/
 # post excerpt
-summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
+summaryLength = 15 # see https://gohugo.io/content-management/excerpts/
 # disable language
 disableLanguages = [
 ] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
@@ -26,7 +27,7 @@ defaultContentLanguageInSubdir = false
 ID = 'G-MEASUREMENT_ID' # see https://gohugo.io/templates/internal/#configure-google-analytics
 
 [services.disqus]
-shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+# shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
 
 ########################## Permalinks ############################
 [permalinks.page]

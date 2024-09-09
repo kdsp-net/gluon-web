@@ -1,63 +1,58 @@
 ############# English navigation ##############
 
 # main menu
+
 [[main]]
-name = "Home"
-pageRef = "/"
+name = "Investors"
 weight = 1
 
 [[main]]
-name = "About"
-pageRef = "/about"
+parent = "Investors"
+name = "Founders"
+pageRef = "/founders"
+weight = 1
+
+[[main]]
+parent = "Investors"
+name = "Investor Deck"
+url = "https://slides.gluon.vc/investor-deck"
 weight = 2
 
 [[main]]
-name = "Elements"
-pageRef = "/elements"
+parent = "Investors"
+name = "Join Us"
+pageRef = "/membership"
 weight = 3
 
 [[main]]
-weight = 4
-name = "Pages"
+name = "How We Invest"
+pageRef = "/how-we-invest"
+weight = 2
 
 [[main]]
-parent = "Pages"
-name = "Blog"
-pageRef = "/blog"
+name = "Resources"
+weight = 3
 
 [[main]]
-parent = "Pages"
-name = "Contact"
-pageRef = "/contact"
-
-[[main]]
-parent = "Pages"
-name = "Authors"
-pageRef = "/authors"
-
-[[main]]
-parent = "Pages"
-name = "Categories"
-pageRef = "/categories"
-
-[[main]]
-parent = "Pages"
-name = "404 Page"
-pageRef = "/404"
-
-
-# footer menu
-[[footer]]
-name = "About"
-pageRef = "/about"
+parent = "Resources"
+name = "Knowledge Base"
+pageRef = "/resources/knowledge-base"
 weight = 1
 
-[[footer]]
-name = "Elements"
-pageRef = "/elements"
+[[main]]
+parent = "Resources"
+name = "Blog"
+pageRef = "/resources/blog"
 weight = 2
+
+# footer menu
+
+[[footer]]
+name = "Terms of Service"
+pageRef = "/resources/terms-of-service"
+weight = 1
 
 [[footer]]
 name = "Privacy Policy"
-pageRef = "/privacy-policy"
-weight = 3
+pageRef = "/resources/privacy-policy"
+weight = 2

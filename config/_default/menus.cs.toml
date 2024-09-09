@@ -1,0 +1,58 @@
+############# Czech navigation ##############
+
+# main menu
+
+[[main]]
+name = "Investoři"
+weight = 1
+
+[[main]]
+parent = "Investoři"
+name = "Zakladatelé syndikátu"
+pageRef = "/founders"
+weight = 1
+
+[[main]]
+parent = "Investoři"
+name = "Prezentace pro investory"
+url = "https://slides.gluon.vc/investor-deck"
+weight = 2
+
+[[main]]
+parent = "Investoři"
+name = "Přidejte se"
+pageRef = "/membership"
+weight = 3
+
+[[main]]
+name = "Jak investujeme"
+pageRef = "/how-we-invest"
+weight = 2
+
+[[main]]
+name = "Zdroje"
+weight = 3
+
+[[main]]
+parent = "Zdroje"
+name = "Wiki"
+pageRef = "/resources/knowledge-base"
+weight = 1
+
+[[main]]
+parent = "Zdroje"
+name = "Blog"
+pageRef = "/resources/blog"
+weight = 2
+
+# footer menu
+
+[[footer]]
+name = "Všeobecné obchodní podmínky"
+pageRef = "/resources/terms-of-service"
+weight = 1
+
+[[footer]]
+name = "Zásady ochrany osobních údajů"
+pageRef = "/resources/privacy-policy"
+weight = 2

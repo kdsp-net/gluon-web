@@ -9,9 +9,10 @@ node_modules
 builds
 package-lock.json
 public
-resources
+/resources
 .hugo_build.lock
 jsconfig.json
 hugo_stats.json
 go.sum
 yarn.lock
+examplesite

@@ -1,6 +1,20 @@
 ################ English language ##################
 [en]
-languageName = "En"
+languageName = "EN"
 languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
+
+################ Slovak language ##################
+[sk]
+languageName = "SK"
+languageCode = "sk"
+contentDir = "content/slovak"
+weight = 2
+
+################ Czech language ##################
+[cs]
+languageName = "CS"
+languageCode = "cs"
+contentDir = "content/czech"
+weight = 3

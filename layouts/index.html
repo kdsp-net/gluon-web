@@ -1,0 +1,126 @@
+{{ define "main" }}
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    <section class="section pt-14 pb-0">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-7 md:col-9 mb-8 text-center">
+            <h1 class="mb-4 text-h3 lg:text-h1">
+              {{ .title | markdownify }}
+            </h1>
+            <p class="mb-8">
+              {{ .content | markdownify }}
+            </p>
+            {{ $index := 0 }}
+            {{ range .buttons }}
+              {{ if .enable }}
+                <a
+                  class="btn btn-{{ .type }} {{ if gt $index 0 }}mt-4 md:mt-6 md:ml-4{{ end }}"
+                  {{ if strings.HasPrefix .link `http` }}
+                    href="{{ .link | absURL }}" target="_blank" rel="noopener"
+                  {{ else }}
+                    href="{{ .link | absLangURL }}"
+                  {{ end }}>
+                  {{ i18n (printf "button_labels.%s" .label_key) | safeHTML }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+                {{ $index = add $index 1 }}
+              {{ end }}
+            {{ end }}
+          </div>
+          <div class="col-12">
+            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px] dark:hidden" "DisplayXL" "800x" ) }}
+            {{ partial "image" (dict "Src" .image_dark "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px] hidden dark:block" "DisplayXL" "800x" ) }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Banner -->
+
+  <!-- Countdown Timer -->
+
+  {{ if site.Params.next_event.enable }}
+  <section class="section next-event py-10 border-y border-border dark:border-darkmode-border">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-7 md:col-9 text-center">
+          <h2>
+            {{ i18n "timer.title" }}
+          </h2>
+          {{ partial "components/countdown-timer" }}
+          <ul>
+            <li>
+              <i class="fa-regular fa-calendar"></i> 
+              {{ with site.Params.next_event.date }}
+                {{ $dateString := slicestr . 0 19 }} <!-- Extract the date-time portion -->
+                {{ $date := time $dateString }}
+                {{ $date | time.Format ":date_full" }}
+              {{ end }}
+            </li>
+            <li>
+              <i class="fa-regular fa-location-pin"></i> {{ site.Params.next_event.location }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- /Coutdown Timer -->
+
+  <!-- Features -->
+  {{ range $i, $e:= .Params.features }}
+    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
+      <div class="container">
+        <div class="row items-center justify-between">
+          <div
+            class="md:mb-0 {{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-5 mb-12">
+            {{ partial "image" (dict "Src" .image "Class" "dark:hidden" "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+            {{ partial "image" (dict "Src" .image_dark "Class" "hidden dark:block" "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+          </div>
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-1
+            {{ end }} md:col-7 lg:col-6">
+            <h2 class="mb-4">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="mb-8 text-lg">
+              {{ .content | markdownify }}
+            </p>
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ $index := 0 }}
+            {{ range .buttons }}
+              {{ if .enable }}
+                <a
+                  class="btn btn-{{ .type }} {{ if gt $index 0 }}mt-4 md:mt-6 md:ml-4{{ end }}"
+                  {{ if strings.HasPrefix .link `http` }}
+                    href="{{ .link | absURL }}" target="_blank" rel="noopener"
+                  {{ else }}
+                    href="{{ .link | absLangURL }}"
+                  {{ end }}>
+                  {{ i18n (printf "button_labels.%s" .label_key) | safeHTML }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+                {{ $index = add $index 1 }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Features -->
+
+{{ end }}

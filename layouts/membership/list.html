@@ -1,0 +1,285 @@
+{{ define "main" }}
+{{ partial "page-header" . }}
+
+<form id="membership_order">
+  <!-- Stepper -->
+  <div class="py-24 relative w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto" data-hs-stepper="">
+    <!-- Stepper Nav -->
+    <ul class="relative flex flex-row gap-x-2 content-center">
+      <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group" data-hs-stepper-nav-item='{
+        "index": 1
+      }'>
+        <span class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle">
+          <span class="size-7 flex justify-center items-center shrink-0 bg-theme-light font-medium text-text rounded-full group-focus:bg-theme-light hs-stepper-active:bg-dark hs-stepper-active:text-darkmode-dark hs-stepper-success:bg-dark hs-stepper-success:text-darkmode-dark hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600 dark:bg-darkmode-theme-light dark:text-darkmode-text dark:group-focus:bg-darkmode-theme-light dark:hs-stepper-active:bg-darkmode-dark dark:hs-stepper-success:bg-darkmode-dark dark:hs-stepper-active:text-dark dark:hs-stepper-success:text-dark dark:hs-stepper-completed:bg-teal-500 dark:hs-stepper-completed:group-focus:bg-teal-600">
+            <span class="hs-stepper-success:hidden hs-stepper-completed:hidden">1</span>
+            <svg class="hidden shrink-0 size-3 hs-stepper-success:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="ms-2 text-sm font-medium text-text dark:text-darkmode-text">
+            {{ .Params.step_1.title }}
+          </span>
+        </span>
+        <div class="w-full h-px flex-1 bg-theme-light group-last:hidden hs-stepper-success:bg-dark hs-stepper-completed:bg-teal-600 dark:bg-darkmode-theme-light dark:hs-stepper-success:bg-darkmode-dark dark:hs-stepper-completed:bg-teal-600"></div>
+      </li>
+
+      <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group" data-hs-stepper-nav-item='{
+        "index": 2
+      }'>
+        <span class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle">
+          <span class="size-7 flex justify-center items-center shrink-0 bg-theme-light font-medium text-text rounded-full group-focus:bg-theme-light hs-stepper-active:bg-dark hs-stepper-active:text-darkmode-dark hs-stepper-success:bg-dark hs-stepper-success:text-darkmode-dark hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600 dark:bg-darkmode-theme-light dark:text-darkmode-text dark:group-focus:bg-darkmode-theme-light dark:hs-stepper-active:bg-darkmode-dark dark:hs-stepper-success:bg-darkmode-dark dark:hs-stepper-active:text-dark dark:hs-stepper-success:text-dark dark:hs-stepper-completed:bg-teal-500 dark:hs-stepper-completed:group-focus:bg-teal-600">
+            <span class="hs-stepper-success:hidden hs-stepper-completed:hidden">2</span>
+            <svg class="hidden shrink-0 size-3 hs-stepper-success:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="ms-2 text-sm font-medium text-text dark:text-darkmode-text">
+            {{ .Params.step_2.title }}
+          </span>
+        </span>
+        <div class="w-full h-px flex-1 bg-theme-light group-last:hidden hs-stepper-success:bg-dark hs-stepper-completed:bg-teal-600 dark:bg-darkmode-theme-light dark:hs-stepper-success:bg-darkmode-dark dark:hs-stepper-completed:bg-teal-600"></div>
+      </li>
+
+      <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group" data-hs-stepper-nav-item='{
+          "index": 3
+        }'>
+        <span class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle">
+          <span class="size-7 flex justify-center items-center shrink-0 bg-theme-light font-medium text-text rounded-full group-focus:bg-theme-light hs-stepper-active:bg-dark hs-stepper-active:text-darkmode-dark hs-stepper-success:bg-dark hs-stepper-success:text-darkmode-dark hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600 dark:bg-darkmode-theme-light dark:text-darkmode-text dark:group-focus:bg-darkmode-theme-light dark:hs-stepper-active:bg-darkmode-dark dark:hs-stepper-success:bg-darkmode-dark dark:hs-stepper-active:text-dark dark:hs-stepper-success:text-dark dark:hs-stepper-completed:bg-teal-500 dark:hs-stepper-completed:group-focus:bg-teal-600">
+            <span class="hs-stepper-success:hidden hs-stepper-completed:hidden">3</span>
+            <svg class="hidden shrink-0 size-3 hs-stepper-success:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="ms-2 text-sm font-medium text-text dark:text-darkmode-text">
+            {{ .Params.step_3.title }}
+          </span>
+        </span>
+        <div class="w-full h-px flex-1 bg-theme-light group-last:hidden hs-stepper-success:bg-dark hs-stepper-completed:bg-teal-600 dark:bg-darkmode-theme-light dark:hs-stepper-success:bg-darkmode-dark dark:hs-stepper-completed:bg-teal-600"></div>
+      </li>
+      <!-- End Item -->
+    </ul>
+    <!-- End Stepper Nav -->
+
+    <!-- Stepper Content -->
+    <div class="mt-8 sm:mt-16">
+      <!-- First Contnet -->
+      <div data-hs-stepper-content-item='{
+        "index": 1
+      }'>
+        <div id="step-1" class="form-step">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <!-- Grid -->
+              <div class="lg:auto-rows-max space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
+                {{ range .Params.step_1.plans }}
+                <!-- Card-->
+                <input id="{{ .id }}" type="radio" name="membership" class="hidden peer/{{ .id }} {{ if .multiple }}multiple{{ end }}" value="{{ .name }}">
+                <label for="{{ .id }}" class="lg:h-full cursor-pointer flex flex-col mx-auto w-full max-w-xl border border-border dark:border-darkmode-border text-dark dark:text-darkmode-dark rounded-2xl bg-theme-light dark:bg-darkmode-theme-light peer-checked/{{ .id }}:outline peer-checked/{{ .id }}:outline-offset-2 peer-checked/{{ .id }}:outline-2 peer-checked/{{ .id }}:outline-dark dark:peer-checked/{{ .id }}:outline-darkmode-dark">
+                    <div class="p-6 xl:py-9 xl:px-12">
+                        <h3 class="font-manrope text-2xl font-bold mb-3">{{ .name }}</h3>
+                        {{ if .multiple }}
+                        <p class="text-xl text-text dark:text-darkmode-text from-tag">{{ i18n "membership.plan.from" }}</p>
+                        <div class="flex items-center mb-6">
+                            <span class="font-manrope mr-2 text-6xl font-semibold text-dark dark:text-darkmode-dark">€<span class="price-tag" data-unitPrice="{{ .price }}">{{ mul 2 .price }}</span></span>
+                        {{ else }}
+                        <div class="flex items-center mb-6">
+                            <span class="font-manrope mr-2 text-6xl font-semibold text-dark dark:text-darkmode-dark">€<span class="price-tag" data-unitPrice="{{ .price }}">{{ .price }}</span></span>
+                        {{ end }}
+                        <span class="text-xl text-text dark:text-darkmode-text">{{ i18n "membership.plan.per_year" }}</span>
+                          </div>
+  
+                          <!-- List -->
+                          <ul class="price-features space-y-6 text-left text-lg text-text dark:text-darkmode-dark">
+                              {{ range .features }}
+                              <li class="flex items-center space-x-4 tooltip" {{ if .tooltip }} data-text="{{ .tooltip }}" {{ end }}>
+                                  <!-- Icon -->
+                                  <svg class="flex-shrink-0 w-6 h-6 text-dark dark:text-darkmode-dark" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                  <!-- Icon End -->
+                                  <span>{{ .title }}</span>
+                              </li>
+                              {{ end }}
+                          <!-- List End -->
+                      </div>
+                  </label>
+                  <!-- Card End -->
+                  {{ end }}
+              </div>
+              <!--Grid End-->
+              
+              <!-- Input Number -->
+              <div id="multipleInput" class="hidden mx-auto max-w-md mt-16 py-2 px-3 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg" data-hs-input-number='{
+                "min": 2
+              }'>
+                <div class="w-full flex justify-between items-center gap-x-3">
+                  <div>
+                    <span class="block font-medium text-xl text-dark dark:text-darkmode-dark">
+                      {{ i18n "membership.plan.persons" }}
+                    </span>
+                    <span class="block text-sm text-text dark:text-darkmode-text">
+                      <span id="unit-price">€2.000</span> {{ i18n "membership.plan.per_person" }}
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-x-1.5">
+                    <button type="button" class="size-12 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light text-dark dark:text-darkmode-dark shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" tabindex="-1" aria-label="Decrease" data-hs-input-number-decrement="">
+                      <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                      </svg>
+                    </button>
+                    <input id="quantityInput" name="quantity" class="text-xl p-0 w-12 bg-transparent border-0 text-dark-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-darkmode-dark" style="-moz-appearance: textfield;" type="number" aria-roledescription="Number field" data-hs-input-number-input="">
+                    <button type="button" class="size-12 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light text-dark dark:text-darkmode-dark shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" aria-label="Increase" data-hs-input-number-increment="">
+                      <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5v14"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- End Input Number -->
+          </div>
+      </div>
+      </div>
+      <!-- End First Contnet -->
+
+      <!-- Second Contnet -->
+      <div data-hs-stepper-content-item='{
+        "index": 2
+      }' style="display: none;">
+          <div id="step-2" class="form-step">
+            <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg">
+                <!-- Grid -->
+                <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
+                    <!-- Form -->
+                    {{ range .Params.step_2.form }}
+                    <div class="flex flex-col mx-auto w-full max-w-xl">
+                        <label for="{{ .id }}" class="flex gap-1 items-center text-text dark:text-darkmode-text text-base leading-relaxed">{{ .label }} {{ if .hint }} <span class="text-light dark:text-darkmode-light">({{.hint}})</span> {{ end }}
+                            {{ if .required }}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                            </svg>
+                            {{ end }}
+                        </label>
+                        <input type="{{ .type }}" id="{{ .id }}" name="{{ .id }}" {{ if .required }} required {{ end }} class="w-full focus:outline-none bg-body dark:bg-darkmode-body text-text dark:text-darkmode-text placeholder-border dark:placeholder-darkmode-border text-lg font-normal leading-relaxed px-5 py-3 rounded-lg  border border-border dark:border-darkmode-border justify-start items-center gap-2 inline-flex" placeholder="{{ .placeholder }}">
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- End Second Contnet -->
+
+      <!-- Third Contnet -->
+      <div data-hs-stepper-content-item='{
+        "index": 3
+      }' style="display: none;">
+        <div id="step-3" class="form-step space-y-4 md:space-y-8">
+          <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg">
+            <!-- Summary -->
+            <div class="space-y-6 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
+              {{ range .Params.step_2.form }}
+              <p class="text-text dark:text-darkmode-text">
+                {{ .label }}: 
+                <span id="summary_{{ .id }}" class="text-dark dark:text-darkmode-dark">
+                  --
+                </span>
+              </p>
+              {{ end }}
+            </div>
+            <!-- End Summary -->
+          </div>
+          <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg">
+            <!-- Consents -->
+            <div class="space-y-8">
+              {{ range .Params.step_3.consents }}
+              <div class="flex items-center">
+                <input id="{{ .id }}" name="{{ .id }}" type="checkbox" value="" class="w-6 h-6 text-blue-600 bg-body border-border rounded focus:dark dark:focus:darkmode-dark dark:ring-offset-gray-800 focus:ring-2 dark:bg-darkmode-body dark:border-darkmode-border" {{ if .required }} required {{ end }}>
+                <label for="{{ .id }}" class="ms-4 text-md text-dark dark:text-darkmode-dark">
+                  {{ .label.text }}
+                  {{ with .label.link }} 
+                  <a href="{{ .ulr }}" class="text-blue-600 dark:text-blue-500 hover:underline">
+                    {{ .text }}
+                  </a>
+                  {{ end }}
+                  {{ if .required }}
+                  <svg class="inline ml-2" xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                      <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                  </svg>
+                  {{ end }}
+                </label>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+            <!-- End Consents -->
+            <!-- Total -->
+          <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8 border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg">
+            <div id="total" class="flex flex-wrap gap-x-4">
+              <p class="flex-none text-dark dark:text-darkmode-dark">
+                <span id="total_units">--</span> &times; <span id="total_plan">--</span>
+              </p>
+              <p class="flex-auto text-text dark:text-darkmode-text">
+                (€ <span id="unit_price">--</span> {{ i18n "membership.plan.per_person" }})
+              </p>
+              <p class="flex-none text-dark dark:text-darkmode-dark">
+                € <span id="total_price">--</span>
+              </p>
+            </div>
+          </div>
+            <!-- End Total -->
+            <!-- Turnstile -->
+            <input type="hidden" id="turnstile-response" name="turnstile-response" value="">
+            <div id="turnstile-element" class="flex justify-center py-8"></div>
+            <!-- End Turnstile -->
+        </div>
+      </div>
+      <!-- End Third Contnet -->
+
+      <!-- Final Contnet -->
+      <div data-hs-stepper-content-item='{
+        "isFinal": true
+      }' style="display: none;">
+        <div class="p-4 h-48 flex justify-center items-center border border-border dark:border-darkmode-border bg-theme-light dark:bg-darkmode-theme-light rounded-lg">
+          <h3 id="success_message" class="text-dark dark:text-darkmode-dark">
+            {{ .Params.success_message }}
+          </h3>
+          <h3 id="error_message" class="text-dark dark:text-darkmode-dark hidden">
+            {{ .Params.error_message }}
+          </h3>
+        </div>
+      </div>
+      <!-- End Final Contnet -->
+
+      <!-- Button Group -->
+      <div class="mt-16 flex justify-between items-center gap-x-2">
+        <button type="button" class="inline-flex items-center gap-x-1 btn btn-secondary" data-hs-stepper-back-btn="" disabled>
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"></path>
+          </svg>
+          {{ i18n "button_labels.back" }}
+        </button>
+        <button type="button" class="inline-flex items-center gap-x-1 btn btn-primary" data-hs-stepper-next-btn="" disabled>
+          {{ i18n "button_labels.next" }}
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+        </button>
+        <button type="submit" class="inline-flex items-center gap-x-1 btn btn-primary" data-hs-stepper-finish-btn="" disabled style="display: none;">
+          {{ i18n "button_labels.submit" }}
+        </button>
+      </div>
+      <!-- End Button Group -->
+    </div>
+    <!-- End Stepper Content -->
+  </div>
+  <!-- End Stepper -->
+</form>
+
+<script src='{{ "/js/toggleNumberInput.js" | absURL }}'></script>
+<script src='{{ "/js/updatePrice.js" | absURL }}'></script>
+<script src='{{ "/js/orderForm.js" | absURL }}'></script>
+<script src='{{ "/js/formSubmission.js" | absURL }}'></script>
+
+<!-- Turnstile Script -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+{{ end }}

@@ -28,7 +28,10 @@ if (theme.fonts.font_family.secondary) {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./hugo_stats.json"],
+  content: [
+    "./hugo_stats.json",
+    "node_modules/preline/dist/*.js", // Added Preline content path
+  ],
   safelist: [{ pattern: /^swiper-/ }],
   darkMode: "class",
   theme: {
@@ -99,5 +102,6 @@ module.exports = {
         5: "3rem",
       },
     }),
+    require("preline/plugin"), // Added Preline plugin
   ],
 };

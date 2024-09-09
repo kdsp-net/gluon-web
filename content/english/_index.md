@@ -1,53 +1,99 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Hugo Project"
-  content: "Hugoplate is a free starter template built with Hugo and TailwindCSS, providing everything you need to jumpstart your Hugo project and save valuable time."
+  title: "Shaping the Early-Stage Funding Landscape"
+  content: "Whether you’re an angel investor looking to diversify and maximize your portfolio or a startup seeking fair and early-stage funding, Gluon Syndicate is here for you. Join us and become a part of a community that’s shaping the future of angel investments in CEE!"
   image: "/images/banner.png"
-  button:
-    enable: true
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/hugoplate"
+  image_dark: "/images/banner_dark.png"
+  buttons:
+    - label_key: "startup"
+      link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+      type: "primary"
+      enable: true
+    - label_key: "member"
+      link:  "/membership"
+      type: "secondary"
+      enable: true
 
 # Features
 features:
-  - title: "What's Included in Hugoplate"
-    image: "/images/service-1.png"
-    content: "Hugoplate is a comprehensive starter template that includes everything you need to get started with your Hugo project. What's Included in Hugoplate"
+  - title: "Connect. Invest. Grow."
+    image: "/images/feature_1.png"
+    image_dark: "/images/feature_1_dark.png"
+    content: "We bridge the gap between angel investors and early-stage startups, fostering innovation and growth in the CEE region."
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Hugo and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
-    button:
-      enable: false
-      label: "Get Started Now"
-      link: "#"
+      - "Four prestigious live pitch events annually in Slovakia and Czechia"
+      - "Presenting 15 pre-selected, vetted startups per event"
+      - "Fair, transparent investments through a standardized legal framework"
+      - "Investments of €50K to €300K in pre-seed and seed stages"
+    buttons:
+      - label_key: "startup"
+        link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+        type: "primary"
+        enable: true
+      - label_key: "member"
+        link:  "/membership"
+        type: "secondary"
+        enable: true
 
-  - title: "Discover the Key Features Of Hugo"
-    image: "/images/service-2.png"
-    content: "Hugo is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
+  - title: "Angels, Maximize Your Investment Potential"
+    image: "/images/feature_2.png"
+    image_dark: "/images/feature_2_dark.png"
+    content: "Gluon Syndicate offers unparalleled opportunities for investors to engage with the most promising startups in the CEE region."
     bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
-    button:
-      enable: true
-      label: "Get Started Now"
-      link: "https://github.com/zeon-studio/hugoplate"
+      - "Access premier deal flow through extensive networks and partnerships"
+      - "Diversify your portfolio with investments starting as low as €5K"
+      - "Co-invest with experienced angels and share insights and risks"
+      - "Simplified investment process with a templated legal framework"
+      - "Active investor-startup relationship management for sustained growth"
+    buttons:
+      - label_key: "member"
+        link:  "/membership"
+        type: "primary"
+        enable: true
+      - label_key: "investor_deck"
+        link:  "https://slides.gluon.vc/investor-deck"
+        type: "secondary"
+        enable: true
 
-  - title: "The Top Reasons to Choose Hugo for Your Hugo Project"
-    image: "/images/service-3.png"
-    content: "With Hugo, you can build modern and content-focused websites without sacrificing performance or ease of use."
+  - title: "Startups, Fuel Your Growth"
+    image: "/images/feature_3.png"
+    image_dark: "/images/feature_3_dark.png"
+    content: "Gluon Syndicate offers a streamlined process to pitch to multiple vetted angel investors, ensuring fair and transparent funding opportunities for early-stage startups."
     bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Hugo a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
-    button:
-      enable: false
-      label: ""
-      link: ""
+      - "Pitch to multiple investors simultaneously for higher funding potential"
+      - "Fair investment terms with convertible loan agreements"
+      - "Support for MVP, pre-revenue, and early revenue stages"
+      - "Access to investors' expertise and mentoring"
+      - "Quick and efficient funding process"
+      - "Pathway to subsequent funding rounds with leading CEE VC funds"
+    buttons:
+      - label_key: "startup"
+        link:  "https://app.dealum.com/#/company/application/new/179459/lv87nnpydpvdwsus5oppwf09y4852o15"
+        type: "primary"
+        enable: true
+      - label_key: "investment_process"
+        link:  "/resources/knowledge-base/how-we-invest"
+        type: "secondary"
+        enable: true
+
+  - title: "Fair Deals, Clear Conditions"
+    image: "/images/feature_4.png"
+    image_dark: "/images/feature_4_dark.png"
+    content: "Gluon Syndicate despises predatory deals and offers investment through convertible loan agreements that postpone the discussion about valuation until the upcoming qualified round."
+    bulletpoints:
+      - "We target pre-revenue and first-revenue CEE startups (industry-agnostic)"
+      - "Our investment sweet spot is in the range of 50‑300K, founders set the investment targets themselves"
+      - "Reaching the investment target at the pitching event sets off the deal"
+      - "Once the startup raises their goal, they can raise up to double the amount as a stretch goal"
+      - "Funding based on CLAs with 30% discount on a subsequent round and a valuation cap in the amount of 10&times; the investment target"
+    buttons:
+      - label_key: "investment_process"
+        link:  "/resources/knowledge-base/how-we-invest"
+        type: "primary"
+        enable: true
+      - label_key: "investment_criteria"
+        link:  "/resources/knowledge-base/investment-criteria-and-conditions"
+        type: "secondary"
+        enable: true
 ---

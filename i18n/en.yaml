@@ -12,3 +12,31 @@ search_initial_message: Type something to search..
 search_navigate: to navigate
 search_select: to select
 search_close: to close
+button_labels:
+  startup: Apply <span>(Startup)</span>
+  member: Join <span>(Investor)</span>
+  subscribe: Subscirbe
+  investment_process: How We Invest
+  investor_deck: Investor Deck
+  investment_criteria: Investment Criteria & Conditions
+  next: Next
+  back: Back
+  submit: Submit
+announcement:
+  message: "Are you an investor, startupist, or tech enthusiast? Join our **Mission to Web Summit 2024** and enjoy great mix of networking, flight and event tickets, accomodation, and side events."
+  link: "https://www.pelikan.sk/sk/pobyt/web-summit-lisabon-gluon-syndicate"
+beehiiv_url:
+  default: "https://embeds.beehiiv.com/04babe21-4fa5-4161-acd6-2638316a6a13"
+  dark: "https://embeds.beehiiv.com/27541c05-650d-4afc-a803-d7d74cb375d2"
+timer:
+  title: "Upcoming Pitch Event:"
+  days: Days
+  hours: Hours
+  minutes: Minutes
+  seconds: Seconds
+membership:
+  plan:
+    from: From
+    per_year: / year
+    per_person: / investor
+    persons: Investors

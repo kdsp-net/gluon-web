@@ -1,17 +1,11 @@
 // Add your own custom styles here
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-.font-primary {
-  font-family: "IBM Plex Mono", monospace;
-}
-
-.font-secondary {
-  font-family: "IBM Plex Sans", sans-serif;
+html {
+  @apply scroll-pt-20 md:scroll-pt-24 lg:scroll-pt-28;
 }
 
 body {
-  @apply font-normal;
+  @apply font-medium;
 }
 
 h1,
@@ -24,5 +18,179 @@ h6 {
 }
 
 .btn {
-  @apply rounded-none font-secondary font-semibold uppercase;
+  @apply font-secondary font-semibold uppercase;
+  span {
+    @apply font-normal;
+  }
+}
+
+.btn-primary {
+  @apply
+    border-dark bg-dark text-darkmode-dark
+    dark:border-darkmode-dark dark:bg-darkmode-dark dark:text-dark
+    disabled:border-border disabled:bg-border
+    disabled:dark:border-darkmode-border disabled:dark:bg-darkmode-border;
+}
+
+.btn-secondary {
+  @apply
+    border-dark bg-transparent text-dark
+    dark:border-darkmode-dark dark:text-darkmode-dark
+    disabled:border-border disabled:text-border
+    disabled:dark:border-darkmode-border disabled:dark:text-darkmode-border;
+}
+
+.btn-tertiary {
+  @apply
+    border-transparent bg-transparent text-dark
+    dark:text-darkmode-dark
+    disabled:text-border
+    disabled:dark:text-darkmode-border;
+}
+
+.nav-link {
+  @apply text-text hover:text-dark dark:text-darkmode-text dark:hover:text-darkmode-dark;
+}
+
+.nav-dropdown-link {
+  @apply text-text hover:text-dark dark:text-darkmode-text dark:hover:text-darkmode-dark;
+}
+
+.theme-switcher {
+
+  label {
+    @apply dark:bg-darkmode-border;
+  }
+
+}
+
+.founder {
+  @apply text-dark dark:text-darkmode-dark font-secondary font-semibold uppercase text-3xl;
+}
+
+.founder-socials li a {
+  @apply relative -top-2 h-6 w-6 text-xs;
+}
+
+// Count Down
+
+.count-down-title {
+  @apply flex items-center justify-center w-full
+}
+
+.count-down-main {
+  @apply flex items-center justify-center w-full gap-6
+}
+
+.timer {
+  div {
+    @apply pr-1.5 pl-2 relative bg-body dark:bg-darkmode-body w-max before:absolute before:h-full before:w-0.5 before:top-0 before:left-1/2 before:-translate-x-1/2 before:bg-theme-light dark:before:bg-darkmode-theme-light before:z-10
+  };
+  h3 {
+    @apply font-semibold text-2xl text-dark dark:text-darkmode-dark tracking-[15.36px] max-w-[44px] text-center relative z-20
+  };
+  p {
+    @apply text-sm font-medium text-dark dark:text-darkmode-dark mt-1 text-center w-full
+  }
+}
+
+.next-event {
+  @apply bg-theme-light dark:bg-darkmode-theme-light;
+  h2 {
+    @apply mb-4 text-h3 lg:text-h3 text-dark dark:text-darkmode-dark
+  };
+  ul {
+    @apply mt-4 flex flex-wrap items-center justify-center space-x-4 md:space-x-6
+  };
+  li {
+    @apply text-sm font-medium text-dark dark:text-darkmode-dark
+  }
+}
+
+// Mermaid Styles
+
+.mermaid {
+   @apply bg-body dark:bg-darkmode-body #{!important};
+}
+
+.mermaid .node rect {
+  @apply fill-theme-light dark:fill-darkmode-theme-light stroke-border dark:stroke-darkmode-border #{!important};
+}
+
+.mermaid .nodeLabel {
+  @apply text-dark dark:text-darkmode-dark font-primary font-medium #{!important};
+}
+
+.mermaid .cluster rect {
+  @apply fill-body dark:fill-darkmode-body stroke-darkmode-border dark:stroke-border #{!important};
+}
+
+.mermaid .cluster-label {
+  @apply uppercase #{!important};
+}
+
+.mermaid .flowchart-link {
+  @apply stroke-dark dark:stroke-darkmode-dark #{!important};
+}
+
+.mermaid .marker {
+  @apply stroke-dark dark:stroke-darkmode-dark fill-dark dark:fill-darkmode-dark #{!important};
+}
+
+.mermaid .edgeLabel {
+  @apply bg-body dark:bg-darkmode-body text-dark dark:text-darkmode-dark font-primary font-medium #{!important}
+}
+
+.mermaid .labelBkg {
+  @apply bg-body dark:bg-darkmode-body #{!important}
+}
+
+.mermaid .edgeLabel p {
+  @apply bg-body dark:bg-darkmode-body #{!important}
+}
+
+.page-columns .column-page-inset {
+  z-index: 100; /* default z-index: 998; */
+}
+
+// Tooltip
+
+.price-features {
+  li[data-text] {
+    @apply relative; /* making the .tooltip span a container for the tooltip text */
+
+    span:after {
+      content: " [?]"; /* add the [?] at the end of the <li> */
+    }
+
+    &:hover:before {
+      @apply block; /* show the tooltip on hover */
+    }
+  }
+
+  a {
+    @apply no-underline text-black; /* No underline and black color */
+  }
+
+  li[data-text]:before {
+    content: attr(data-text); /* here's the magic */
+    @apply absolute left-1/2 text-white text-center bg-black;
+
+    transform: translateX(-50%); /* horizontally center */
+
+    top: 90%; /* move to bottom */
+    margin-top: 10px;
+
+    clip-path: polygon(
+      0% calc(0% + 10px),
+      calc(50% - 10px) calc(0% + 10px),
+      50% 0,
+      calc(50% + 10px) calc(0% + 10px),
+      100% calc(0% + 10px),
+      100% 100%,
+      0% 100%
+    );
+
+    @apply hidden w-[400px] p-12 z-10; /* basic styles */
+  }
 }
