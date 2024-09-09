@@ -4,12 +4,19 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get the HSStepper instance
         const stepper = HSStepper.getInstance('[data-hs-stepper]');
         const nextButton = document.querySelector('[data-hs-stepper-next-btn]');
+        const backButton = document.querySelector('[data-hs-stepper-back-btn]');
         const finishButton = document.querySelector('[data-hs-stepper-finish-btn]');
         const radioButtons = document.querySelectorAll('input[name="membership"]');
+        const form = document.getElementById('membership_order');
         
         // Initially disable the Next and Finish buttons
         nextButton.disabled = true;
         finishButton.disabled = true;
+
+        // Scroll form to view on next step
+        function scrollUp() {;
+            form.scrollIntoView();
+        };
 
         // Function to check Turnstile validation
         function isTurnstileValid() {
@@ -109,6 +116,11 @@ document.addEventListener('DOMContentLoaded', function () {
             unitPriceElement.textContent = unitPrice;
             totalPriceElement.textContent = Math.round(totalPrice);
         }
+
+        // Add evenrt listeners for clicking next, back, and finish buttons
+        nextButton.addEventListener("click", scrollUp);
+        backButton.addEventListener("click", scrollUp);
+        finishButton.addEventListener("click", scrollUp);
 
         // Add event listeners for Step 1 (radio selection)
         radioButtons.forEach(radio => {
