@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
         nextButton.disabled = true;
         finishButton.disabled = true;
 
+        // Function to check Turnstile validation
+        function isTurnstileValid() {
+            const turnstileToken = document.getElementById('turnstile-response')?.value;
+            return !!turnstileToken;
+        }
+
         // Step 1: Enable "Next" button when a card is selected
         function handleCardSelection() {
             const selectedRadio = document.querySelector('input[name="membership"]:checked');
@@ -75,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            finishButton.disabled = !allChecked;
+            finishButton.disabled = !(allChecked && isTurnstileValid());  // Ensure consents and Turnstile validation
         }
 
         // Task 3: Update the Total Section
@@ -139,6 +145,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 validateConsents();
             }
         }
+
+        // Add event listener for turnstile validation
+        document.addEventListener("turnstileVerified", function() {
+            validateConsents();
+        });
 
         // Hook into Preline's stepper events
         stepper.on('active', function () {

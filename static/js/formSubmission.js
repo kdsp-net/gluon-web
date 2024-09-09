@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
+      // Ensure the Turnstile widget is loaded before interacting with it
+    window.onload = function () {
+        // Turnstile initialization
+        turnstile.render('#turnstile-element', {
+            sitekey: '0x4AAAAAAAjBOyA0QfcZbKoV', // Use your actual site key here
+            theme: localStorage.theme, // Render turnstile in theme matching site
+            callback: function (token) {
+                console.log('Turnstile token:', token);
+                document.getElementById('turnstile-response').value = token; // Store the token in a hidden input
+                let event = new CustomEvent("turnstileVerified", { "token": token }); // Signal Turnstile validation
+                document.dispatchEvent(event);
+            }
+        });
+    };
+
     // Add event listener for form submission
     const form = document.querySelector('#membership_order');
     const successMessageElement = document.getElementById('success_message');
@@ -6,6 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the form from actually submitting
+
+        // Ensure the Turnstile token is available before submitting
+        const turnstileToken = document.getElementById('turnstile-response').value;
+
+        if (!turnstileToken) {
+            console.error('Turnstile validation failed: no token');
+            errorMessageElement.classList.remove('hidden');
+            successMessageElement.classList.add('hidden');
+            return;
+        }
 
         // Create an object to hold the form data
         const formJson = {};
@@ -58,6 +83,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 type: 'number'
             };
         }
+
+        // Add unit_price and total_price
+        const priceTag = selectedRadio ? document.querySelector(`label[for="${selectedRadio.id}"] .price-tag`) : null;
+        if (priceTag) {
+            const unitPrice = parseFloat(priceTag.dataset.unitprice);
+            const totalUnits = formJson['quantity'].value;
+            const totalPrice = Math.round(unitPrice * totalUnits);
+
+            formJson['unit_price'] = {
+                value: unitPrice,
+                type: 'number'
+            };
+
+            formJson['total_price'] = {
+                value: totalPrice,
+                type: 'number'
+            };
+        }
+
+        // Add the Turnstile token to the form data
+        formJson['turnstile_token'] = {
+            value: turnstileToken,
+            type: 'string'
+        };
 
         // Send the JSON data to the worker endpoint
         fetch('https://form2obsidian.disruptivebros.workers.dev/', {

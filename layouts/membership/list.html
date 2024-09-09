@@ -227,6 +227,10 @@
             </div>
           </div>
             <!-- End Total -->
+            <!-- Turnstile -->
+            <input type="hidden" id="turnstile-response" name="turnstile-response" value="">
+            <div id="turnstile-element" class="flex justify-center py-8"></div>
+            <!-- End Turnstile -->
         </div>
       </div>
       <!-- End Third Contnet -->
@@ -275,4 +279,7 @@
 <script src='{{ "/js/updatePrice.js" | absURL }}'></script>
 <script src='{{ "/js/orderForm.js" | absURL }}'></script>
 <script src='{{ "/js/formSubmission.js" | absURL }}'></script>
+
+<!-- Turnstile Script -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 {{ end }}
