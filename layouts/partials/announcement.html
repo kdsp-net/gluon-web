@@ -6,6 +6,9 @@
         <p>
           {{ i18n "announcement.message" | markdownify }}
           <i class="fa fa-arrow-right pl-2"></i>
+          <button id="announcement-button" class="announcement-button" {{ if not .dismissable }} style="display: none" {{ end }}>
+            &times;
+          </button>
         </p>
       </div>
     </a>
