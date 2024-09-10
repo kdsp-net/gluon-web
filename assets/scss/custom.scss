@@ -95,7 +95,7 @@ h6 {
 }
 
 .next-event {
-  @apply bg-theme-light dark:bg-darkmode-theme-light;
+  @apply bg-theme-dark dark:bg-darkmode-theme-dark;
   h2 {
     @apply mb-4 text-h3 lg:text-h3 text-dark dark:text-darkmode-dark
   };
