@@ -10,6 +10,12 @@
     <!-- head (don't cache it) -->
     {{ partial "essentials/head.html" . }}
 
+    <!-- canonical URL -->
+    {{ if .Params.canonicalUrl }}
+      <link rel="canonical" href="{{ .Params.canonicalUrl }}">
+    {{ else }}
+      <link rel="canonical" href="{{ .Permalink }}">
+    {{ end }}
 
     <!-- style (always cache it) -->
     {{ partialCached "essentials/style.html" . }}

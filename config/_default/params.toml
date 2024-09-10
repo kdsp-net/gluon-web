@@ -123,6 +123,6 @@ member_link = "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1t
 
 # Next Event
 [next_event]
-enable = false
+enable = true
 date = "2024-10-22T16:00:00+02:00"
 location = "Bratislava, SK"
