@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Send the JSON data to the worker endpoint
-        fetch('https://form2obsidian.disruptivebros.workers.dev/', {
+        fetch('https://form-to-obsidian.workers.gluon.vc/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
