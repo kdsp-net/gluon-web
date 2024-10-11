@@ -48,7 +48,7 @@ The loan will **convert into equity** upon a conversion event (explained below
 The loan converts into equity under specific events, including:
 - A **significant investment** from a third party.
 - A **change of control** in the company.
-- > - A **non-significant investment** from a third party (if investor approves so).
+- A **non-significant investment** from a third party (if investor approves so).
 - The **final maturity date** of **three years from the investment** without any other conversion event. In the event of maturity, the conversion will happen at a **valuation equal to half of the valuation cap**.
  
 ### Valuation Cap & Discount
@@ -63,7 +63,7 @@ Before the loan is disbursed, certain conditions must be met, including:
 -  The startup must raise commitments equal to or greater than the **initial target**.
 
 ### Supervisory Board
-    
+
 A **Supervisory Board** of three members will oversee the company’s governance and key decisions (including reserved matters).
 
 The **Founders** appoint **one member**, while the **Investor** (Gluon Syndicate) appoints **two members**, with one serving as the **Chairperson (with no casting vote)**.
