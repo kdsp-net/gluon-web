@@ -30,29 +30,18 @@ pageRef = "/how-we-invest"
 weight = 2
 
 [[main]]
-name = "Zdroje"
+name = "Znalostní báze (EN)"
+url = "https://kb.gluon.vc/"
 weight = 3
-
-[[main]]
-parent = "Zdroje"
-name = "Wiki"
-pageRef = "/resources/knowledge-base"
-weight = 1
-
-[[main]]
-parent = "Zdroje"
-name = "Blog"
-pageRef = "/resources/blog"
-weight = 2
 
 # footer menu
 
 [[footer]]
 name = "Všeobecné obchodní podmínky"
-pageRef = "/resources/terms-of-service"
+url = "https://kb.gluon.vc/terms-of-service"
 weight = 1
 
 [[footer]]
 name = "Zásady ochrany osobních údajů"
-pageRef = "/resources/privacy-policy"
+url = "https://kb.gluon.vc/privacy-policy"
 weight = 2

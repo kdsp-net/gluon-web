@@ -23,7 +23,7 @@ features:
     content: "Stavíme most mezi angel investory a začínajícími startupy a podporujeme inovace a růst v regionu střední a východní Evropy."
     bulletpoints:
       - "Čtyři prestižní fyzické pitch eventy ročně na Slovensku a v Česku"
-      - "Představení 15 předem vybraných a prověřených startupů na každém eventu"
+      - "Představení 8 předem vybraných a prověřených startupů na každém eventu"
       - "Férové, transparentní investice prostřednictvím standardizovaného právního rámce"
       - "Preseedové a seedové investice ve výši 50 000 až 300 000 EUR"
     buttons:
@@ -73,7 +73,7 @@ features:
         type: "primary"
         enable: true
       - label_key: "investment_process"
-        link:  "/resources/knowledge-base/how-we-invest/"
+        link:  "/how-we-invest"
         type: "secondary"
         enable: true
 
@@ -86,14 +86,14 @@ features:
       - "Náš investiční sweet spot je v rozmezí 50-300 tis. Eur, zakladatelé si sami stanovují investiční cíle"
       - "Dosažení investičního cíle na pitch eventu spuští celou investici"
       - "Jakmile startup dosáhne svůj cíl, může pokračovat v raisování peněz až na dvojnásobnou částku"
-      - "Financování na základě CLA s 30% slevou na valuaci pro následující investiční kolo a valuation cap ve výši 10-násobku investičního cíle"
+      - "Financování na základě CLA nebo SAFE s 20-30% slevou na valuaci pro následující investiční kolo a valuation cap ve výši 10-násobku investičního cíle"
     buttons:
       - label_key: "investment_process"
-        link:  "/resources/knowledge-base/how-we-invest/"
+        link:  "/how-we-invest"
         type: "primary"
         enable: true
-      - label_key: "investment_criteria"
-        link:  "/resources/knowledge-base/investment-criteria-and-conditions"
+      - label_key: "investment_thesis"
+        link:  "https://kb.gluon.vc/Knowledge+Base/Investment+Thesis"
         type: "secondary"
         enable: true
 ---

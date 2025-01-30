@@ -23,7 +23,7 @@ features:
     content: "We bridge the gap between angel investors and early-stage startups, fostering innovation and growth in the CEE region."
     bulletpoints:
       - "Four prestigious live pitch events annually in Slovakia and Czechia"
-      - "Presenting 15 pre-selected, vetted startups per event"
+      - "Presenting 8 pre-selected, vetted startups per event"
       - "Fair, transparent investments through a standardized legal framework"
       - "Investments of €50K to €300K in pre-seed and seed stages"
     buttons:
@@ -73,7 +73,7 @@ features:
         type: "primary"
         enable: true
       - label_key: "investment_process"
-        link:  "/resources/knowledge-base/how-we-invest"
+        link:  "/how-we-invest"
         type: "secondary"
         enable: true
 
@@ -86,14 +86,14 @@ features:
       - "Our investment sweet spot is in the range of 50‑300K, founders set the investment targets themselves"
       - "Reaching the investment target at the pitching event sets off the deal"
       - "Once the startup raises their goal, they can raise up to double the amount as a stretch goal"
-      - "Funding based on CLAs with 30% discount on a subsequent round and a valuation cap in the amount of 10&times; the investment target"
+      - "Funding based on CLA or SAFE with 20-30% discount on a subsequent round and a valuation cap in the amount of 10&times; the investment target"
     buttons:
       - label_key: "investment_process"
-        link:  "/resources/knowledge-base/how-we-invest"
+        link:  "/how-we-invest"
         type: "primary"
         enable: true
-      - label_key: "investment_criteria"
-        link:  "/resources/knowledge-base/investment-criteria-and-conditions"
+      - label_key: "investment_thesis"
+        link:  "https://kb.gluon.vc/Knowledge+Base/Investment+Thesis"
         type: "secondary"
         enable: true
 ---
