@@ -124,5 +124,5 @@ member_link = "https://app.dealum.com/#/dealroom/member/new/62028/cyog3czz59zg1t
 # Next Event
 [next_event]
 enable = true
-date = "2025-03-04T16:00:00+01:00"
-location = "Bratislava, SK"
+date = "2025-06-17T16:00:00+02:00"
+location = "Prague, CZ"
