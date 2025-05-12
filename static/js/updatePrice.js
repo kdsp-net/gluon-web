@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const selectedRadio = document.querySelector('input[name="membership"]:checked');
                 if (selectedRadio && selectedRadio.classList.contains('multiple')) {
                     updatePrice(inputValue);
-                    updateNumberInputValue(inputValue); // Update the number input field with the correct value
+                    updateNumberInputValue(inputValue);
                 }
             });
         }
@@ -26,18 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
             const priceTag = label.querySelector('.price-tag');
             if (!priceTag) return;
 
-            const unitPrice = parseFloat(priceTag.dataset.unitprice);
-            if (isNaN(unitPrice)) return;
+            const baseUnitPrice = parseFloat(priceTag.dataset.unitprice);
+            if (isNaN(baseUnitPrice)) return;
 
-            let finalUnitPrice = unitPrice;
+            // Apply discount if valid
+            const discountFactor = window.discountValid ? 0.5 : 1.0;
+            const discountedUnitPrice = baseUnitPrice * discountFactor;
+            const totalPrice = Math.round(discountedUnitPrice * quantity);
 
-            if (window.discountValid === true) {
-                const discountFactor = 0.8; // 20% off
-                finalUnitPrice = unitPrice * discountFactor;
-            }
-
-            const totalPrice = Math.round(finalUnitPrice * quantity);
+            // Update visible price
             priceTag.textContent = totalPrice;
+
+            // Store the actual unit price in a data attribute (for consistency on submit)
+            priceTag.dataset.actualUnitPrice = discountedUnitPrice.toFixed(2);
         }
 
         // Function to revert the price of the multiple card when it is deselected
@@ -47,8 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 const label = document.querySelector(`label[for="${multipleCardRadio.id}"]`);
                 const priceTag = label.querySelector('.price-tag');
                 if (priceTag) {
-                    const unitPrice = parseFloat(priceTag.dataset.unitprice);
-                    priceTag.textContent = Math.round(unitPrice * 2); // Revert to 2x unit price
+                    const baseUnitPrice = parseFloat(priceTag.dataset.unitprice);
+                    const discountFactor = window.discountValid ? 0.5 : 1.0;
+                    const totalPrice = Math.round(baseUnitPrice * discountFactor * 2); // Reset to 2x by default
+                    priceTag.textContent = totalPrice;
+                    priceTag.dataset.actualUnitPrice = (baseUnitPrice * discountFactor).toFixed(2);
                 }
             }
         }
@@ -67,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
             radio.addEventListener('change', function () {
                 const selectedRadio = document.querySelector('input[name="membership"]:checked');
                 if (selectedRadio && selectedRadio.classList.contains('multiple')) {
-                    const inputValue = inputNumberElement.inputValue || 2; // Default to 2 if no value
+                    const inputValue = inputNumberElement.inputValue || 2;
                     updatePrice(inputValue);
-                    updateNumberInputValue(inputValue); // Ensure the input field shows the correct value
+                    updateNumberInputValue(inputValue);
                 } else {
                     resetMultipleCardPrice();
                 }
