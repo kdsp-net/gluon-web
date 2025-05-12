@@ -27,17 +27,19 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optional: Set a flag somewhere to apply discount on total update
         window.discountValid = true;
         window.discountCode = code;
-        document.dispatchEvent(new Event('discountApplied'));
+        document.dispatchEvent(new CustomEvent('discountUpdated'));
       } else {
         feedbackEl.classList.remove('hidden');
         successEl.classList.add('hidden');
         window.discountValid = false;
+        document.dispatchEvent(new CustomEvent('discountUpdated'));
       }
     } catch (err) {
       feedbackEl.textContent = 'Something went wrong validating the code.';
       feedbackEl.classList.remove('hidden');
       successEl.classList.add('hidden');
       window.discountValid = false;
+      document.dispatchEvent(new CustomEvent('discountUpdated'));
     }
   });
 });
