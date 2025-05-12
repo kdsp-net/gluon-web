@@ -110,6 +110,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const quantity = isMultiple ? HSInputNumber.getInstance('#multipleInput').inputValue : 1;
             const totalPrice = unitPrice * quantity;
 
+            if (window.discountValid) {
+            const discountRate = 0.8; // 20% off
+            totalPrice = totalPrice * discountRate;
+            }
+
             // Update the total section values
             totalUnitsElement.textContent = quantity;
             totalPlanElement.textContent = `${h3Element.textContent} membership`;
