@@ -1,72 +1,86 @@
+// updatePrice.js
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
-    const discountFactor = 0.8;
+    const DISCOUNT_FACTOR = 0.8; // 20% off
 
-    function applyDiscountIfValid(price) {
-      return window.discountValid ? Math.round(price * discountFactor) : price;
+    // Returns 1.0 or DISCOUNT_FACTOR based on window.discountValid
+    function getFactor() {
+      return window.discountValid ? DISCOUNT_FACTOR : 1.0;
     }
 
+    // 1) Update every card's price-tag (step 1)
     function updateAllCardPrices() {
       document.querySelectorAll('.price-tag').forEach(tag => {
-        const original = parseFloat(tag.dataset.originalPrice || tag.dataset.unitprice);
+        // store original unit price once
         if (!tag.dataset.originalPrice) {
-          tag.dataset.originalPrice = original; // store once
+          tag.dataset.originalPrice = tag.dataset.unitprice;
         }
+        const base = parseFloat(tag.dataset.originalPrice);
+        const factor = getFactor();
+        const discountedUnit = Math.round(base * factor);
 
-        const newPrice = applyDiscountIfValid(original);
-
-        tag.dataset.unitprice = newPrice;
-        tag.textContent = tag.closest('input.multiple') ? Math.round(newPrice * 2) : newPrice;
+        // update the span content & data-unitprice
+        tag.textContent = tag.closest('label').querySelector('input.multiple')
+          ? discountedUnit * 2
+          : discountedUnit;
+        tag.dataset.unitprice = discountedUnit;
       });
     }
 
+    // 2) Update the summary in step 3 (#unit_price, #total_price, #total_units)
     function updateStepperSummary() {
-      const selectedRadio = document.querySelector('input[name="membership"]:checked');
-      if (!selectedRadio) return;
+      const selected = document.querySelector('input[name="membership"]:checked');
+      if (!selected) return;
 
-      const priceTag = document.querySelector(`label[for="${selectedRadio.id}"] .price-tag`);
-      if (!priceTag) return;
-
-      const unitPrice = parseFloat(priceTag.dataset.unitprice);
-      const quantity = selectedRadio.classList.contains('multiple')
-        ? parseInt(document.querySelector('#quantityInput')?.value || 2)
+      const unitPrice = parseFloat(
+        document
+          .querySelector(`label[for="${selected.id}"] .price-tag`)
+          .dataset.unitprice
+      );
+      const qty = selected.classList.contains('multiple')
+        ? parseInt(document.getElementById('quantityInput').value, 10) || 1
         : 1;
 
+      // unit & total
       document.getElementById('unit_price').textContent = unitPrice;
-      document.getElementById('total_price').textContent = Math.round(unitPrice * quantity);
-      document.getElementById('total_units').textContent = quantity;
+      document.getElementById('total_price').textContent = unitPrice * qty;
+      document.getElementById('total_units').textContent = qty;
 
-      const planName = document.querySelector(`label[for="${selectedRadio.id}"] h3`)?.textContent || '--';
+      // plan name
+      const planName = document.querySelector(`label[for="${selected.id}"] h3`)
+        .textContent;
       document.getElementById('total_plan').textContent = `${planName} membership`;
     }
 
-    function handleQuantityChange() {
+    // 3) Call both together
+    function refreshPricing(qtyChanged = false) {
       updateAllCardPrices();
       updateStepperSummary();
     }
 
-    // Quantity change handler
-    const quantityInput = HSInputNumber.getInstance('#multipleInput');
-    if (quantityInput) {
-      quantityInput.on('change', ({ inputValue }) => {
-        handleQuantityChange();
+    // Quantity changes (step 1 multiple input)
+    const hsNum = HSInputNumber.getInstance('#multipleInput');
+    if (hsNum) {
+      hsNum.on('change', ({ inputValue }) => {
+        refreshPricing(true);
       });
     }
 
-    // Membership change handler
-    document.querySelectorAll('input[name="membership"]').forEach(radio => {
-      radio.addEventListener('change', () => {
-        handleQuantityChange();
-      });
-    });
+    // Plan selection changes
+    document
+      .querySelectorAll('input[name="membership"]')
+      .forEach(radio =>
+        radio.addEventListener('change', () => {
+          refreshPricing();
+        })
+      );
 
-    // Discount code validated
+    // Discount applied event
     document.addEventListener('discountValidated', () => {
-      updateAllCardPrices();
-      updateStepperSummary();
+      refreshPricing();
     });
 
-    // On page load
-    updateAllCardPrices();
+    // Initial run
+    refreshPricing();
   });
 });
