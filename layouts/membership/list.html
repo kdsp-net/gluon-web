@@ -155,7 +155,7 @@
                     {{ range .Params.step_2.form }}
                       {{ $f := . }}
                       <div class="flex flex-col mx-auto w-full max-w-xl">
-                        <label for="{{ $f.id }}" class="flex gap-1 items-center text-base">
+                        <label for="{{ $f.id }}" class="flex gap-1 items-center text-text dark:text-darkmode-text text-base leading-relaxed">
                           {{ $f.label }}
                           {{ if $f.hint }}<span class="text-light dark:text-darkmode-light">({{ $f.hint }})</span>{{ end }}
                           {{ if $f.required }}
@@ -171,7 +171,7 @@
                             id="{{ $f.id }}"
                             name="{{ $f.id }}"
                             {{ if $f.required }} required{{ end }}
-                            class="w-full px-5 py-3 rounded-lg border"
+                            class="w-full focus:outline-none bg-body dark:bg-darkmode-body text-text dark:text-darkmode-text placeholder-border dark:placeholder-darkmode-border text-lg font-normal leading-relaxed px-5 py-3 rounded-lg  border border-border dark:border-darkmode-border justify-start items-center gap-2 inline-flex"
                           >
                             {{ range $opt := $f.select }}
                               <option value="{{ $opt.value }}"{{ if eq $current $opt.value }} selected{{ end }}>
@@ -186,7 +186,7 @@
                             id="{{ $f.id }}"
                             name="{{ $f.id }}"
                             {{ if $f.required }} required{{ end }}
-                            class="w-full px-5 py-3 rounded-lg border"
+                            class="w-full focus:outline-none bg-body dark:bg-darkmode-body text-text dark:text-darkmode-text placeholder-border dark:placeholder-darkmode-border text-lg font-normal leading-relaxed px-5 py-3 rounded-lg  border border-border dark:border-darkmode-border justify-start items-center gap-2 inline-flex"
                             placeholder="{{ $f.placeholder }}"
                           >
                         {{ end }}
