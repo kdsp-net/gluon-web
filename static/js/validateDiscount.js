@@ -32,14 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
         feedbackEl.classList.remove('hidden');
         successEl.classList.add('hidden');
         window.discountValid = false;
-        document.dispatchEvent(new CustomEvent('discountUpdated'));
       }
     } catch (err) {
       feedbackEl.textContent = 'Something went wrong validating the code.';
       feedbackEl.classList.remove('hidden');
       successEl.classList.add('hidden');
       window.discountValid = false;
-      document.dispatchEvent(new CustomEvent('discountUpdated'));
     }
   });
 });
