@@ -93,16 +93,18 @@ step_2:
     placeholder: "Vyberte stát…"
     required: true
     select:
-      - value: ""
-        label: "— Vyberte stát —"
-      - value: CZ
-        label: "Česká republika"
-      - value: SK
+      - value: 56
+        label: "Česko"
+      - value: 201
         label: "Slovensko"
-      - value: DE
-        label: "Německo"
-      - value: AT
+      - value: 12
         label: "Rakousko"
+      - value: 57
+        label: "Německo"
+      - value: 43
+        label: "Švýcarsko"
+      - value: 189
+        label: "Srbsko"
   - id: company_id
     label: "IČ"
     hint: "Nepovinné"

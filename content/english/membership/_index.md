@@ -89,10 +89,22 @@ step_2:
     type: text
     required: true
   - id: country
-    label: "Country"
-    placeholder: "Slovakia"
-    type: text
+    label: "Stát"
+    placeholder: "Vyberte stát…"
     required: true
+    select:
+      - value: 201
+        label: "Slovakia"
+      - value: 56
+        label: "Czechia"
+      - value: 12
+        label: "Austria"
+      - value: 57
+        label: "Germany"
+      - value: 43
+        label: "Switzerland"
+      - value: 189
+        label: "Serbia"
   - id: company_id
     label: "Company ID"
     hint: "Optional"
