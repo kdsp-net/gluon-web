@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optional: Set a flag somewhere to apply discount on total update
         window.discountValid = true;
         window.discountCode = code;
-        document.dispatchEvent(new CustomEvent('discountUpdated'));
+        document.dispatchEvent(new Event('discountApplied'));
       } else {
         feedbackEl.classList.remove('hidden');
         successEl.classList.add('hidden');
