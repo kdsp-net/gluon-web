@@ -1,97 +1,72 @@
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
-    const inputNumberElement = HSInputNumber.getInstance('#multipleInput');
+    const discountFactor = 0.8;
 
-    // Apply discount to all price tags
-    function applyDiscountToCards() {
-      const discountFactor = 0.8; // 20% off
-      const priceTags = document.querySelectorAll('.price-tag');
+    function applyDiscountIfValid(price) {
+      return window.discountValid ? Math.round(price * discountFactor) : price;
+    }
 
-      priceTags.forEach(tag => {
-        const originalPrice = parseFloat(tag.dataset.originalPrice || tag.dataset.unitprice);
-        const isMultiple = tag.closest('label')?.querySelector('input.multiple') !== null;
-        const discounted = Math.round(originalPrice * (isMultiple ? 2 : 1) * discountFactor);
-        tag.textContent = discounted;
-        tag.dataset.unitprice = (originalPrice * discountFactor).toFixed(2);
-        tag.dataset.originalPrice = originalPrice; // Store original if not stored
+    function updateAllCardPrices() {
+      document.querySelectorAll('.price-tag').forEach(tag => {
+        const original = parseFloat(tag.dataset.originalPrice || tag.dataset.unitprice);
+        if (!tag.dataset.originalPrice) {
+          tag.dataset.originalPrice = original; // store once
+        }
+
+        const newPrice = applyDiscountIfValid(original);
+
+        tag.dataset.unitprice = newPrice;
+        tag.textContent = tag.closest('input.multiple') ? Math.round(newPrice * 2) : newPrice;
       });
     }
 
-    // Restore original prices
-    function resetAllPrices() {
-      const priceTags = document.querySelectorAll('.price-tag');
-      priceTags.forEach(tag => {
-        const originalPrice = parseFloat(tag.dataset.originalPrice || tag.dataset.unitprice);
-        const isMultiple = tag.closest('label')?.querySelector('input.multiple') !== null;
-        const price = Math.round(originalPrice * (isMultiple ? 2 : 1));
-        tag.textContent = price;
-        tag.dataset.unitprice = originalPrice.toFixed(2);
-      });
-    }
-
-    // Recalculate total price when quantity changes
-    function updatePrice(quantity) {
+    function updateStepperSummary() {
       const selectedRadio = document.querySelector('input[name="membership"]:checked');
       if (!selectedRadio) return;
 
-      const label = document.querySelector(`label[for="${selectedRadio.id}"]`);
-      const priceTag = label.querySelector('.price-tag');
+      const priceTag = document.querySelector(`label[for="${selectedRadio.id}"] .price-tag`);
+      if (!priceTag) return;
+
       const unitPrice = parseFloat(priceTag.dataset.unitprice);
-      if (isNaN(unitPrice)) return;
+      const quantity = selectedRadio.classList.contains('multiple')
+        ? parseInt(document.querySelector('#quantityInput')?.value || 2)
+        : 1;
 
-      const totalPrice = Math.round(unitPrice * quantity);
-      priceTag.textContent = totalPrice;
+      document.getElementById('unit_price').textContent = unitPrice;
+      document.getElementById('total_price').textContent = Math.round(unitPrice * quantity);
+      document.getElementById('total_units').textContent = quantity;
+
+      const planName = document.querySelector(`label[for="${selectedRadio.id}"] h3`)?.textContent || '--';
+      document.getElementById('total_plan').textContent = `${planName} membership`;
     }
 
-    // Set input field value
-    function updateNumberInputValue(value) {
-      const quantityInput = document.querySelector('#quantityInput');
-      if (quantityInput) {
-        quantityInput.value = value;
-      }
+    function handleQuantityChange() {
+      updateAllCardPrices();
+      updateStepperSummary();
     }
 
-    // Handle discount changes
-    function handleDiscountState() {
-      if (window.discountValid) {
-        applyDiscountToCards();
-      } else {
-        resetAllPrices();
-      }
-    }
-
-    // Watch discount code changes (discountValid toggled externally)
-    document.addEventListener('discountUpdated', () => {
-      handleDiscountState();
-    });
-
-    // Listen for quantity change
-    if (inputNumberElement) {
-      inputNumberElement.on('change', ({ inputValue }) => {
-        const selectedRadio = document.querySelector('input[name="membership"]:checked');
-        if (selectedRadio && selectedRadio.classList.contains('multiple')) {
-          updatePrice(inputValue);
-          updateNumberInputValue(inputValue);
-        }
+    // Quantity change handler
+    const quantityInput = HSInputNumber.getInstance('#multipleInput');
+    if (quantityInput) {
+      quantityInput.on('change', ({ inputValue }) => {
+        handleQuantityChange();
       });
     }
 
-    // Listen for membership change
-    const radios = document.querySelectorAll('input[name="membership"]');
-    radios.forEach(radio => {
+    // Membership change handler
+    document.querySelectorAll('input[name="membership"]').forEach(radio => {
       radio.addEventListener('change', () => {
-        const selectedRadio = document.querySelector('input[name="membership"]:checked');
-        if (selectedRadio && selectedRadio.classList.contains('multiple')) {
-          const inputValue = inputNumberElement?.inputValue || 2;
-          updatePrice(inputValue);
-          updateNumberInputValue(inputValue);
-        } else {
-          handleDiscountState(); // still update base price
-        }
+        handleQuantityChange();
       });
     });
 
-    // Initial setup
-    handleDiscountState();
+    // Discount code validated
+    document.addEventListener('discountValidated', () => {
+      updateAllCardPrices();
+      updateStepperSummary();
+    });
+
+    // On page load
+    updateAllCardPrices();
   });
 });
