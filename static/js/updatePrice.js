@@ -29,7 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const unitPrice = parseFloat(priceTag.dataset.unitprice);
             if (isNaN(unitPrice)) return;
 
-            const totalPrice = Math.round(unitPrice * quantity);
+            let finalUnitPrice = unitPrice;
+
+            if (window.discountValid === true) {
+                const discountFactor = 0.8; // 20% off
+                finalUnitPrice = unitPrice * discountFactor;
+            }
+
+            const totalPrice = Math.round(finalUnitPrice * quantity);
             priceTag.textContent = totalPrice;
         }
 
