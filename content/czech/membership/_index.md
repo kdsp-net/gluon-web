@@ -135,9 +135,6 @@ step_3:
           text: "Souhlas se spracováním osobních údajů"
           url: "#"
       required: true
-    - id: nl
-      label:
-        text: "Chci se přihlásit k odběru newsletteru"
 
 success_message: "Vaše objednávka byla úspěšně přijata"
 error_message: "Omlouváme se, ale při zpracování objednávky se vyskytla chyba. Prosím zadejte ji znovu."
