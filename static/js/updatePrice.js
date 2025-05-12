@@ -1,97 +1,106 @@
+// updatePrice.js
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
     const inputNumberElement = HSInputNumber.getInstance('#multipleInput');
 
-    // Apply discount to all price tags
-    function applyDiscountToCards() {
-      const discountFactor = 0.8; // 20% off
-      const priceTags = document.querySelectorAll('.price-tag');
-
-      priceTags.forEach(tag => {
-        const originalPrice = parseFloat(tag.dataset.originalPrice || tag.dataset.unitprice);
-        const isMultiple = tag.closest('label')?.querySelector('input.multiple') !== null;
-        const discounted = Math.round(originalPrice * (isMultiple ? 2 : 1) * discountFactor);
-        tag.textContent = discounted;
-        tag.dataset.unitprice = (originalPrice * discountFactor).toFixed(2);
-        tag.dataset.originalPrice = originalPrice; // Store original if not stored
-      });
-    }
-
-    // Restore original prices
-    function resetAllPrices() {
-      const priceTags = document.querySelectorAll('.price-tag');
-      priceTags.forEach(tag => {
-        const originalPrice = parseFloat(tag.dataset.originalPrice || tag.dataset.unitprice);
-        const isMultiple = tag.closest('label')?.querySelector('input.multiple') !== null;
-        const price = Math.round(originalPrice * (isMultiple ? 2 : 1));
-        tag.textContent = price;
-        tag.dataset.unitprice = originalPrice.toFixed(2);
-      });
-    }
-
-    // Recalculate total price when quantity changes
-    function updatePrice(quantity) {
-      const selectedRadio = document.querySelector('input[name="membership"]:checked');
-      if (!selectedRadio) return;
-
-      const label = document.querySelector(`label[for="${selectedRadio.id}"]`);
-      const priceTag = label.querySelector('.price-tag');
-      const unitPrice = parseFloat(priceTag.dataset.unitprice);
-      if (isNaN(unitPrice)) return;
-
-      const totalPrice = Math.round(unitPrice * quantity);
-      priceTag.textContent = totalPrice;
-    }
-
-    // Set input field value
-    function updateNumberInputValue(value) {
-      const quantityInput = document.querySelector('#quantityInput');
-      if (quantityInput) {
-        quantityInput.value = value;
-      }
-    }
-
-    // Handle discount changes
-    function handleDiscountState() {
-      if (window.discountValid) {
-        applyDiscountToCards();
-      } else {
-        resetAllPrices();
-      }
-    }
-
-    // Watch discount code changes (discountValid toggled externally)
-    document.addEventListener('discountUpdated', () => {
-      handleDiscountState();
-    });
-
-    // Listen for quantity change
+    // Listen to quantity changes
     if (inputNumberElement) {
       inputNumberElement.on('change', ({ inputValue }) => {
         const selectedRadio = document.querySelector('input[name="membership"]:checked');
         if (selectedRadio && selectedRadio.classList.contains('multiple')) {
-          updatePrice(inputValue);
-          updateNumberInputValue(inputValue);
+          applyPricing(inputValue);
+          syncQuantityInput(inputValue);
         }
       });
     }
 
-    // Listen for membership change
-    const radios = document.querySelectorAll('input[name="membership"]');
-    radios.forEach(radio => {
+    // Listen to plan changes
+    document.querySelectorAll('input[name="membership"]').forEach(radio => {
       radio.addEventListener('change', () => {
         const selectedRadio = document.querySelector('input[name="membership"]:checked');
         if (selectedRadio && selectedRadio.classList.contains('multiple')) {
-          const inputValue = inputNumberElement?.inputValue || 2;
-          updatePrice(inputValue);
-          updateNumberInputValue(inputValue);
+          // when switching back to a multiple plan, recalc for current quantity
+          const qty = inputNumberElement?.inputValue || 2;
+          applyPricing(qty);
+          syncQuantityInput(qty);
         } else {
-          handleDiscountState(); // still update base price
+          // non-multiple plan: revert to base 2× pricing display on card
+          resetCardPricing();
         }
       });
     });
 
-    // Initial setup
-    handleDiscountState();
+    // Whenever discountValid flips, re-apply pricing if on multiple plan
+    document.addEventListener('discountApplied', () => {
+      const selectedRadio = document.querySelector('input[name="membership"]:checked');
+      if (selectedRadio && selectedRadio.classList.contains('multiple')) {
+        const qty = inputNumberElement?.inputValue || 2;
+        applyPricing(qty);
+      }
+    });
+
+    // Initial reset on load
+    resetCardPricing();
   });
 });
+
+/**
+ * Computes and applies both unit and total prices.
+ * @param {number} quantity 
+ */
+function applyPricing(quantity) {
+  const selectedRadio = document.querySelector('input[name="membership"]:checked');
+  if (!selectedRadio) return;
+
+  const label = document.querySelector(`label[for="${selectedRadio.id}"]`);
+  const priceTag = label?.querySelector('.price-tag');
+  const unitPriceDisplay = document.getElementById('unit-price');
+  if (!priceTag || !unitPriceDisplay) return;
+
+  const baseUnit = parseFloat(priceTag.dataset.unitprice);
+  if (isNaN(baseUnit)) return;
+
+  // apply discount if set
+  const factor = window.discountValid ? 0.8 : 1.0;
+  const discountedUnit = baseUnit * factor;
+  const roundedUnit = Math.round(discountedUnit);
+
+  // update the per-person display
+  unitPriceDisplay.textContent = `€${roundedUnit}`;
+
+  // calculate and update total on the card
+  const total = Math.round(discountedUnit * quantity);
+  priceTag.textContent = total;
+
+  // save the actual unit price for submission
+  priceTag.dataset.actualUnitPrice = discountedUnit.toFixed(2);
+}
+
+/** On non-multiple plans or initial load, show 2× base unit price */
+function resetCardPricing() {
+  const radio = document.querySelector('input[name="membership"].multiple');
+  if (!radio) return;
+  const label = document.querySelector(`label[for="${radio.id}"]`);
+  const priceTag = label?.querySelector('.price-tag');
+  const unitPriceDisplay = document.getElementById('unit-price');
+  if (!priceTag || !unitPriceDisplay) return;
+
+  const baseUnit = parseFloat(priceTag.dataset.unitprice);
+  if (isNaN(baseUnit)) return;
+
+  const factor = window.discountValid ? 0.8 : 1.0;
+  const discountedUnit = baseUnit * factor;
+  const roundedUnit = Math.round(discountedUnit);
+
+  // show 2× on the card
+  priceTag.textContent = roundedUnit * 2;
+  unitPriceDisplay.textContent = `€${roundedUnit}`;
+
+  priceTag.dataset.actualUnitPrice = discountedUnit.toFixed(2);
+}
+
+/** Mirror the HSInputNumber value back into the input field */
+function syncQuantityInput(value) {
+  const qtyInput = document.querySelector('#quantityInput');
+  if (qtyInput) qtyInput.value = value;
+}
