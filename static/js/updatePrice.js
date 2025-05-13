@@ -1,49 +1,74 @@
-// updatePrice.js
-document.addEventListener('DOMContentLoaded', () => {
-  // Recalculate only the summary (Step 3) unit & total price
-  function recalcSummary() {
-    const selected = document.querySelector('input[name="membership"]:checked');
-    if (!selected) return;
+document.addEventListener('DOMContentLoaded', function () {
+    // Wait for Preline's autoInit to finish
+    window.addEventListener('load', function () {
+        // Get the HSInputNumber instance for the input number element
+        const inputNumberElement = HSInputNumber.getInstance('#multipleInput');
 
-    // Figure out quantity
-    const isMultiple = selected.classList.contains('multiple');
-    const qty = isMultiple
-      ? (HSInputNumber.getInstance('#multipleInput')?.inputValue || 1)
-      : 1;
+        if (inputNumberElement) {
+            inputNumberElement.on('change', ({ inputValue }) => {
+                // Only update the price if the multiple card is selected
+                const selectedRadio = document.querySelector('input[name="membership"]:checked');
+                if (selectedRadio && selectedRadio.classList.contains('multiple')) {
+                    updatePrice(inputValue);
+                    updateNumberInputValue(inputValue); // Update the number input field with the correct value
+                }
+            });
+        }
 
-    // Grab the base unit price from the card's data-unit-price
-    const label = document.querySelector(`label[for="${selected.id}"]`);
-    const tag = label?.querySelector('.price-tag');
-    const baseUnit = tag ? parseFloat(tag.dataset.unitprice) : NaN;
-    if (isNaN(baseUnit)) return;
+        // Function to update the price when the quantity changes
+        function updatePrice(quantity) {
+            const selectedRadio = document.querySelector('input[name="membership"]:checked');
+            if (!selectedRadio) return;
 
-    // Apply discount factor if valid
-    const factor = window.discountValid ? 0.8 : 1.0;
-    const unit = Math.round(baseUnit * factor);
-    const total = unit * qty;
+            const label = document.querySelector(`label[for="${selectedRadio.id}"]`);
+            if (!label) return;
 
-    // Update the summary spans
-    document.getElementById('unit_price').textContent = unit;
-    document.getElementById('total_units').textContent = qty;
-    document.getElementById('total_price').textContent = total;
+            const priceTag = label.querySelector('.price-tag');
+            if (!priceTag) return;
 
-    // (Re-sync plan name in case needed)
-    const planName = label.querySelector('h3')?.textContent || '';
-    document.getElementById('total_plan').textContent = `${planName} membership`;
-  }
+            const unitPrice = parseFloat(priceTag.dataset.unitprice);
+            if (isNaN(unitPrice)) return;
+            const totalPrice = Math.round(unitPrice * quantity);
+            priceTag.textContent = totalPrice;
+        }
 
-  // When discount is validated (or cleared), rerun the summary calc
-  document.addEventListener('discountValidated', recalcSummary);
+        // Function to revert the price of the multiple card when it is deselected
+        function resetMultipleCardPrice() {
+            const multipleCardRadio = document.querySelector('input[name="membership"].multiple');
+            if (multipleCardRadio) {
+                const label = document.querySelector(`label[for="${multipleCardRadio.id}"]`);
+                const priceTag = label.querySelector('.price-tag');
+                if (priceTag) {
+                    const unitPrice = parseFloat(priceTag.dataset.unitprice);
+                    priceTag.textContent = Math.round(unitPrice * 2); // Revert to 2x unit price
+                }
+            }
+        }
 
-  // Also recalc when user navigates into step 3
-  // (so if they applied discount before, it shows immediately)
-  const stepper = HSStepper.getInstance('[data-hs-stepper]');
-  stepper.on('active', () => {
-    if (stepper.currentIndex === 3) recalcSummary();
-  });
+        // Function to update the number input value in the DOM
+        function updateNumberInputValue(value) {
+            const quantityInput = document.querySelector('#quantityInput');
+            if (quantityInput) {
+                quantityInput.value = value;
+            }
+        }
 
-  // Initial run (in case step 3 is already active at load)
-  if (HSStepper.getInstance('[data-hs-stepper]').currentIndex === 3) {
-    recalcSummary();
-  }
+        // Listen for changes to the selected radio buttons
+        const radioButtons = document.querySelectorAll('input[name="membership"]');
+        radioButtons.forEach((radio) => {
+            radio.addEventListener('change', function () {
+                const selectedRadio = document.querySelector('input[name="membership"]:checked');
+                if (selectedRadio && selectedRadio.classList.contains('multiple')) {
+                    const inputValue = inputNumberElement.inputValue || 2; // Default to 2 if no value
+                    updatePrice(inputValue);
+                    updateNumberInputValue(inputValue); // Ensure the input field shows the correct value
+                } else {
+                    resetMultipleCardPrice();
+                }
+            });
+        });
+
+        // Initial state: reset the price of the multiple card on page load
+        resetMultipleCardPrice();
+    });
 });
