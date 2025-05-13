@@ -1,86 +1,62 @@
 // updatePrice.js
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
-    const DISCOUNT_FACTOR = 0.5; // 50% off
+    const DISCOUNT_FACTOR = 0.5; // 50% off when discountValid is true
+    const qtyInputNumber = HSInputNumber.getInstance('#multipleInput');
+    const radios = document.querySelectorAll('input[name="membership"]');
 
-    // Returns 1.0 or DISCOUNT_FACTOR based on window.discountValid
+    // Return 1.0 or DISCOUNT_FACTOR
     function getFactor() {
       return window.discountValid ? DISCOUNT_FACTOR : 1.0;
     }
 
-    // 1) Update every card's price-tag (step 1)
-    function updateAllCardPrices() {
+    // 1) Recompute & render every card's price-tag
+    function renderAllCardPrices() {
       document.querySelectorAll('.price-tag').forEach(tag => {
-        // store original unit price once
+        // stash original unit price the first time
         if (!tag.dataset.originalPrice) {
           tag.dataset.originalPrice = tag.dataset.unitprice;
         }
+
         const base = parseFloat(tag.dataset.originalPrice);
         const factor = getFactor();
-        const discountedUnit = Math.round(base * factor);
+        const unit = base * factor;
 
-        // update the span content & data-unitprice
-        tag.textContent = tag.closest('label').querySelector('input.multiple')
-          ? discountedUnit * 2
-          : discountedUnit;
-        tag.dataset.unitprice = discountedUnit;
+        // is this card "multiple"?
+        const label = tag.closest('label');
+        const isMulti = label.querySelector('input.multiple') !== null;
+
+        // quantity only matters for a multiple card
+        let displayVal = isMulti
+          ? Math.round(unit * (qtyInputNumber?.inputValue || 2))
+          : Math.round(unit);
+
+        // update both text and the dataset for downstream logic
+        tag.textContent = displayVal;
+        tag.dataset.unitprice = unit.toFixed(2);
       });
     }
 
-    // 2) Update the summary in step 3 (#unit_price, #total_price, #total_units)
-    function updateStepperSummary() {
-      const selected = document.querySelector('input[name="membership"]:checked');
-      if (!selected) return;
-
-      const unitPrice = parseFloat(
-        document
-          .querySelector(`label[for="${selected.id}"] .price-tag`)
-          .dataset.unitprice
-      );
-      const qty = selected.classList.contains('multiple')
-        ? parseInt(document.getElementById('quantityInput').value, 10) || 1
-        : 1;
-
-      // unit & total
-      document.getElementById('unit_price').textContent = unitPrice;
-      document.getElementById('total_price').textContent = unitPrice * qty;
-      document.getElementById('total_units').textContent = qty;
-
-      // plan name
-      const planName = document.querySelector(`label[for="${selected.id}"] h3`)
-        .textContent;
-      document.getElementById('total_plan').textContent = `${planName} membership`;
-    }
-
-    // 3) Call both together
-    function refreshPricing(qtyChanged = false) {
-      updateAllCardPrices();
-      updateStepperSummary();
-    }
-
-    // Quantity changes (step 1 multiple input)
-    const hsNum = HSInputNumber.getInstance('#multipleInput');
-    if (hsNum) {
-      hsNum.on('change', ({ inputValue }) => {
-        refreshPricing(true);
+    // 2) On quantity change: re-render ALL cards (to pick up discount), but only the multiple one actually moves
+    if (qtyInputNumber) {
+      qtyInputNumber.on('change', ({ inputValue }) => {
+        renderAllCardPrices();
       });
     }
 
-    // Plan selection changes
-    document
-      .querySelectorAll('input[name="membership"]')
-      .forEach(radio =>
-        radio.addEventListener('change', () => {
-          refreshPricing();
-        })
-      );
-
-    // Discount applied event
-    document.addEventListener('discountValidated', () => {
-      refreshPricing();
+    // 3) On plan change: re-render ALL cards (so the single vs multiple switch resets properly)
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        renderAllCardPrices();
+      });
     });
 
-    // Initial run
-    refreshPricing();
+    // 4) When discount is toggled elsewhere (e.g. your validateDiscount.js fires 'discountValidated'):
+    document.addEventListener('discountValidated', () => {
+      renderAllCardPrices();
+    });
+
+    // 5) Initial render
+    renderAllCardPrices();
   });
 });
