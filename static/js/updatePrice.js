@@ -1,7 +1,7 @@
 // updatePrice.js
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
-    const DISCOUNT_FACTOR = 0.8; // 20% off
+    const DISCOUNT_FACTOR = 0.5; // 50% off
 
     // Grab the HSInputNumber instance for multiple plans
     const hsInput = HSInputNumber.getInstance('#multipleInput');
