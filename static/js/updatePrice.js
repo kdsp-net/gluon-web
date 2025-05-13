@@ -1,64 +1,49 @@
 // updatePrice.js
 document.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener('load', () => {
-    const DISCOUNT_FACTOR = 0.8; // 20% off
+  // Recalculate only the summary (Step 3) unit & total price
+  function recalcSummary() {
+    const selected = document.querySelector('input[name="membership"]:checked');
+    if (!selected) return;
 
-    // Figure out our current discount multiplier
-    function getFactor() {
-      return window.discountValid ? DISCOUNT_FACTOR : 1;
-    }
+    // Figure out quantity
+    const isMultiple = selected.classList.contains('multiple');
+    const qty = isMultiple
+      ? (HSInputNumber.getInstance('#multipleInput')?.inputValue || 1)
+      : 1;
 
-    // Update all the cards in Step 1
-    function updateAllCardPrices() {
-      const qtyInput = document.getElementById('quantityInput');
-      const qty = parseInt(qtyInput?.value, 10) || 1;
+    // Grab the base unit price from the card's data-unit-price
+    const label = document.querySelector(`label[for="${selected.id}"]`);
+    const tag = label?.querySelector('.price-tag');
+    const baseUnit = tag ? parseFloat(tag.dataset.unitprice) : NaN;
+    if (isNaN(baseUnit)) return;
 
-      document.querySelectorAll('.price-tag').forEach(tag => {
-        // 1) Store original unit‐price once
-        if (!tag.dataset.originalUnitPrice) {
-          // reads from `data-unit-price` in your HTML
-          tag.dataset.originalUnitPrice = tag.dataset.unitPrice;
-        }
+    // Apply discount factor if valid
+    const factor = window.discountValid ? 0.8 : 1.0;
+    const unit = Math.round(baseUnit * factor);
+    const total = unit * qty;
 
-        const base = parseFloat(tag.dataset.originalUnitPrice);
-        if (isNaN(base)) return;
+    // Update the summary spans
+    document.getElementById('unit_price').textContent = unit;
+    document.getElementById('total_units').textContent = qty;
+    document.getElementById('total_price').textContent = total;
 
-        // 2) Apply discount factor
-        const factor = getFactor();
-        const discountedUnit = base * factor;
+    // (Re-sync plan name in case needed)
+    const planName = label.querySelector('h3')?.textContent || '';
+    document.getElementById('total_plan').textContent = `${planName} membership`;
+  }
 
-        // 3) Write back into dataset so form‐submit picks it up
-        tag.dataset.unitPrice = discountedUnit.toFixed(2);
+  // When discount is validated (or cleared), rerun the summary calc
+  document.addEventListener('discountValidated', recalcSummary);
 
-        // 4) Determine if this card is “multiple” and calculate display
-        const isMultiple = !!tag.closest('label').querySelector('input.multiple');
-        const displayQty = isMultiple ? qty : 1;
-        const displayPrice = Math.round(discountedUnit * displayQty);
-
-        // 5) Update the span’s text
-        tag.textContent = displayPrice;
-      });
-    }
-
-    // 🎛 Quantity widget changed?
-    const hsNum = HSInputNumber.getInstance('#multipleInput');
-    hsNum?.on('change', () => {
-      updateAllCardPrices();
-    });
-
-    // 🎛 Plan selection changed?
-    document.querySelectorAll('input[name="membership"]').forEach(radio => {
-      radio.addEventListener('change', () => {
-        updateAllCardPrices();
-      });
-    });
-
-    // 🎛 Discount toggled?
-    document.addEventListener('discountValidated', () => {
-      updateAllCardPrices();
-    });
-
-    // initial run
-    updateAllCardPrices();
+  // Also recalc when user navigates into step 3
+  // (so if they applied discount before, it shows immediately)
+  const stepper = HSStepper.getInstance('[data-hs-stepper]');
+  stepper.on('active', () => {
+    if (stepper.currentIndex === 3) recalcSummary();
   });
+
+  // Initial run (in case step 3 is already active at load)
+  if (HSStepper.getInstance('[data-hs-stepper]').currentIndex === 3) {
+    recalcSummary();
+  }
 });
