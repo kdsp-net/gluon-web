@@ -2,73 +2,59 @@
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
     const DISCOUNT_FACTOR = 0.8; // 20% off
-    const stepper = HSStepper.getInstance('[data-hs-stepper]');
 
-    // Helper: are we discounted?
+    // figure out current multiplier
     function getFactor() {
-      return window.discountValid ? DISCOUNT_FACTOR : 1.0;
+      return window.discountValid ? DISCOUNT_FACTOR : 1;
     }
 
-    // 1) Adjust the on-card price-tags (only on Step 1)
-    function updateAllCardPrices() {
+    // apply the current unitPrice→data-unitprice→textContent to every card
+    function applyToCards() {
+      const qtyInput = document.getElementById('quantityInput');
+      const qty = parseInt(qtyInput?.value, 10) || 1;
+
       document.querySelectorAll('.price-tag').forEach(tag => {
+        // stash original unit price once
         if (!tag.dataset.originalPrice) {
           tag.dataset.originalPrice = tag.dataset.unitprice;
         }
         const base = parseFloat(tag.dataset.originalPrice);
-        const unit = Math.round(base * getFactor());
+        const factor = getFactor();
+        const discountedUnit = base * factor;
+
+        // update the dataset for form-submit to pick up
+        tag.dataset.unitprice = discountedUnit.toFixed(2);
+
+        // figure out display: multiple plans always show 2× unit on the card
         const isMultiple = !!tag.closest('label').querySelector('input.multiple');
-        // display “2× unit” or “1× unit”
-        tag.textContent = isMultiple ? unit * 2 : unit;
-        // leave dataset.unitprice alone
+        const displayValue = isMultiple
+          ? Math.round(discountedUnit * qty)
+          : Math.round(discountedUnit);
+
+        tag.textContent = displayValue;
       });
     }
 
-    // 2) Update the step-3 summary block (only on Step 3)
-    function updateStepperSummary() {
-      const sel = document.querySelector('input[name="membership"]:checked');
-      if (!sel) return;
-
-      const tag = document.querySelector(`label[for="${sel.id}"] .price-tag`);
-      if (!tag) return;
-
-      const unit = parseInt(tag.textContent, 10) / (sel.classList.contains('multiple') ? 2 : 1);
-      const qty  = sel.classList.contains('multiple')
-        ? parseInt(document.getElementById('quantityInput').value, 10) || 1
-        : 1;
-
-      document.getElementById('unit_price').textContent  = unit;
-      document.getElementById('total_units').textContent = qty;
-      document.getElementById('total_price').textContent = unit * qty;
-
-      const planName = document.querySelector(`label[for="${sel.id}"] h3`).textContent;
-      document.getElementById('total_plan').textContent = `${planName} membership`;
-    }
-
-    // 3) Dispatch to the right updater based on current step
-    function refreshPricing() {
-      if (stepper.currentIndex === 1) {
-        updateAllCardPrices();
-      }
-      if (stepper.currentIndex === 3) {
-        updateStepperSummary();
-      }
-    }
-
-    // Recalc whenever quantity, plan or discount changes:
-    const numInst = HSInputNumber.getInstance('#multipleInput');
-    numInst?.on('change', refreshPricing);
-    document.querySelectorAll('input[name="membership"]').forEach(r => {
-      r.addEventListener('change', refreshPricing);
+    // re-apply on:
+    //  • quantity change (only Step 1 has the #multipleInput widget anyway)
+    const hsNum = HSInputNumber.getInstance('#multipleInput');
+    hsNum?.on('change', () => {
+      applyToCards();
     });
-    document.addEventListener('discountValidated', refreshPricing);
 
-    // Also hook into the stepper’s own events so moving between steps runs it:
-    stepper.on('active',  refreshPricing);
-    stepper.on('next',    refreshPricing);
-    stepper.on('back',    refreshPricing);
+    //  • plan selection change
+    document.querySelectorAll('input[name="membership"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        applyToCards();
+      });
+    });
 
-    // Initial
-    refreshPricing();
+    //  • discount toggle
+    document.addEventListener('discountUpdated', () => {
+      applyToCards();
+    });
+
+    // initial
+    applyToCards();
   });
 });
