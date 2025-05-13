@@ -89,8 +89,8 @@ step_2:
     type: text
     required: true
   - id: country
-    label: "Stát"
-    placeholder: "Vyberte stát…"
+    label: "Country"
+    placeholder: "Choose Country…"
     required: true
     select:
       - value: 201

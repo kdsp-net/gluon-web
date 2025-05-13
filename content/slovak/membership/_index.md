@@ -89,8 +89,8 @@ step_2:
     type: text
     required: true
   - id: country
-    label: "Stát"
-    placeholder: "Vyberte stát…"
+    label: "Štát"
+    placeholder: "Vyberte štát…"
     required: true
     select:
       - value: 201
@@ -107,7 +107,7 @@ step_2:
         label: "Srbsko"
   - id: company_id
     label: "IČO"
-    hint: "Optional"
+    hint: "Nepovinné"
     placeholder: ""
     type: text
     required: false

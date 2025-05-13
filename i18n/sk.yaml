@@ -40,3 +40,9 @@ membership:
     per_year: / rok
     per_person: / investor
     persons: Počet investorov
+  promocode:
+    label: "Zľavový kód"
+    button: "Uplatniť"
+    invalid: "Neplatný zľavový kód."
+    valid: "Zľava aplikovaná!"
+    

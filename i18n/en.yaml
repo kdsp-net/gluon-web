@@ -40,3 +40,8 @@ membership:
     per_year: / year
     per_person: / investor
     persons: Investors
+  promocode:
+    label: "Discount Code"
+    button: "Apply"
+    invalid: "Ivalid Promo Code."
+    valid: "Discount Applied!"
