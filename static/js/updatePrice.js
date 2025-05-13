@@ -1,60 +1,64 @@
 // updatePrice.js
-document.addEventListener('DOMContentLoaded', function () {
-  window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
     const DISCOUNT_FACTOR = 0.8; // 20% off
 
-    // figure out current multiplier
+    // Figure out our current discount multiplier
     function getFactor() {
       return window.discountValid ? DISCOUNT_FACTOR : 1;
     }
 
-    // apply the current unitPrice→data-unitprice→textContent to every card
-    function applyToCards() {
+    // Update all the cards in Step 1
+    function updateAllCardPrices() {
       const qtyInput = document.getElementById('quantityInput');
       const qty = parseInt(qtyInput?.value, 10) || 1;
 
       document.querySelectorAll('.price-tag').forEach(tag => {
-        // stash original unit price once
-        if (!tag.dataset.originalPrice) {
-          tag.dataset.originalPrice = tag.dataset.unitprice;
+        // 1) Store original unit‐price once
+        if (!tag.dataset.originalUnitPrice) {
+          // reads from `data-unit-price` in your HTML
+          tag.dataset.originalUnitPrice = tag.dataset.unitPrice;
         }
-        const base = parseFloat(tag.dataset.originalPrice);
+
+        const base = parseFloat(tag.dataset.originalUnitPrice);
+        if (isNaN(base)) return;
+
+        // 2) Apply discount factor
         const factor = getFactor();
         const discountedUnit = base * factor;
 
-        // update the dataset for form-submit to pick up
-        tag.dataset.unitprice = discountedUnit.toFixed(2);
+        // 3) Write back into dataset so form‐submit picks it up
+        tag.dataset.unitPrice = discountedUnit.toFixed(2);
 
-        // figure out display: multiple plans always show 2× unit on the card
+        // 4) Determine if this card is “multiple” and calculate display
         const isMultiple = !!tag.closest('label').querySelector('input.multiple');
-        const displayValue = isMultiple
-          ? Math.round(discountedUnit * qty)
-          : Math.round(discountedUnit);
+        const displayQty = isMultiple ? qty : 1;
+        const displayPrice = Math.round(discountedUnit * displayQty);
 
-        tag.textContent = displayValue;
+        // 5) Update the span’s text
+        tag.textContent = displayPrice;
       });
     }
 
-    // re-apply on:
-    //  • quantity change (only Step 1 has the #multipleInput widget anyway)
+    // 🎛 Quantity widget changed?
     const hsNum = HSInputNumber.getInstance('#multipleInput');
     hsNum?.on('change', () => {
-      applyToCards();
+      updateAllCardPrices();
     });
 
-    //  • plan selection change
+    // 🎛 Plan selection changed?
     document.querySelectorAll('input[name="membership"]').forEach(radio => {
       radio.addEventListener('change', () => {
-        applyToCards();
+        updateAllCardPrices();
       });
     });
 
-    //  • discount toggle
-    document.addEventListener('discountUpdated', () => {
-      applyToCards();
+    // 🎛 Discount toggled?
+    document.addEventListener('discountValidated', () => {
+      updateAllCardPrices();
     });
 
-    // initial
-    applyToCards();
+    // initial run
+    updateAllCardPrices();
   });
 });
