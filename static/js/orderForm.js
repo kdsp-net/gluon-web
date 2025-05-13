@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let totalPrice = unitPrice * quantity;
 
             if (window.discountValid) {
-            const discountRate = 0.8; // 20% off
+            const discountRate = 0.5 // 50% off
             totalPrice *= discountRate;
             }
 
