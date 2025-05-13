@@ -1,7 +1,7 @@
 // updatePrice.js
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
-    const DISCOUNT_FACTOR = 0.8; // 20% off
+    const DISCOUNT_FACTOR = 0.5; // 50% off
 
     // Returns 1.0 or DISCOUNT_FACTOR based on window.discountValid
     function getFactor() {
