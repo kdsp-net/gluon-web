@@ -1,86 +1,94 @@
 // updatePrice.js
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
-    const DISCOUNT_FACTOR = 0.8; // 20% off
+    // Grab the Preline number-input instance
+    const inputNumberInstance = HSInputNumber.getInstance('#multipleInput');
 
-    // Returns 1.0 or DISCOUNT_FACTOR based on window.discountValid
-    function getFactor() {
-      return window.discountValid ? DISCOUNT_FACTOR : 1.0;
+    // Apply pricing logic to the selected card
+    function applyPricing(quantity) {
+      const selectedRadio = document.querySelector('input[name="membership"]:checked');
+      if (!selectedRadio) return;
+
+      const label    = document.querySelector(`label[for="${selectedRadio.id}"]`);
+      const priceTag = label?.querySelector('.price-tag');
+      if (!priceTag) return;
+
+      // Base unit price from data-attribute
+      const baseUnit = parseFloat(priceTag.dataset.unitprice);
+      if (isNaN(baseUnit)) return;
+
+      // Apply discount if valid
+      const factor = window.discountValid ? 0.8 : 1.0;
+      const finalUnitPrice = baseUnit * factor;
+
+      // Round unit price and compute total
+      const roundedUnit = Math.round(finalUnitPrice);
+      const totalPrice  = Math.round(finalUnitPrice * quantity);
+
+      // Update the card display
+      priceTag.textContent         = totalPrice;
+      priceTag.dataset.unitprice   = finalUnitPrice.toFixed(2);
+      // Also mirror back into the number input if needed
+      const qtyInput = document.getElementById('quantityInput');
+      if (qtyInput) qtyInput.value = quantity;
     }
 
-    // 1) Update every card's price-tag (step 1)
-    function updateAllCardPrices() {
-      document.querySelectorAll('.price-tag').forEach(tag => {
-        // store original unit price once
-        if (!tag.dataset.originalPrice) {
-          tag.dataset.originalPrice = tag.dataset.unitprice;
+    // Revert to base pricing (2×) when non-multiple selected
+    function resetMultipleCardPrice() {
+      const multipleRadio = document.querySelector('input[name="membership"].multiple');
+      if (!multipleRadio) return;
+
+      const label    = document.querySelector(`label[for="${multipleRadio.id}"]`);
+      const priceTag = label?.querySelector('.price-tag');
+      if (!priceTag) return;
+
+      const baseUnit = parseFloat(priceTag.dataset.unitprice);
+      if (isNaN(baseUnit)) return;
+
+      const factor = window.discountValid ? 0.8 : 1.0;
+      const finalUnitPrice = baseUnit * factor;
+      const roundedUnit    = Math.round(finalUnitPrice);
+
+      // Show 2× this price
+      priceTag.textContent       = roundedUnit * 2;
+      priceTag.dataset.unitprice = finalUnitPrice.toFixed(2);
+    }
+
+    // Whenever discount state changes, recalc for whichever plan is active
+    function handleDiscountUpdate() {
+      const selectedRadio = document.querySelector('input[name="membership"]:checked');
+      if (selectedRadio?.classList.contains('multiple')) {
+        const qty = inputNumberInstance?.inputValue || 2;
+        applyPricing(qty);
+      } else {
+        resetMultipleCardPrice();
+      }
+    }
+
+    // Listen for quantity changes
+    if (inputNumberInstance) {
+      inputNumberInstance.on('change', ({ inputValue }) => {
+        applyPricing(inputValue);
+      });
+    }
+
+    // Listen for plan changes
+    document.querySelectorAll('input[name="membership"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        const sel = document.querySelector('input[name="membership"]:checked');
+        if (sel.classList.contains('multiple')) {
+          const qty = inputNumberInstance?.inputValue || 2;
+          applyPricing(qty);
+        } else {
+          resetMultipleCardPrice();
         }
-        const base = parseFloat(tag.dataset.originalPrice);
-        const factor = getFactor();
-        const discountedUnit = Math.round(base * factor);
-
-        // update the span content & data-unitprice
-        tag.textContent = tag.closest('label').querySelector('input.multiple')
-          ? discountedUnit * 2
-          : discountedUnit;
-        tag.dataset.unitprice = discountedUnit;
       });
-    }
-
-    // 2) Update the summary in step 3 (#unit_price, #total_price, #total_units)
-    function updateStepperSummary() {
-      const selected = document.querySelector('input[name="membership"]:checked');
-      if (!selected) return;
-
-      const unitPrice = parseFloat(
-        document
-          .querySelector(`label[for="${selected.id}"] .price-tag`)
-          .dataset.unitprice
-      );
-      const qty = selected.classList.contains('multiple')
-        ? parseInt(document.getElementById('quantityInput').value, 10) || 1
-        : 1;
-
-      // unit & total
-      document.getElementById('unit_price').textContent = unitPrice;
-      document.getElementById('total_price').textContent = unitPrice * qty;
-      document.getElementById('total_units').textContent = qty;
-
-      // plan name
-      const planName = document.querySelector(`label[for="${selected.id}"] h3`)
-        .textContent;
-      document.getElementById('total_plan').textContent = `${planName} membership`;
-    }
-
-    // 3) Call both together
-    function refreshPricing(qtyChanged = false) {
-      updateAllCardPrices();
-      updateStepperSummary();
-    }
-
-    // Quantity changes (step 1 multiple input)
-    const hsNum = HSInputNumber.getInstance('#multipleInput');
-    if (hsNum) {
-      hsNum.on('change', ({ inputValue }) => {
-        refreshPricing(true);
-      });
-    }
-
-    // Plan selection changes
-    document
-      .querySelectorAll('input[name="membership"]')
-      .forEach(radio =>
-        radio.addEventListener('change', () => {
-          refreshPricing();
-        })
-      );
-
-    // Discount applied event
-    document.addEventListener('discountValidated', () => {
-      refreshPricing();
     });
 
-    // Initial run
-    refreshPricing();
+    // Re-run on your custom discount event
+    document.addEventListener('discountUpdated', handleDiscountUpdate);
+
+    // Initial setup
+    resetMultipleCardPrice();
   });
 });
