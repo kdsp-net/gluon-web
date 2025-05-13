@@ -108,11 +108,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const isMultiple = selectedRadio.classList.contains('multiple');
             const unitPrice = parseFloat(priceTag.dataset.unitprice);
             const quantity = isMultiple ? HSInputNumber.getInstance('#multipleInput').inputValue : 1;
-            const totalPrice = unitPrice * quantity;
+            let totalPrice = unitPrice * quantity;
 
             if (window.discountValid) {
             const discountRate = 0.8; // 20% off
-            totalPrice = totalPrice * discountRate;
+            totalPrice *= discountRate;
             }
 
             // Update the total section values
