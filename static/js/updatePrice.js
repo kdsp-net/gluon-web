@@ -1,85 +1,74 @@
+// updatePrice.js
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
     const DISCOUNT_FACTOR = 0.8; // 20% off
+    const stepper = HSStepper.getInstance('[data-hs-stepper]');
 
-    // Returns 1.0 or DISCOUNT_FACTOR based on window.discountValid
+    // Helper: are we discounted?
     function getFactor() {
       return window.discountValid ? DISCOUNT_FACTOR : 1.0;
     }
 
-    // 1) Update every card's price-tag (step 1)
+    // 1) Adjust the on-card price-tags (only on Step 1)
     function updateAllCardPrices() {
       document.querySelectorAll('.price-tag').forEach(tag => {
-        // store original unit price once
         if (!tag.dataset.originalPrice) {
           tag.dataset.originalPrice = tag.dataset.unitprice;
         }
         const base = parseFloat(tag.dataset.originalPrice);
-        const factor = getFactor();
-        const discountedUnit = Math.round(base * factor);
-
-        // update the span content & data-unitprice
-        tag.textContent = tag.closest('label').querySelector('input.multiple')
-          ? discountedUnit * 2
-          : discountedUnit;
-        tag.dataset.unitprice = discountedUnit;
+        const unit = Math.round(base * getFactor());
+        const isMultiple = !!tag.closest('label').querySelector('input.multiple');
+        // display “2× unit” or “1× unit”
+        tag.textContent = isMultiple ? unit * 2 : unit;
+        // leave dataset.unitprice alone
       });
     }
 
-    // 2) Update the summary in step 3 (#unit_price, #total_price, #total_units)
+    // 2) Update the step-3 summary block (only on Step 3)
     function updateStepperSummary() {
-      const selected = document.querySelector('input[name="membership"]:checked');
-      if (!selected) return;
+      const sel = document.querySelector('input[name="membership"]:checked');
+      if (!sel) return;
 
-      const unitPrice = parseFloat(
-        document
-          .querySelector(`label[for="${selected.id}"] .price-tag`)
-          .dataset.unitprice
-      );
-      const qty = selected.classList.contains('multiple')
+      const tag = document.querySelector(`label[for="${sel.id}"] .price-tag`);
+      if (!tag) return;
+
+      const unit = parseInt(tag.textContent, 10) / (sel.classList.contains('multiple') ? 2 : 1);
+      const qty  = sel.classList.contains('multiple')
         ? parseInt(document.getElementById('quantityInput').value, 10) || 1
         : 1;
 
-      // unit & total
-      document.getElementById('unit_price').textContent = unitPrice;
-      document.getElementById('total_price').textContent = unitPrice * qty;
+      document.getElementById('unit_price').textContent  = unit;
       document.getElementById('total_units').textContent = qty;
+      document.getElementById('total_price').textContent = unit * qty;
 
-      // plan name
-      const planName = document.querySelector(`label[for="${selected.id}"] h3`)
-        .textContent;
+      const planName = document.querySelector(`label[for="${sel.id}"] h3`).textContent;
       document.getElementById('total_plan').textContent = `${planName} membership`;
     }
 
-    // 3) Call both together
-    function refreshPricing(qtyChanged = false) {
-      updateAllCardPrices();
-      updateStepperSummary();
+    // 3) Dispatch to the right updater based on current step
+    function refreshPricing() {
+      if (stepper.currentIndex === 1) {
+        updateAllCardPrices();
+      }
+      if (stepper.currentIndex === 3) {
+        updateStepperSummary();
+      }
     }
 
-    // Quantity changes (step 1 multiple input)
-    const hsNum = HSInputNumber.getInstance('#multipleInput');
-    if (hsNum) {
-      hsNum.on('change', ({ inputValue }) => {
-        refreshPricing(true);
-      });
-    }
-
-    // Plan selection changes
-    document
-      .querySelectorAll('input[name="membership"]')
-      .forEach(radio =>
-        radio.addEventListener('change', () => {
-          refreshPricing();
-        })
-      );
-
-    // Discount applied event
-    document.addEventListener('discountValidated', () => {
-      refreshPricing();
+    // Recalc whenever quantity, plan or discount changes:
+    const numInst = HSInputNumber.getInstance('#multipleInput');
+    numInst?.on('change', refreshPricing);
+    document.querySelectorAll('input[name="membership"]').forEach(r => {
+      r.addEventListener('change', refreshPricing);
     });
+    document.addEventListener('discountValidated', refreshPricing);
 
-    // Initial run
+    // Also hook into the stepper’s own events so moving between steps runs it:
+    stepper.on('active',  refreshPricing);
+    stepper.on('next',    refreshPricing);
+    stepper.on('back',    refreshPricing);
+
+    // Initial
     refreshPricing();
   });
 });
