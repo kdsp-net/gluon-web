@@ -1,49 +1,49 @@
 // updatePrice.js
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', function () {
-    const DISCOUNT_FACTOR = 0.5; // 50% off on premium only
+    const DISCOUNT_FACTOR = 0.5; // 50% off
 
-    // HSInputNumber instance for the “multiple” plan
+    // Grab the HSInputNumber instance for multiple plans
     const hsInput = HSInputNumber.getInstance('#multipleInput');
 
-    // Mirror spinner back into the number field
+    // 1) Helpers
+
+    // Are we discounted right now?
+    function getFactor() {
+      return window.discountValid ? DISCOUNT_FACTOR : 1.0;
+    }
+
+    // Mirror spinner value back into text input
     function updateNumberInputValue(val) {
       const n = document.querySelector('#quantityInput');
       if (n) n.value = val;
     }
 
-    // Apply discount *only* to premium-membership cards
+    // 2) Apply discount to *unit* prices of all cards
     function applyDiscountToUnits() {
       document.querySelectorAll('.price-tag').forEach(tag => {
-        // stash original unit price once
+        // Store original unit price once
         if (!tag.dataset.originalPrice) {
           tag.dataset.originalPrice = tag.dataset.unitprice;
         }
         const base = parseFloat(tag.dataset.originalPrice);
         if (isNaN(base)) return;
 
-        // figure out whether this card is the premium plan
-        const label = tag.closest('label');
-        const planId = label?.getAttribute('for');
-        const isPremium = planId === 'premium-membership';
-
-        // choose factor: only discount if window.discountValid AND this is premium
-        const factor = (window.discountValid && isPremium)
-          ? DISCOUNT_FACTOR
-          : 1.0;
-
-        // compute discounted unit price
-        const discUnit = base * factor;
+        // Compute discounted unit price
+        let discUnit = base * getFactor();
+        // Save it for later calculations
         tag.dataset.unitprice = discUnit.toFixed(2);
 
-        // update displayed price: single→1×, multiple→2×
-        const isMulti = !!label.querySelector('input.multiple');
+        // Now update the *displayed* price:
+        // - single card: just discUnit
+        // - multiple card: discUnit * 2 (we revert to default 2× on reset or selection)
+        const isMulti = !!tag.closest('label').querySelector('input.multiple');
         const display = Math.round(discUnit * (isMulti ? 2 : 1));
         tag.textContent = display;
       });
     }
 
-    // your original quantity‐based logic for the “multiple” card
+    // 3) Original qty logic for "multiple" plan
     function updatePrice(quantity) {
       const sel = document.querySelector('input[name="membership"]:checked');
       if (!sel || !sel.classList.contains('multiple')) return;
@@ -52,10 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const tag = label?.querySelector('.price-tag');
       if (!tag) return;
 
-      const unit = parseFloat(tag.dataset.unitprice);
+      let unit = parseFloat(tag.dataset.unitprice);
       if (isNaN(unit)) return;
 
-      tag.textContent = Math.round(unit * quantity);
+      const total = Math.round(unit * quantity);
+      tag.textContent = total;
     }
 
     function resetMultipleCardPrice() {
@@ -69,12 +70,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const unit = parseFloat(tag.dataset.unitprice);
       if (isNaN(unit)) return;
 
+      // default is 2× unit
       tag.textContent = Math.round(unit * 2);
     }
 
-    // hook up events
+    // 4) Hook up events
 
-    // spinner change
+    // Quantity spinner change
     if (hsInput) {
       hsInput.on('change', ({ inputValue }) => {
         updatePrice(inputValue);
@@ -82,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
 
-    // plan selection change
+    // Plan selection change
     document.querySelectorAll('input[name="membership"]').forEach(radio => {
       radio.addEventListener('change', () => {
         const sel = document.querySelector('input[name="membership"]:checked');
@@ -96,10 +98,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    // discount toggle — only refresh premiums
+    // Discount toggled
     document.addEventListener('discountValidated', () => {
       applyDiscountToUnits();
-      // reapply qty logic for multiple plans
+      // reapply the right display for current selection
       const sel = document.querySelector('input[name="membership"]:checked');
       if (sel && sel.classList.contains('multiple')) {
         const qty = hsInput?.inputValue || 2;
@@ -109,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // initial run
+    // Initial run
     applyDiscountToUnits();
     resetMultipleCardPrice();
   });
