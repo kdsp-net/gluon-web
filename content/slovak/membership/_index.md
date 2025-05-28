@@ -5,43 +5,50 @@ description: "Pridajte sa ku Gluon Syndicate"
 draft: false
 
 step_1:
-  title: "Možnosti členstva"
+  title: "Členské plány"
   plans:
-    - name: "Basic"
+    - name: "Základný"
       id: "basic-membership"
       price: 1000
       multiple: false
       features:
-        - title: "Deal flow"
-        - title: "Kvartálne pitch events"
-        - title: "Online komunita"
-          tooltip: "Získajte prístup ku našej LinkedIn komunite a WhatsApp skupine členov."
+        - title: "Prístup k preverenému dealflow a aplikácii"
+          tooltip: "Prístup k preverenému dealflow, právnemu frameworku, investorskej aplikácii a nástrojom na správu portfólia."
+        - title: "4× online vstupenka na Pitch Event"
+          tooltip: "Zahŕňa online prístup na 4 Pitch Eventy ročne (streamovaný hlavný program)."
+        - title: "1× in-person vstupenka na Pitch Event"
+          tooltip: "Zahŕňa osobnú účasť na 1 Pitch Evente ročne."
+        - title: "Prístup do komunity"
+          tooltip: "Prístup do uzavretej WhatsApp skupiny pre investorov."
+
     - name: "Premium"
       id: "premium-membership"
       price: 3000
       multiple: false
       features:
-        - title: "Všetky výhody Basic členstva"
-        - title: "Vstup na event pre sprievodnú osobu"
-          tooltip: "Získajte jednu neinvestorskú vstupenku na každý event a možnosť prikúpiť si až tri ďalšie za 200€/osoba."
-        - title: "Nominačné hlasovanie"
-          tooltip: "Preskúmajte ako prví shortlistované startupy a hlasujte pre tie, ktoré chcete vidieť na pitch evente."
-        - title: "Divoká karta"
-          tooltip: "Vyberte si jeden startup ročne, ktorý prostredníctvom divokej karty nominujete priamo na event."
-    - name: "Corporate"
-      id: "corporate-membership"
+        - title: "Prístup k dealflow a aplikácii"
+          tooltip: "Prístup k preverenému dealflow, právnemu frameworku, investorskej aplikácii a nástrojom na správu portfólia."
+        - title: "4× online vstupenka na Pitch Event"
+          tooltip: "Zahŕňa online prístup na 4 Pitch Eventy ročne (streamovaný hlavný program)."
+        - title: "8× in-person vstupenka na Pitch Event"
+          tooltip: "Spolu 8 vstupov ročne na Pitch Eventy (formát investor +1)."
+        - title: "Prístup do komunity"
+          tooltip: "Prístup do uzavretej WhatsApp skupiny pre investorov."
+        - title: "50% zľava na poplatok za SPV"
+          tooltip: "50% zľava z ročného poplatku €200 za každé SPV, v ktorom investujete."
+        - title: "Investorské vstupenky na startup podujatia"
+          tooltip: "Investorské vstupenky na top európske startupové konferencie (napr. WebSummit, Reflect, Slush)."
+
+    - name: "Partner"
+      id: "partner-membership"
       price: 2000
       multiple: true
       features:
-        - title: "Všetky výhody Basic členstva"
-        - title: "Vstup na event pre sprievodnú osobu"
-          tooltip: "Získajte jednu neinvestorskú vstupenku na každý event a možnosť prikúpiť si až tri ďalšie za 200€/osoba."
-        - title: "Nominačné hlasovanie"
-          tooltip: "Preskúmajte ako prví shortlistované startupy a hlasujte pre tie, ktoré chcete vidieť na pitch evente."
-        - title: "Divoká karta"
-          tooltip: "Vyberte si jeden startup ročne, ktorý prostredníctvom divokej karty nominujete priamo na event."
-        - title: "Partnerská vizibilita"
-          tooltip: "Odkomunikujte svoj brand v partnerskej sekcii na našom webe aj na každom našom pitch evente."
+        - title: "Všetko z Premium"
+        - title: "Tímový prístup"
+          tooltip: "Každé členstvo obsahuje plné výhody; ideálne pre VC fondy a akcelerátory."
+        - title: "Vizibilita partnera"
+          tooltip: "Logo na webstránke a prezentácia počas Pitch Eventov."
 
 step_2:
   title: "Fakturačné údaje"

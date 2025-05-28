@@ -12,36 +12,43 @@ step_1:
       price: 1000
       multiple: false
       features:
-        - title: "Deal flow"
-        - title: "Quarterly pitching events"
-        - title: "Online community"
-          tooltip: "Get access to our invite-only LinkedIn community and Whatsapp group."
+        - title: "Dealflow & app access"
+          tooltip: "Access curated startup dealflow, legal framework, investor app, and portfolio tools."
+        - title: "4× online event vouchers"
+          tooltip: "Covers online access to 4 Pitch Events per year (streamed stage program)."
+        - title: "1× in-person event voucher"
+          tooltip: "Covers in-person access to 1 Pitch Event per year."
+        - title: "Community access"
+          tooltip: "Join the invite-only WhatsApp investor group for discussions and updates."
+
     - name: "Premium"
       id: "premium-membership"
       price: 3000
       multiple: false
       features:
-        - title: "All Basic features"
-        - title: "Companion tickets"
-          tooltip: "Get one free additional non‑investor ticket for each event and the possibility to buy up to 3 more at €200 per person."
-        - title: "Shortlist voting"
-          tooltip: "Take an early look at our shortlisted startups and vote for the ones that you want to see pitch on the stage"
-        - title: "Wildcard"
-          tooltip: "Send any one startup directly to pitch on the stage without having to go through the qualification process."
-    - name: "Corporate"
-      id: "corporate-membership"
+        - title: "Dealflow & app access"
+          tooltip: "Access curated startup dealflow, legal framework, investor app, and portfolio tools."
+        - title: "4× online event vouchers"
+          tooltip: "Covers online access to 4 Pitch Events per year (streamed stage program)."
+        - title: "8× in-person event vouchers"
+          tooltip: "Total of 8 in-person Pitch Event entries per year (investor +1 per event)."
+        - title: "Community access"
+          tooltip: "Join the invite-only WhatsApp investor group for discussions and updates."
+        - title: "50% portfolio fee discount"
+          tooltip: "50% off the €200/year fee per SPV you invest in."
+        - title: "Investor passes to startup events"
+          tooltip: "Investor passes for Europe’s top startup events (e.g., WebSummit, Reflect, Slush)."
+
+    - name: "Partner"
+      id: "partner-membership"
       price: 2000
       multiple: true
       features:
-        - title: "All Basic features"
-        - title: "Companion tickets"
-          tooltip: "Every member gets one additional non‑investor ticket for each event and the possibility to buy up to 3 more at €200 per person"
-        - title: "Shortlist voting"
-          tooltip: "Take an early look at our shortlisted startups and vote for the ones that you want to see pitch on the stage"
-        - title: "Wildcard"
-          tooltip: "Send any one startup directly to pitch on the stage without having to go through the qualification process."
-        - title: "Visibility"
-          tooltip: "Get your brand featured on our website and at the events."
+        - title: "All Premium features"
+        - title: "Team access"
+          tooltip: "Each seat includes full benefits; ideal for VC firms and accelerators."
+        - title: "Partner visibility"
+          tooltip: "Logo displayed on our website and at Pitch Events."
 
 step_2:
   title: "Billing Information"
