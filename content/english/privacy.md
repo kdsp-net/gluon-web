@@ -5,7 +5,7 @@ meta_title = "Privacy Policy"
 
 Effective Date: 29/05/2025, 14:58:08
 
-## Introduction & Organizational Info:
+## Introduction & Organizational Info
 
 We, at Gluon Syndicate, s. r. o., are dedicated to serving our customers and contacts to the best of our abilities. Part of our commitment involves the responsible management of personal information collected through our website gluon.vc, and any related interactions. Our primary goals in processing this information include:
 
@@ -23,15 +23,15 @@ We do not have a designated Data Protection Officer (DPO) but remain fully commi
 
 Your privacy is our priority. We are committed to processing your personal information transparently and with your safety in mind. This commitment extends to our collaboration with third-party services that may process personal information on our behalf, such as in the case of sending invoices. Rest assured, all activities are conducted in strict compliance with applicable privacy laws.
 
-## Scope and Application:
+## Scope and Application
 
 Our privacy policy is designed to protect the personal information of all our stakeholders, including website visitors, registered users, and customers. Whether you are just browsing our website gluon.vc, using our services as a registered user, or engaging with us as a valued customer, we ensure that your personal data is processed with the highest standards of privacy and security. This policy outlines our practices and your rights related to personal information.
 
-## Data Collection and Processing:
+## Data Collection and Processing
 
 Our commitment to transparency and data protection extends to how we collect and use your personal information. We gather personal data through various interactions, including but not limited to, when you utilize our services or products such as Membership, or directly provide information to us.
 
-## The following list details the types of personal information we may process:
+## The following list details the types of personal information we may process
 
 - First and Last Name
 - Email address and/or Phone number
