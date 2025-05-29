@@ -152,7 +152,7 @@ step_3:
       label:
         text: "I want to sign up to the newsletter"
 
-success_message: "Your order was submitted successfully"
+success_message: "Thank you. You will recieve an ivoice and payment instructions to your inbox shortly."
 error_message: "We are sorry, there was a problem submitting your order, please try again later."
 
 ---

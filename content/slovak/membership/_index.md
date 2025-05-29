@@ -153,7 +153,7 @@ step_3:
       label:
         text: "Chcem sa prihlásiť ku odberu newslettera"
 
-success_message: "Vaša objednávka bola úspešne prijatá."
+success_message: "Ďakujeme. Čoskoro obdržíte faktúru a pokyny na platbu do svojej e-mailovej schránky."
 error_message: "Ospravedlňujeme sa, ale pri spracovaní objednávky sa vyskytla chyba. Prosím, zadajte ju znova."
 
 ---

@@ -143,7 +143,7 @@ step_3:
           url: "#"
       required: true
 
-success_message: "Vaše objednávka byla úspěšně přijata"
+success_message: "Děkujeme. Brzy obdržíte fakturu a pokyny k platbě do své e-mailové schránky."
 error_message: "Omlouváme se, ale při zpracování objednávky se vyskytla chyba. Prosím zadejte ji znovu."
 
 ---
