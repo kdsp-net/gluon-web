@@ -140,7 +140,7 @@ step_3:
         text: "Vyjadřuji"
         link:
           text: "Souhlas se spracováním osobních údajů"
-          url: "#"
+          url: "https://gluon.vc/privacy"
       required: true
 
 success_message: "Děkujeme. Do 15 minut obdržíte fakturu a pokyny k platbě do své e-mailové schránky."

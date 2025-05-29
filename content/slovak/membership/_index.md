@@ -147,7 +147,7 @@ step_3:
         text: "Vyjadrujem"
         link:
           text: "Súhlas so spracovaním osobných údajov"
-          url: "#"
+          url: "https://gluon.vc/privacy"
       required: true
     - id: nl
       label:

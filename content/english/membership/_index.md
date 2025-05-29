@@ -146,7 +146,7 @@ step_3:
         text: "I agree to the data processing according to the"
         link:
           text: "Privacy Policy"
-          url: "#"
+          url: "https://gluon.vc/privacy"
       required: true
     - id: nl
       label:
