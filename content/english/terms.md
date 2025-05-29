@@ -1,1 +1,0 @@
-This website does not use cookies.
