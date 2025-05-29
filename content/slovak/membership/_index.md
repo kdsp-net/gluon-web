@@ -7,7 +7,7 @@ draft: false
 step_1:
   title: "Členské plány"
   plans:
-    - name: "Základný"
+    - name: "Basic"
       id: "basic-membership"
       price: 1000
       multiple: false
