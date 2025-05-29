@@ -70,10 +70,19 @@ document.addEventListener('DOMContentLoaded', function () {
         function updateSummary() {
             const formFields = document.querySelectorAll('#step-2 input, #step-2 select, #step-2 textarea');
             formFields.forEach(field => {
-                const summaryElement = document.getElementById(`summary_${field.id}`);
-                if (summaryElement) {
-                    summaryElement.textContent = field.value.trim() || '--';
+                const summaryEl = document.getElementById(`summary_${field.id}`);
+                if (!summaryEl) return;
+
+                let display = '--';
+                if (field.tagName === 'SELECT') {
+                    // use the option label/text instead of the value
+                    const opt = field.options[field.selectedIndex];
+                    display = opt ? opt.text : '--';
+                } else {
+                    display = field.value.trim() || '--';
                 }
+
+                summaryEl.textContent = display;
             });
         }
 
