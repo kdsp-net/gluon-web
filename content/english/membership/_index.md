@@ -139,7 +139,7 @@ step_3:
         text: "I agree to the"
         link: 
           text: "Terms of Service"
-          url: "#"
+          url: "https://gluon.odoo.com/terms"
       required: true
     - id: gdpr
       label:
@@ -152,7 +152,7 @@ step_3:
       label:
         text: "I want to sign up to the newsletter"
 
-success_message: "Thank you. You will recieve an ivoice and payment instructions to your inbox shortly."
+success_message: "Thank you. Within 15 minutes you will recieve an ivoice and payment instructions in your inbox."
 error_message: "We are sorry, there was a problem submitting your order, please try again later."
 
 ---

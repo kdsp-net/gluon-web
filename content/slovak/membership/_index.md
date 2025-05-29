@@ -140,7 +140,7 @@ step_3:
         text: "Súhlasím so"
         link: 
           text: "Všeobecnými obchodnými podmienkami"
-          url: "#"
+          url: "https://gluon.odoo.com/terms"
       required: true
     - id: gdpr
       label:
@@ -153,7 +153,7 @@ step_3:
       label:
         text: "Chcem sa prihlásiť ku odberu newslettera"
 
-success_message: "Ďakujeme. Čoskoro obdržíte faktúru a pokyny na platbu do svojej e-mailovej schránky."
+success_message: "Ďakujeme. Do 15 minút obdržíte faktúru a pokyny na platbu do svojej e-mailovej schránky."
 error_message: "Ospravedlňujeme sa, ale pri spracovaní objednávky sa vyskytla chyba. Prosím, zadajte ju znova."
 
 ---

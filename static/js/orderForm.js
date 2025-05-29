@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Task 1: Update the Summary in Step 3
         function updateSummary() {
-            const formFields = document.querySelectorAll('#step-2 input');
+            const formFields = document.querySelectorAll('#step-2 input, #step-2 select, #step-2 textarea');
             formFields.forEach(field => {
                 const summaryElement = document.getElementById(`summary_${field.id}`);
                 if (summaryElement) {
-                    summaryElement.textContent = field.value || '--';
+                    summaryElement.textContent = field.value.trim() || '--';
                 }
             });
         }
