@@ -1,44 +1,14 @@
 {{ define "main" }}
   {{ partial "page-header" . }}
 
-  <script id="usercentrics-ppg" privacy-policy-id="faabdc5e-1ea6-44ce-92a9-30ea0def0de3" src="https://policygenerator.usercentrics.eu/api/privacy-policy" > </script>
-
-  <div class="uc-privacy-policy"></div>
-
-  <section class="section">
+   <section class="section">
     <div class="container">
-      <ul class="text-center">
-        {{/* categories */}}
-        {{ if eq .Permalink (`categories/` | absLangURL) }}
-          {{ range site.Taxonomies.categories.ByCount }}
-            <li class="m-3 inline-block">
-              <a
-                href="{{ .Page.Permalink }}"
-                class="bg-theme-light text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark block rounded px-4 py-2 text-xl">
-                {{ .Page.Title }}
-                <span class="bg-body dark:bg-darkmode-body ml-2 rounded px-2">
-                  {{ .Count }}
-                </span>
-              </a>
-            </li>
-          {{ end }}
-        {{ end }}
-        {{/* tags */}}
-        {{ if eq .Permalink (`tags/` | absLangURL) }}
-          {{ range site.Taxonomies.tags.ByCount }}
-            <li class="m-3 inline-block">
-              <a
-                href="{{ .Page.Permalink }}"
-                class="bg-theme-light text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark block rounded px-4 py-2 text-xl">
-                {{ .Page.Title }}
-                <span class="bg-body dark:bg-darkmode-body ml-2 rounded px-2">
-                  {{ .Count }}
-                </span>
-              </a>
-            </li>
-          {{ end }}
-        {{ end }}
-      </ul>
+      <div class="row justify-center">
+        <div class="lg:col-10 mb-10">
+        <div class="uc-privacy-policy"></div>
+          {{ .Content }}
+        </div>
+      </div>
     </div>
   </section>
 {{ end }}
