@@ -39,7 +39,7 @@ step_1:
         - title: "Community access"
           tooltip: "Join the invite-only WhatsApp investor group for discussions and updates."
         - title: "Investor passes to startup events"
-          tooltip: "1&times; investor pass for Europe’s top startup event, additional passes at discounted prices"
+          tooltip: "1× investor pass for Europe’s top startup event, additional passes at discounted prices"
 
     - name: "Partner"
       id: "partner-membership"

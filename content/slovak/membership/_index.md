@@ -39,7 +39,7 @@ step_1:
         - title: "Prístup do komunity"
           tooltip: "Prístup do uzavretej WhatsApp skupiny pre investorov."
         - title: "Investorské vstupenky na startup podujatia"
-          tooltip: "1&times; investorská vstupenka na top európske startupové konferencie zadarmo; dalšie za zvýhodnené ceny"
+          tooltip: "1× investorská vstupenka na top európske startupové konferencie zadarmo; dalšie za zvýhodnené ceny"
 
     - name: "Partner"
       id: "partner-membership"
