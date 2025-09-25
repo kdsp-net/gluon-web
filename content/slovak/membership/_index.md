@@ -12,7 +12,7 @@ step_1:
       price: 1000
       multiple: false
       features:
-        - title: "Prístup k preverenému dealflow a aplikácii"
+        - title: "Prístup k dealflow a aplikácii"
           tooltip: "Prístup k preverenému dealflow, právnemu frameworku, investorskej aplikácii a nástrojom na správu portfólia."
         - title: "4× online vstupenka na Pitch Event"
           tooltip: "Zahŕňa online prístup na 4 Pitch Eventy ročne (streamovaný hlavný program)."
